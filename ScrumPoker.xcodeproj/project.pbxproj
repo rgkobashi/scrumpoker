@@ -19,6 +19,7 @@
 		E23288B1227455B000A94F15 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B0227455B000A94F15 /* ReusableView.swift */; };
 		E23288B32274560000A94F15 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B22274560000A94F15 /* NibLoadableView.swift */; };
 		E23288B5227457F300A94F15 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B4227457F300A94F15 /* UICollectionView.swift */; };
+		E23288B8227460F900A94F15 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B7227460F900A94F15 /* Card.swift */; };
 		E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06922743EBC00C28204 /* AppDelegate.swift */; };
 		E242E06C22743EBC00C28204 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06B22743EBC00C28204 /* MainViewController.swift */; };
 		E242E06F22743EBC00C28204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E06D22743EBC00C28204 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		E23288B0227455B000A94F15 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		E23288B22274560000A94F15 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		E23288B4227457F300A94F15 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		E23288B7227460F900A94F15 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06622743EBC00C28204 /* ScrumPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrumPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06922743EBC00C28204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +212,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		E23288B6227460EB00A94F15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E23288B7227460F900A94F15 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E242E05D22743EBC00C28204 = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +248,7 @@
 				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E23288A622744DC800A94F15 /* Protocols */,
 				E23288A322744D7100A94F15 /* Extensions */,
+				E23288B6227460EB00A94F15 /* Models */,
 				E232889C22744CEE00A94F15 /* Scenes */,
 				E2328897227449B400A94F15 /* Support */,
 				E2328898227449C100A94F15 /* Secrets */,
@@ -523,6 +534,7 @@
 				E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */,
 				E23288A822744DD400A94F15 /* StoryboardIdentifiable.swift in Sources */,
 				E23288AA22744E3300A94F15 /* MainViewModel.swift in Sources */,
+				E23288B8227460F900A94F15 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
