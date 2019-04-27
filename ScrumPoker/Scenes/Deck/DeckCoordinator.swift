@@ -24,11 +24,18 @@ class DeckCoordinator {
         self.window = window
         deckVC = storyboard.instantiateViewController()
         deckVM = DeckViewModel(deck: Card.fibonacciDeck, layout: .default)
+        deckVM.delegate = self
         deckVC.viewModel = deckVM
     }
     
     func start() {
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
+    }
+}
+
+extension DeckCoordinator: DeckViewModelDelegate {
+    func didTapShowSettings(from: DeckViewController) {
+        
     }
 }

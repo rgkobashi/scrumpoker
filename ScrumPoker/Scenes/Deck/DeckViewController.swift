@@ -87,3 +87,9 @@ extension DeckViewController: UICollectionViewDelegateFlowLayout {
         return viewModel.verticalCardSpacing(for: holderView)
     }
 }
+
+extension DeckViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.showSettings(from: self)
+    }
+}

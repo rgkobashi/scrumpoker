@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol DeckViewModelDelegate: class {
+    func didTapShowSettings(from: DeckViewController)
+}
+
 class DeckViewModel {
     private let deck: [Card]
     private let layout: DeckLayout
     private let screen: UIScreen
+    
+    weak var delegate: DeckViewModelDelegate?
     
     var deckSize: Int {
         return deck.count
@@ -47,5 +53,9 @@ class DeckViewModel {
     
     func verticalCardSpacing(for parentView: UIView) -> CGFloat {
         return parentView.frame.height * layout.verticalCardSpacing
+    }
+    
+    func showSettings(from viewController: DeckViewController) {
+        delegate?.didTapShowSettings(from: viewController)
     }
 }
