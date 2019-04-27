@@ -30,35 +30,35 @@ class MainViewController: UIViewController {
     private func layoutCollectionView() {
         holderView.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        let centerX = NSLayoutConstraint(item: collectionView,
-                                         attribute: .centerX,
-                                         relatedBy: .equal,
-                                         toItem: holderView,
-                                         attribute: .centerX,
-                                         multiplier: 1,
-                                         constant: 0)
-        let centerY = NSLayoutConstraint(item: collectionView,
-                                         attribute: .centerY,
-                                         relatedBy: .equal,
-                                         toItem: holderView,
-                                         attribute: .centerY,
-                                         multiplier: 1,
-                                         constant: 0)
-        let width = NSLayoutConstraint(item: collectionView,
-                                       attribute: .width,
-                                       relatedBy: .equal,
-                                       toItem: holderView,
-                                       attribute: .width,
-                                       multiplier: viewModel.deckWidthMultiplier,
-                                       constant: 0)
-        let height = NSLayoutConstraint(item: collectionView,
-                                        attribute: .height,
+        let horizontalC = NSLayoutConstraint(item: collectionView,
+                                             attribute: .centerX,
+                                             relatedBy: .equal,
+                                             toItem: holderView,
+                                             attribute: .centerX,
+                                             multiplier: 1,
+                                             constant: 0)
+        let verticalC = NSLayoutConstraint(item: collectionView,
+                                           attribute: .centerY,
+                                           relatedBy: .equal,
+                                           toItem: holderView,
+                                           attribute: .centerY,
+                                           multiplier: 1,
+                                           constant: 0)
+        let widthC = NSLayoutConstraint(item: collectionView,
+                                        attribute: .width,
                                         relatedBy: .equal,
                                         toItem: holderView,
-                                        attribute: .height,
-                                        multiplier: viewModel.deckHeightMultiplier,
+                                        attribute: .width,
+                                        multiplier: viewModel.deckWidthMultiplier,
                                         constant: 0)
-        holderView.addConstraints([centerX, centerY, width, height])
+        let heightC = NSLayoutConstraint(item: collectionView,
+                                         attribute: .height,
+                                         relatedBy: .equal,
+                                         toItem: holderView,
+                                         attribute: .height,
+                                         multiplier: viewModel.deckHeightMultiplier,
+                                         constant: 0)
+        holderView.addConstraints([horizontalC, verticalC, widthC, heightC])
     }
 }
 

@@ -24,6 +24,6 @@ extension DeckLayout {
                                       cardHeight: 0.15,
                                       horizontalCardSpacing: 0.06,
                                       verticalCardSpacing: 0.04,
-                                      horizontalDeckPadding: 27,
-                                      verticalDeckPadding: 8)
+                                      horizontalDeckPadding: 0.27,
+                                      verticalDeckPadding: 0.08)
 }
