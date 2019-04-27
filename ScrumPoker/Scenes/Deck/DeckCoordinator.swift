@@ -9,13 +9,23 @@
 import UIKit
 
 class DeckCoordinator {
+    var rootViewController: UIViewController {
+        return navigationController
+    }
     
+    // MARK: Coordinators
+    private lazy var settingsCoordinator: SettingsCoordinator = {
+        let c = SettingsCoordinator()
+        c.delegate = self
+        return c
+    }()
+    
+    // MARK: Stack
     private let window: UIWindow!
-    private lazy var rootViewController: UIViewController = {
+    private lazy var navigationController: UINavigationController = {
         let nc = UINavigationController(rootViewController: deckVC)
         return nc
     }()
-    
     private let storyboard = UIStoryboard(name: "Deck")
     private let deckVC: DeckViewController
     private let deckVM: DeckViewModel
@@ -34,8 +44,24 @@ class DeckCoordinator {
     }
 }
 
+// MARK: - Navigation
+
+extension DeckCoordinator {
+    func showSettings() {
+        navigationController.present(settingsCoordinator.rootViewController, animated: true, completion: nil)
+    }
+}
+
+// MARK: - ViewModels callbacks
+
 extension DeckCoordinator: DeckViewModelDelegate {
     func didTapShowSettings(from: DeckViewController) {
-        
+        showSettings()
     }
+}
+
+// MARK: - Coordinators callbacks
+
+extension DeckCoordinator: SettingsCoordinatorDelegate {
+    
 }
