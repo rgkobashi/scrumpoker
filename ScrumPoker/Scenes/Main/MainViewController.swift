@@ -9,6 +9,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var viewModel: MainViewModel!
 }
 
