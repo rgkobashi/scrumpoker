@@ -17,6 +17,14 @@ class MainViewModel {
         return deck.count
     }
     
+    var deckWidthMultiplier: CGFloat {
+        return 1 - layout.horizontalDeckPadding
+    }
+    
+    var deckHeightMultiplier: CGFloat {
+        return 1 - layout.verticalDeckPadding
+    }
+    
     init(deck: [Card], layout: DeckLayout, screen: UIScreen = UIScreen.main) {
         self.deck = deck
         self.layout = layout
@@ -27,5 +35,17 @@ class MainViewModel {
         return deck[index]
     }
     
+    func cardSize(for parentView: UIView) -> CGSize {
+        let w = parentView.frame.width * layout.cardWidth
+        let h = parentView.frame.height * layout.cardHeight
+        return CGSize(width: w, height: h)
+    }
+    
+    func horizontalCardSpacing(for parentView: UIView) -> CGFloat {
+        return parentView.frame.width * layout.horizontalCardSpacing
+    }
+    
+    func verticalCardSpacing(for parentView: UIView) -> CGFloat {
+        return parentView.frame.height * layout.verticalCardSpacing
     }
 }

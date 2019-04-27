@@ -9,14 +9,57 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView! {
-        didSet {
-            collectionView.dataSource = self
-            collectionView.register(CardCell.self)
-        }
-    }
+    
+    @IBOutlet weak var holderView: UIView!
     
     var viewModel: MainViewModel!
+    
+    private lazy var collectionView: UICollectionView = {
+        let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+        cv.dataSource = self
+        cv.delegate = self
+        cv.register(CardCell.self)
+        return cv
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        layoutCollectionView()
+    }
+    
+    private func layoutCollectionView() {
+        holderView.addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        let centerX = NSLayoutConstraint(item: collectionView,
+                                         attribute: .centerX,
+                                         relatedBy: .equal,
+                                         toItem: holderView,
+                                         attribute: .centerX,
+                                         multiplier: 1,
+                                         constant: 0)
+        let centerY = NSLayoutConstraint(item: collectionView,
+                                         attribute: .centerY,
+                                         relatedBy: .equal,
+                                         toItem: holderView,
+                                         attribute: .centerY,
+                                         multiplier: 1,
+                                         constant: 0)
+        let width = NSLayoutConstraint(item: collectionView,
+                                       attribute: .width,
+                                       relatedBy: .equal,
+                                       toItem: holderView,
+                                       attribute: .width,
+                                       multiplier: viewModel.deckWidthMultiplier,
+                                       constant: 0)
+        let height = NSLayoutConstraint(item: collectionView,
+                                        attribute: .height,
+                                        relatedBy: .equal,
+                                        toItem: holderView,
+                                        attribute: .height,
+                                        multiplier: viewModel.deckHeightMultiplier,
+                                        constant: 0)
+        holderView.addConstraints([centerX, centerY, width, height])
+    }
 }
 
 extension MainViewController: UICollectionViewDataSource {
@@ -28,5 +71,19 @@ extension MainViewController: UICollectionViewDataSource {
         let cell: CardCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.card = viewModel.card(at: indexPath.row)
         return cell
+    }
+}
+
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return viewModel.cardSize(for: holderView)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return viewModel.horizontalCardSpacing(for: holderView)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return viewModel.verticalCardSpacing(for: holderView)
     }
 }
