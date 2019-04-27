@@ -4,6 +4,7 @@ target 'ScrumPoker' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'LicensePlist'
+  pod 'SideMenu'
 
   target 'ScrumPokerTests' do
     inherit! :search_paths

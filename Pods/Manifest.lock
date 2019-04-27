@@ -5,6 +5,7 @@ PODS:
   - LicensePlist (2.5.0)
   - Nimble (8.0.1)
   - Quick (2.1.0)
+  - SideMenu (5.0.3)
 
 DEPENDENCIES:
   - Crashlytics
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - LicensePlist
   - Nimble
   - Quick
+  - SideMenu
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -20,6 +22,7 @@ SPEC REPOS:
     - LicensePlist
     - Nimble
     - Quick
+    - SideMenu
 
 SPEC CHECKSUMS:
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
@@ -27,7 +30,8 @@ SPEC CHECKSUMS:
   LicensePlist: e5f8f2e3465620e53ec4c669955a5a7d0692b9cb
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
 
-PODFILE CHECKSUM: ddd2c5cd4df533b38402d08a7d0f3438f02e2377
+PODFILE CHECKSUM: d2efc47d301c16ae85fe0e8a26367f10006daa19
 
 COCOAPODS: 1.5.3

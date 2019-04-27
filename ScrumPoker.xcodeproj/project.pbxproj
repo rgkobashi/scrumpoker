@@ -293,6 +293,7 @@
 				E242E06322743EBC00C28204 /* Frameworks */,
 				E242E06422743EBC00C28204 /* Resources */,
 				E23288962274495600A94F15 /* Fabric Script */,
+				6917455A6DDA20081811D52D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -480,6 +481,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6917455A6DDA20081811D52D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ScrumPoker/Pods-ScrumPoker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrumPoker/Pods-ScrumPoker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A3B8F5B3778C22D301B23627 /* [CP] Check Pods Manifest.lock */ = {
