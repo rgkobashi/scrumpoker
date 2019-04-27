@@ -9,25 +9,23 @@
 import UIKit
 
 class MainViewModel {
-    private var cards: [Card]
-    private var deckLayout: DeckLayout
+    private let deck: [Card]
+    private let layout: DeckLayout
     private let screen: UIScreen
     
-    var totalNumberOfCards: Int {
-        return cards.count
+    var deckSize: Int {
+        return deck.count
     }
     
-    init(cards: [Card], deckLayout: DeckLayout, screen: UIScreen = UIScreen.main) {
-        self.cards = cards
-        self.deckLayout = deckLayout
+    init(deck: [Card], layout: DeckLayout, screen: UIScreen = UIScreen.main) {
+        self.deck = deck
+        self.layout = layout
         self.screen = screen
     }
     
-    func updateCards(_ cards: [Card]) {
-        self.cards = cards
+    func card(at index: Int) -> Card {
+        return deck[index]
     }
     
-    func card(at index: Int) -> Card {
-        return cards[index]
     }
 }
