@@ -165,8 +165,8 @@
 				E242E06D22743EBC00C28204 /* Main.storyboard */,
 				E242E07022743EBD00C28204 /* Assets.xcassets */,
 				E242E07222743EBD00C28204 /* LaunchScreen.storyboard */,
-				E2328898227449C100A94F15 /* Secrets */,
 				E2328897227449B400A94F15 /* Support */,
+				E2328898227449C100A94F15 /* Secrets */,
 			);
 			path = ScrumPoker;
 			sourceTree = "<group>";
