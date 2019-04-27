@@ -10,6 +10,13 @@ import UIKit
 
 class CardCell: UICollectionViewCell {
     
+    @IBOutlet weak var textLabel: UILabel!
+    
+    var card: Card! {
+        didSet {
+            textLabel.text = card.text
+        }
+    }
 }
 
 extension CardCell: NibLoadableView {}
