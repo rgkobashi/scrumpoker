@@ -11,9 +11,10 @@ import UIKit
 class MainCoordinator {
     
     private let window: UIWindow!
-    private var rootViewController: UIViewController {
-        return mainVC
-    }
+    private lazy var rootViewController: UIViewController = {
+        let nc = UINavigationController(rootViewController: mainVC)
+        return nc
+    }()
     
     private let storyboard = UIStoryboard(name: "Main")
     private let mainVC: MainViewController
