@@ -8,11 +8,17 @@
 
 import SideMenu
 
+protocol SettingsCoordinatorDelegate: class {
+    
+}
+
 class SettingsCoordinator {
     var rootViewController: UIViewController {
         return sideMenuNavigationController
     }
+    weak var delegate: SettingsCoordinatorDelegate?
     
+    // MARK: Stack
     private lazy var sideMenuNavigationController: UISideMenuNavigationController = {
         let nc = UISideMenuNavigationController(rootViewController: settingsVC)
         SideMenuManager.default.menuRightNavigationController = nc
