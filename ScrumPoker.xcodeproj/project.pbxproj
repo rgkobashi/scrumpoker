@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D8497ECAC64B22DDDC05A24 /* Pods_ScrumPokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */; };
+		17367E1EDA1D59A34E5FFF82 /* Pods_ScrumPokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */; };
+		65982F83EE22C95E29C64909 /* Pods_ScrumPoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */; };
 		E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06922743EBC00C28204 /* AppDelegate.swift */; };
 		E242E06C22743EBC00C28204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06B22743EBC00C28204 /* ViewController.swift */; };
 		E242E06F22743EBC00C28204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E06D22743EBC00C28204 /* Main.storyboard */; };
@@ -34,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		229C509B6A68785E5E2DC75C /* Pods-ScrumPokerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30346FFCE57F983C633DF77C /* Pods-ScrumPoker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPoker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPoker/Pods-ScrumPoker.release.xcconfig"; sourceTree = "<group>"; };
+		3B9F67A6EB5355FCE8FE13D3 /* Pods-ScrumPoker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPoker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPoker/Pods-ScrumPoker.debug.xcconfig"; sourceTree = "<group>"; };
+		80E89707AECA3BF1647A5934 /* Pods-ScrumPokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06622743EBC00C28204 /* ScrumPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrumPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06922743EBC00C28204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E242E06B22743EBC00C28204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		E242E08522743EBE00C28204 /* ScrumPokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrumPokerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumPokerUITests.swift; sourceTree = "<group>"; };
 		E242E08B22743EBE00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65982F83EE22C95E29C64909 /* Pods_ScrumPoker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17367E1EDA1D59A34E5FFF82 /* Pods_ScrumPokerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8497ECAC64B22DDDC05A24 /* Pods_ScrumPokerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A1D1A69436DBF3E0427504F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */,
+				D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */,
+				B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		496BAE6B343D9CCDF64308D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B9F67A6EB5355FCE8FE13D3 /* Pods-ScrumPoker.debug.xcconfig */,
+				30346FFCE57F983C633DF77C /* Pods-ScrumPoker.release.xcconfig */,
+				229C509B6A68785E5E2DC75C /* Pods-ScrumPokerTests.debug.xcconfig */,
+				FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */,
+				80E89707AECA3BF1647A5934 /* Pods-ScrumPokerUITests.debug.xcconfig */,
+				ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E242E05D22743EBC00C28204 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				E242E07D22743EBE00C28204 /* ScrumPokerTests */,
 				E242E08822743EBE00C28204 /* ScrumPokerUITests */,
 				E242E06722743EBC00C28204 /* Products */,
+				496BAE6B343D9CCDF64308D6 /* Pods */,
+				3A1D1A69436DBF3E0427504F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +172,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E242E08E22743EBE00C28204 /* Build configuration list for PBXNativeTarget "ScrumPoker" */;
 			buildPhases = (
+				13D9B90E95FF914055C24FD1 /* [CP] Check Pods Manifest.lock */,
 				E242E06222743EBC00C28204 /* Sources */,
 				E242E06322743EBC00C28204 /* Frameworks */,
 				E242E06422743EBC00C28204 /* Resources */,
@@ -149,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E242E09122743EBE00C28204 /* Build configuration list for PBXNativeTarget "ScrumPokerTests" */;
 			buildPhases = (
+				2C0C2671E9D268DA0D994CC8 /* [CP] Check Pods Manifest.lock */,
 				E242E07622743EBE00C28204 /* Sources */,
 				E242E07722743EBE00C28204 /* Frameworks */,
 				E242E07822743EBE00C28204 /* Resources */,
+				663AD30B272DC0EB119B8160 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E242E09422743EBE00C28204 /* Build configuration list for PBXNativeTarget "ScrumPokerUITests" */;
 			buildPhases = (
+				A3B8F5B3778C22D301B23627 /* [CP] Check Pods Manifest.lock */,
 				E242E08122743EBE00C28204 /* Sources */,
 				E242E08222743EBE00C28204 /* Frameworks */,
 				E242E08322743EBE00C28204 /* Resources */,
@@ -250,6 +294,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13D9B90E95FF914055C24FD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrumPoker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C0C2671E9D268DA0D994CC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrumPokerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		663AD30B272DC0EB119B8160 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3B8F5B3778C22D301B23627 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrumPokerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E242E06222743EBC00C28204 /* Sources */ = {
@@ -430,6 +567,7 @@
 		};
 		E242E08F22743EBE00C28204 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9F67A6EB5355FCE8FE13D3 /* Pods-ScrumPoker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -450,6 +588,7 @@
 		};
 		E242E09022743EBE00C28204 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30346FFCE57F983C633DF77C /* Pods-ScrumPoker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -470,6 +609,7 @@
 		};
 		E242E09222743EBE00C28204 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 229C509B6A68785E5E2DC75C /* Pods-ScrumPokerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +631,7 @@
 		};
 		E242E09322743EBE00C28204 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +653,7 @@
 		};
 		E242E09522743EBE00C28204 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80E89707AECA3BF1647A5934 /* Pods-ScrumPokerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +674,7 @@
 		};
 		E242E09622743EBE00C28204 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
