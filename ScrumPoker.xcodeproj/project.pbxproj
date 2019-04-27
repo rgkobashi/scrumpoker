@@ -10,6 +10,7 @@
 		0D8497ECAC64B22DDDC05A24 /* Pods_ScrumPokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */; };
 		17367E1EDA1D59A34E5FFF82 /* Pods_ScrumPokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */; };
 		65982F83EE22C95E29C64909 /* Pods_ScrumPoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */; };
+		E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A422744D7B00A94F15 /* UIStoryboard.swift */; };
 		E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06922743EBC00C28204 /* AppDelegate.swift */; };
 		E242E06C22743EBC00C28204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06B22743EBC00C28204 /* ViewController.swift */; };
 		E242E06F22743EBC00C28204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E06D22743EBC00C28204 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		E2328899227449DF00A94F15 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = secrets.xcconfig; path = Secrets/secrets.xcconfig; sourceTree = SOURCE_ROOT; };
 		E232889A227449DF00A94F15 /* fabric.apikey */ = {isa = PBXFileReference; lastKnownFileType = text; name = fabric.apikey; path = Secrets/fabric.apikey; sourceTree = SOURCE_ROOT; };
 		E232889B227449DF00A94F15 /* fabric.buildsecret */ = {isa = PBXFileReference; lastKnownFileType = text; name = fabric.buildsecret; path = Secrets/fabric.buildsecret; sourceTree = SOURCE_ROOT; };
+		E23288A422744D7B00A94F15 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06622743EBC00C28204 /* ScrumPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrumPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06922743EBC00C28204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 				E2328899227449DF00A94F15 /* secrets.xcconfig */,
 			);
 			name = Secrets;
+			sourceTree = "<group>";
+		};
+		E23288A322744D7100A94F15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E23288A422744D7B00A94F15 /* UIStoryboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E242E05D22743EBC00C28204 = {
@@ -438,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E242E06C22743EBC00C28204 /* ViewController.swift in Sources */,
+				E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */,
 				E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
