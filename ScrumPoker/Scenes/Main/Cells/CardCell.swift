@@ -11,3 +11,5 @@ import UIKit
 class CardCell: UICollectionViewCell {
     
 }
+
+extension CardCell: NibLoadableView {}

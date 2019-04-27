@@ -17,6 +17,7 @@
 		E23288AD2274507700A94F15 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23288AC2274507700A94F15 /* CardCell.xib */; };
 		E23288AF2274508900A94F15 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288AE2274508900A94F15 /* CardCell.swift */; };
 		E23288B1227455B000A94F15 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B0227455B000A94F15 /* ReusableView.swift */; };
+		E23288B32274560000A94F15 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B22274560000A94F15 /* NibLoadableView.swift */; };
 		E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06922743EBC00C28204 /* AppDelegate.swift */; };
 		E242E06C22743EBC00C28204 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06B22743EBC00C28204 /* MainViewController.swift */; };
 		E242E06F22743EBC00C28204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E06D22743EBC00C28204 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		E23288AC2274507700A94F15 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		E23288AE2274508900A94F15 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		E23288B0227455B000A94F15 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		E23288B22274560000A94F15 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06622743EBC00C28204 /* ScrumPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrumPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06922743EBC00C28204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				E23288A722744DD400A94F15 /* StoryboardIdentifiable.swift */,
 				E23288B0227455B000A94F15 /* ReusableView.swift */,
+				E23288B22274560000A94F15 /* NibLoadableView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				E23288AF2274508900A94F15 /* CardCell.swift in Sources */,
 				E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */,
 				E242E06C22743EBC00C28204 /* MainViewController.swift in Sources */,
+				E23288B32274560000A94F15 /* NibLoadableView.swift in Sources */,
 				E23288B1227455B000A94F15 /* ReusableView.swift in Sources */,
 				E23288A122744D5300A94F15 /* MainCoordinator.swift in Sources */,
 				E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */,
