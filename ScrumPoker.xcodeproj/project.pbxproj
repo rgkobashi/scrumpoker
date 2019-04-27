@@ -29,6 +29,10 @@
 		E242E07422743EBD00C28204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E07222743EBD00C28204 /* LaunchScreen.storyboard */; };
 		E242E07F22743EBE00C28204 /* ScrumPokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E07E22743EBE00C28204 /* ScrumPokerTests.swift */; };
 		E242E08A22743EBE00C28204 /* ScrumPokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */; };
+		E2CDBE072274AD660054957B /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE062274AD660054957B /* SettingsCoordinator.swift */; };
+		E2CDBE0B2274ADD10054957B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE0A2274ADD10054957B /* SettingsViewModel.swift */; };
+		E2CDBE0D2274ADD80054957B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CDBE0C2274ADD80054957B /* Settings.storyboard */; };
+		E2CDBE0F2274ADF10054957B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE0E2274ADF10054957B /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,10 @@
 		E242E08522743EBE00C28204 /* ScrumPokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrumPokerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumPokerUITests.swift; sourceTree = "<group>"; };
 		E242E08B22743EBE00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CDBE062274AD660054957B /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		E2CDBE0A2274ADD10054957B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		E2CDBE0C2274ADD80054957B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		E2CDBE0E2274ADF10054957B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +172,7 @@
 			children = (
 				E232889E22744CFC00A94F15 /* Splash */,
 				E232889F22744D0000A94F15 /* Deck */,
+				E2CDBE052274AD520054957B /* Settings */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -281,6 +290,17 @@
 			path = ScrumPokerUITests;
 			sourceTree = "<group>";
 		};
+		E2CDBE052274AD520054957B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E2CDBE062274AD660054957B /* SettingsCoordinator.swift */,
+				E2CDBE0C2274ADD80054957B /* Settings.storyboard */,
+				E2CDBE0E2274ADF10054957B /* SettingsViewController.swift */,
+				E2CDBE0A2274ADD10054957B /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -395,6 +415,7 @@
 				E242E07122743EBD00C28204 /* Assets.xcassets in Resources */,
 				E242E06F22743EBC00C28204 /* Deck.storyboard in Resources */,
 				E23288AD2274507700A94F15 /* CardCell.xib in Resources */,
+				E2CDBE0D2274ADD80054957B /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,12 +581,15 @@
 				E242E06C22743EBC00C28204 /* DeckViewController.swift in Sources */,
 				E23288B32274560000A94F15 /* NibLoadableView.swift in Sources */,
 				E23288BC2274955500A94F15 /* Collection.swift in Sources */,
+				E2CDBE0F2274ADF10054957B /* SettingsViewController.swift in Sources */,
 				E23288B1227455B000A94F15 /* ReusableView.swift in Sources */,
 				E23288A122744D5300A94F15 /* DeckCoordinator.swift in Sources */,
 				E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */,
 				E23288A822744DD400A94F15 /* StoryboardIdentifiable.swift in Sources */,
+				E2CDBE072274AD660054957B /* SettingsCoordinator.swift in Sources */,
 				E23288AA22744E3300A94F15 /* DeckViewModel.swift in Sources */,
 				E23288B8227460F900A94F15 /* Card.swift in Sources */,
+				E2CDBE0B2274ADD10054957B /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
