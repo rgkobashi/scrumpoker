@@ -43,6 +43,7 @@
 		80E89707AECA3BF1647A5934 /* Pods-ScrumPokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23288952274493E00A94F15 /* fabric.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fabric.sh; sourceTree = "<group>"; };
 		E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06622743EBC00C28204 /* ScrumPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrumPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06922743EBC00C28204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 				E242E07022743EBD00C28204 /* Assets.xcassets */,
 				E242E07222743EBD00C28204 /* LaunchScreen.storyboard */,
 				E242E07522743EBD00C28204 /* Info.plist */,
+				E23288952274493E00A94F15 /* fabric.sh */,
 			);
 			path = ScrumPoker;
 			sourceTree = "<group>";
@@ -176,6 +178,7 @@
 				E242E06222743EBC00C28204 /* Sources */,
 				E242E06322743EBC00C28204 /* Frameworks */,
 				E242E06422743EBC00C28204 /* Resources */,
+				E23288962274495600A94F15 /* Fabric Script */,
 			);
 			buildRules = (
 			);
@@ -385,6 +388,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E23288962274495600A94F15 /* Fabric Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Fabric Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/$PROJECT_NAME/fabric.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
