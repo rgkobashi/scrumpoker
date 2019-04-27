@@ -14,9 +14,15 @@ import Crashlytics
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private var mainCoordinator: MainCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Crashlytics.self])
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        mainCoordinator = MainCoordinator(window: window!)
+        mainCoordinator.start()
+        
         return true
     }
 }
