@@ -22,7 +22,7 @@ class MainCoordinator {
     init(window: UIWindow) {
         self.window = window
         mainVC = storyboard.instantiateViewController()
-        mainVM = MainViewModel()
+        mainVM = MainViewModel(deck: Card.fibonacciDeck, layout: .default)
         mainVC.viewModel = mainVM
     }
     
