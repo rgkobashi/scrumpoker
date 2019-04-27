@@ -1,5 +1,5 @@
 //
-//  MainViewModel.swift
+//  DeckViewModel.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/04/27.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewModel {
+class DeckViewModel {
     private let deck: [Card]
     private let layout: DeckLayout
     private let screen: UIScreen

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Deck View Controller-->
         <scene sceneID="AAY-rl-QVh">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="il3-eR-H7a" customClass="MainViewController" customModule="ScrumPoker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DeckViewController" id="il3-eR-H7a" customClass="DeckViewController" customModule="ScrumPoker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HIo-Oj-vIj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -10,10 +10,10 @@
 		0D8497ECAC64B22DDDC05A24 /* Pods_ScrumPokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */; };
 		17367E1EDA1D59A34E5FFF82 /* Pods_ScrumPokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */; };
 		65982F83EE22C95E29C64909 /* Pods_ScrumPoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */; };
-		E23288A122744D5300A94F15 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A022744D5300A94F15 /* MainCoordinator.swift */; };
+		E23288A122744D5300A94F15 /* DeckCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A022744D5300A94F15 /* DeckCoordinator.swift */; };
 		E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A422744D7B00A94F15 /* UIStoryboard.swift */; };
 		E23288A822744DD400A94F15 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A722744DD400A94F15 /* StoryboardIdentifiable.swift */; };
-		E23288AA22744E3300A94F15 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A922744E3300A94F15 /* MainViewModel.swift */; };
+		E23288AA22744E3300A94F15 /* DeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A922744E3300A94F15 /* DeckViewModel.swift */; };
 		E23288AD2274507700A94F15 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23288AC2274507700A94F15 /* CardCell.xib */; };
 		E23288AF2274508900A94F15 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288AE2274508900A94F15 /* CardCell.swift */; };
 		E23288B1227455B000A94F15 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B0227455B000A94F15 /* ReusableView.swift */; };
@@ -23,8 +23,8 @@
 		E23288BA22748FAA00A94F15 /* DeckLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B922748FAA00A94F15 /* DeckLayout.swift */; };
 		E23288BC2274955500A94F15 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288BB2274955500A94F15 /* Collection.swift */; };
 		E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06922743EBC00C28204 /* AppDelegate.swift */; };
-		E242E06C22743EBC00C28204 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06B22743EBC00C28204 /* MainViewController.swift */; };
-		E242E06F22743EBC00C28204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E06D22743EBC00C28204 /* Main.storyboard */; };
+		E242E06C22743EBC00C28204 /* DeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E06B22743EBC00C28204 /* DeckViewController.swift */; };
+		E242E06F22743EBC00C28204 /* Deck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E06D22743EBC00C28204 /* Deck.storyboard */; };
 		E242E07122743EBD00C28204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E242E07022743EBD00C28204 /* Assets.xcassets */; };
 		E242E07422743EBD00C28204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E07222743EBD00C28204 /* LaunchScreen.storyboard */; };
 		E242E07F22743EBE00C28204 /* ScrumPokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E07E22743EBE00C28204 /* ScrumPokerTests.swift */; };
@@ -59,10 +59,10 @@
 		E2328899227449DF00A94F15 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = secrets.xcconfig; path = Secrets/secrets.xcconfig; sourceTree = SOURCE_ROOT; };
 		E232889A227449DF00A94F15 /* fabric.apikey */ = {isa = PBXFileReference; lastKnownFileType = text; name = fabric.apikey; path = Secrets/fabric.apikey; sourceTree = SOURCE_ROOT; };
 		E232889B227449DF00A94F15 /* fabric.buildsecret */ = {isa = PBXFileReference; lastKnownFileType = text; name = fabric.buildsecret; path = Secrets/fabric.buildsecret; sourceTree = SOURCE_ROOT; };
-		E23288A022744D5300A94F15 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		E23288A022744D5300A94F15 /* DeckCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCoordinator.swift; sourceTree = "<group>"; };
 		E23288A422744D7B00A94F15 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		E23288A722744DD400A94F15 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
-		E23288A922744E3300A94F15 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E23288A922744E3300A94F15 /* DeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModel.swift; sourceTree = "<group>"; };
 		E23288AC2274507700A94F15 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		E23288AE2274508900A94F15 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		E23288B0227455B000A94F15 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -74,8 +74,8 @@
 		E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPoker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06622743EBC00C28204 /* ScrumPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrumPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E06922743EBC00C28204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E242E06B22743EBC00C28204 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		E242E06E22743EBC00C28204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E242E06B22743EBC00C28204 /* DeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewController.swift; sourceTree = "<group>"; };
+		E242E06E22743EBC00C28204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Deck.storyboard; sourceTree = "<group>"; };
 		E242E07022743EBD00C28204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E242E07322743EBD00C28204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E242E07522743EBD00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				E232889E22744CFC00A94F15 /* Splash */,
-				E232889F22744D0000A94F15 /* Main */,
+				E232889F22744D0000A94F15 /* Deck */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -176,16 +176,16 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		E232889F22744D0000A94F15 /* Main */ = {
+		E232889F22744D0000A94F15 /* Deck */ = {
 			isa = PBXGroup;
 			children = (
 				E23288AB2274505C00A94F15 /* Cells */,
-				E23288A022744D5300A94F15 /* MainCoordinator.swift */,
-				E242E06D22743EBC00C28204 /* Main.storyboard */,
-				E242E06B22743EBC00C28204 /* MainViewController.swift */,
-				E23288A922744E3300A94F15 /* MainViewModel.swift */,
+				E23288A022744D5300A94F15 /* DeckCoordinator.swift */,
+				E242E06D22743EBC00C28204 /* Deck.storyboard */,
+				E242E06B22743EBC00C28204 /* DeckViewController.swift */,
+				E23288A922744E3300A94F15 /* DeckViewModel.swift */,
 			);
-			path = Main;
+			path = Deck;
 			sourceTree = "<group>";
 		};
 		E23288A322744D7100A94F15 /* Extensions */ = {
@@ -392,7 +392,7 @@
 			files = (
 				E242E07422743EBD00C28204 /* LaunchScreen.storyboard in Resources */,
 				E242E07122743EBD00C28204 /* Assets.xcassets in Resources */,
-				E242E06F22743EBC00C28204 /* Main.storyboard in Resources */,
+				E242E06F22743EBC00C28204 /* Deck.storyboard in Resources */,
 				E23288AD2274507700A94F15 /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,14 +534,14 @@
 				E23288B5227457F300A94F15 /* UICollectionView.swift in Sources */,
 				E23288AF2274508900A94F15 /* CardCell.swift in Sources */,
 				E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */,
-				E242E06C22743EBC00C28204 /* MainViewController.swift in Sources */,
+				E242E06C22743EBC00C28204 /* DeckViewController.swift in Sources */,
 				E23288B32274560000A94F15 /* NibLoadableView.swift in Sources */,
 				E23288BC2274955500A94F15 /* Collection.swift in Sources */,
 				E23288B1227455B000A94F15 /* ReusableView.swift in Sources */,
-				E23288A122744D5300A94F15 /* MainCoordinator.swift in Sources */,
+				E23288A122744D5300A94F15 /* DeckCoordinator.swift in Sources */,
 				E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */,
 				E23288A822744DD400A94F15 /* StoryboardIdentifiable.swift in Sources */,
-				E23288AA22744E3300A94F15 /* MainViewModel.swift in Sources */,
+				E23288AA22744E3300A94F15 /* DeckViewModel.swift in Sources */,
 				E23288B8227460F900A94F15 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,12 +578,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E242E06D22743EBC00C28204 /* Main.storyboard */ = {
+		E242E06D22743EBC00C28204 /* Deck.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E242E06E22743EBC00C28204 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Deck.storyboard;
 			sourceTree = "<group>";
 		};
 		E242E07222743EBD00C28204 /* LaunchScreen.storyboard */ = {

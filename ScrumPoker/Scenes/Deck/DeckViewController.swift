@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  DeckViewController.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/04/27.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class DeckViewController: UIViewController {
     
     @IBOutlet weak var holderView: UIView!
     
-    var viewModel: MainViewModel!
+    var viewModel: DeckViewModel!
     
     private lazy var collectionView: UICollectionView = {
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -62,7 +62,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UICollectionViewDataSource {
+extension DeckViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.deckSize
     }
@@ -74,7 +74,7 @@ extension MainViewController: UICollectionViewDataSource {
     }
 }
 
-extension MainViewController: UICollectionViewDelegateFlowLayout {
+extension DeckViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return viewModel.cardSize(for: holderView)
     }

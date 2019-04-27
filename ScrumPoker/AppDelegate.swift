@@ -14,14 +14,14 @@ import Crashlytics
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    private var mainCoordinator: MainCoordinator!
+    private var deckCoordinator: DeckCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Crashlytics.self])
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        mainCoordinator = MainCoordinator(window: window!)
-        mainCoordinator.start()
+        deckCoordinator = DeckCoordinator(window: window!)
+        deckCoordinator.start()
         
         return true
     }

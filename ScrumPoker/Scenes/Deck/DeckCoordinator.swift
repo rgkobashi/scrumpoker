@@ -1,5 +1,5 @@
 //
-//  MainCoordinator.swift
+//  DeckCoordinator.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/04/27.
@@ -8,23 +8,23 @@
 
 import UIKit
 
-class MainCoordinator {
+class DeckCoordinator {
     
     private let window: UIWindow!
     private lazy var rootViewController: UIViewController = {
-        let nc = UINavigationController(rootViewController: mainVC)
+        let nc = UINavigationController(rootViewController: deckVC)
         return nc
     }()
     
-    private let storyboard = UIStoryboard(name: "Main")
-    private let mainVC: MainViewController
-    private let mainVM: MainViewModel
+    private let storyboard = UIStoryboard(name: "Deck")
+    private let deckVC: DeckViewController
+    private let deckVM: DeckViewModel
     
     init(window: UIWindow) {
         self.window = window
-        mainVC = storyboard.instantiateViewController()
-        mainVM = MainViewModel(deck: Card.fibonacciDeck, layout: .default)
-        mainVC.viewModel = mainVM
+        deckVC = storyboard.instantiateViewController()
+        deckVM = DeckViewModel(deck: Card.fibonacciDeck, layout: .default)
+        deckVC.viewModel = deckVM
     }
     
     func start() {
