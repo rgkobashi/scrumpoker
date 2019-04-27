@@ -9,5 +9,21 @@
 import Foundation
 
 class MainViewModel {
+    private var cards: [Card]
     
+    var totalNumberOfCards: Int {
+        return cards.count
+    }
+    
+    init(cards: [Card]) {
+        self.cards = cards
+    }
+    
+    func updateCards(_ cards: [Card]) {
+        self.cards = cards
+    }
+    
+    func card(at index: Int) -> Card {
+        return cards[index]
+    }
 }
