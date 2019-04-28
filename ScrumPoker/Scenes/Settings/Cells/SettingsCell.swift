@@ -9,6 +9,12 @@
 import UIKit
 
 class SettingsCell: UITableViewCell {
+    
+    var viewModel: RowViewModel! {
+        didSet {
+            self.textLabel?.text = viewModel.text
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,3 +28,5 @@ class SettingsCell: UITableViewCell {
     }
 
 }
+
+extension SettingsCell: NibLoadableView {}

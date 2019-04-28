@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+            tableView.register(SettingsCell.self)
         }
     }
     
@@ -34,9 +34,8 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        let rvm = viewModel.rowViewModel(for: indexPath)
-        cell.textLabel?.text = rvm.text
+        let cell: SettingsCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.viewModel = viewModel.rowViewModel(for: indexPath)
         return cell
     }
 }
