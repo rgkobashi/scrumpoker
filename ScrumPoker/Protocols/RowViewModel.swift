@@ -10,8 +10,8 @@ import Foundation
 
 enum RowType {
     case none
-    case checkmark
-    case `switch`
+    case checkmark(Bool)
+    case `switch`(Bool)
 }
 
 protocol RowViewModel {
