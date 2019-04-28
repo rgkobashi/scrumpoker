@@ -34,6 +34,7 @@
 		E2CDBE0D2274ADD80054957B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CDBE0C2274ADD80054957B /* Settings.storyboard */; };
 		E2CDBE0F2274ADF10054957B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE0E2274ADF10054957B /* SettingsViewController.swift */; };
 		E2CDBE122275ED6E0054957B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE112275ED6E0054957B /* Configuration.swift */; };
+		E2CDBE142275FEAC0054957B /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE132275FEAC0054957B /* RowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		E2CDBE0C2274ADD80054957B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		E2CDBE0E2274ADF10054957B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E2CDBE112275ED6E0054957B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		E2CDBE132275FEAC0054957B /* RowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewModel.swift; sourceTree = "<group>"; };
 		ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +217,7 @@
 				E23288A722744DD400A94F15 /* StoryboardIdentifiable.swift */,
 				E23288B0227455B000A94F15 /* ReusableView.swift */,
 				E23288B22274560000A94F15 /* NibLoadableView.swift */,
+				E2CDBE132275FEAC0054957B /* RowViewModel.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				E2CDBE0F2274ADF10054957B /* SettingsViewController.swift in Sources */,
 				E23288B1227455B000A94F15 /* ReusableView.swift in Sources */,
 				E23288A122744D5300A94F15 /* DeckCoordinator.swift in Sources */,
+				E2CDBE142275FEAC0054957B /* RowViewModel.swift in Sources */,
 				E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */,
 				E23288A822744DD400A94F15 /* StoryboardIdentifiable.swift in Sources */,
 				E2CDBE072274AD660054957B /* SettingsCoordinator.swift in Sources */,
