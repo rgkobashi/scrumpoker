@@ -36,7 +36,7 @@ class SettingsCoordinator {
                                                  rows: [SettingsRowViewModel(text: "Fibonnaci", type: .checkmark),
                                                         SettingsRowViewModel(text: "Standard", type: .checkmark),
                                                         SettingsRowViewModel(text: "T-shirt", type: .checkmark)]),
-                        SettingsSectionViewModel(title: "",
+                        SettingsSectionViewModel(title: nil,
                                                  rows: [SettingsRowViewModel(text: "Sound", type: .switch),
                                                         SettingsRowViewModel(text: "Shake to reveal", type: .switch)])]
         settingsVC = storyboard.instantiateViewController()
