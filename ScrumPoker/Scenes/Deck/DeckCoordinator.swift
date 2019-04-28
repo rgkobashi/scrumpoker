@@ -13,6 +13,9 @@ class DeckCoordinator {
         return navigationController
     }
     
+    private let window: UIWindow
+    private let configuration: Configuration
+    
     // MARK: Coordinators
     private lazy var settingsCoordinator: SettingsCoordinator = {
         let c = SettingsCoordinator()
@@ -21,8 +24,6 @@ class DeckCoordinator {
     }()
     
     // MARK: Stack
-    private let window: UIWindow
-    private let configuration: Configuration
     private lazy var navigationController: UINavigationController = {
         let nc = UINavigationController(rootViewController: deckVC)
         return nc

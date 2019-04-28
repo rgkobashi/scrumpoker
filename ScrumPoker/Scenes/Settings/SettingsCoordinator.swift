@@ -18,19 +18,29 @@ class SettingsCoordinator {
     }
     weak var delegate: SettingsCoordinatorDelegate?
     
+    private let sideMenuManager: SideMenuManager
+    
     // MARK: Stack
     private lazy var sideMenuNavigationController: UISideMenuNavigationController = {
         let nc = UISideMenuNavigationController(rootViewController: settingsVC)
-        SideMenuManager.default.menuRightNavigationController = nc
+        sideMenuManager.menuRightNavigationController = nc
         return nc
     }()
     private let storyboard = UIStoryboard(name: "Settings")
     private let settingsVC: SettingsViewController
     private let settingsVM: SettingsViewModel
     
-    init() {
+    init(sideMenuManager: SideMenuManager = SideMenuManager.default) {
+        self.sideMenuManager = sideMenuManager
+        let settings = [SettingsSectionViewModel(title: "Deck",
+                                                 rows: [SettingsRowViewModel(text: "Fibonnaci", type: .checkmark),
+                                                        SettingsRowViewModel(text: "Standard", type: .checkmark),
+                                                        SettingsRowViewModel(text: "T-shirt", type: .checkmark)]),
+                        SettingsSectionViewModel(title: "",
+                                                 rows: [SettingsRowViewModel(text: "Sound", type: .switch),
+                                                        SettingsRowViewModel(text: "Shake to reveal", type: .switch)])]
         settingsVC = storyboard.instantiateViewController()
-        settingsVM = SettingsViewModel()
+        settingsVM = SettingsViewModel(settings: settings)
         settingsVC.viewModel = settingsVM
     }
 }
