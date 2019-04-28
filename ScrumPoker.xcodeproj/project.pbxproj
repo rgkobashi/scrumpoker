@@ -35,6 +35,8 @@
 		E2CDBE0F2274ADF10054957B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE0E2274ADF10054957B /* SettingsViewController.swift */; };
 		E2CDBE122275ED6E0054957B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE112275ED6E0054957B /* Configuration.swift */; };
 		E2CDBE142275FEAC0054957B /* RowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE132275FEAC0054957B /* RowViewModel.swift */; };
+		E2CDBE1722760BFD0054957B /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CDBE1622760BFD0054957B /* SettingsCell.xib */; };
+		E2CDBE1922760C0A0054957B /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE1822760C0A0054957B /* SettingsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		E2CDBE0E2274ADF10054957B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E2CDBE112275ED6E0054957B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		E2CDBE132275FEAC0054957B /* RowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowViewModel.swift; sourceTree = "<group>"; };
+		E2CDBE1622760BFD0054957B /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		E2CDBE1822760C0A0054957B /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -299,6 +303,7 @@
 		E2CDBE052274AD520054957B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				E2CDBE1522760BC20054957B /* Cells */,
 				E2CDBE062274AD660054957B /* SettingsCoordinator.swift */,
 				E2CDBE0C2274ADD80054957B /* Settings.storyboard */,
 				E2CDBE0E2274ADF10054957B /* SettingsViewController.swift */,
@@ -313,6 +318,15 @@
 				E2CDBE112275ED6E0054957B /* Configuration.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E2CDBE1522760BC20054957B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E2CDBE1622760BFD0054957B /* SettingsCell.xib */,
+				E2CDBE1822760C0A0054957B /* SettingsCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +439,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2CDBE1722760BFD0054957B /* SettingsCell.xib in Resources */,
 				E242E07422743EBD00C28204 /* LaunchScreen.storyboard in Resources */,
 				E242E07122743EBD00C28204 /* Assets.xcassets in Resources */,
 				E242E06F22743EBC00C28204 /* Deck.storyboard in Resources */,
@@ -604,6 +619,7 @@
 				E23288A822744DD400A94F15 /* StoryboardIdentifiable.swift in Sources */,
 				E2CDBE072274AD660054957B /* SettingsCoordinator.swift in Sources */,
 				E23288AA22744E3300A94F15 /* DeckViewModel.swift in Sources */,
+				E2CDBE1922760C0A0054957B /* SettingsCell.swift in Sources */,
 				E23288B8227460F900A94F15 /* Card.swift in Sources */,
 				E2CDBE0B2274ADD10054957B /* SettingsViewModel.swift in Sources */,
 			);
