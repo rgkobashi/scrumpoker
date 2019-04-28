@@ -15,7 +15,6 @@ protocol DeckViewModelDelegate: class {
 class DeckViewModel {
     private let deck: [Card]
     private let layout: DeckLayout
-    private let screen: UIScreen
     
     weak var delegate: DeckViewModelDelegate?
     
@@ -31,10 +30,9 @@ class DeckViewModel {
         return 1 - layout.verticalDeckPadding
     }
     
-    init(deck: [Card], layout: DeckLayout, screen: UIScreen = UIScreen.main) {
+    init(deck: [Card], layout: DeckLayout) {
         self.deck = deck
         self.layout = layout
-        self.screen = screen
     }
     
     func card(at index: Int) -> Card {

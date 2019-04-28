@@ -21,7 +21,8 @@ class DeckCoordinator {
     }()
     
     // MARK: Stack
-    private let window: UIWindow!
+    private let window: UIWindow
+    private let configuration: Configuration
     private lazy var navigationController: UINavigationController = {
         let nc = UINavigationController(rootViewController: deckVC)
         return nc
@@ -30,8 +31,9 @@ class DeckCoordinator {
     private let deckVC: DeckViewController
     private let deckVM: DeckViewModel
     
-    init(window: UIWindow) {
+    init(window: UIWindow, configuration: Configuration) {
         self.window = window
+        self.configuration = configuration
         deckVC = storyboard.instantiateViewController()
         deckVM = DeckViewModel(deck: Card.fibonacciDeck, layout: .default)
         deckVM.delegate = self
