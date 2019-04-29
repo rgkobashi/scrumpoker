@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Card {
+struct Card: Equatable {
     let text: String
 }

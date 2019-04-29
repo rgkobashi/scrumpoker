@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Deck {
+struct Deck: Equatable {
     let name: String
     let cards: [Card]
 }
