@@ -16,13 +16,11 @@ class SettingsCell: UITableViewCell {
             self.selectionStyle = .none
             switch rowType {
             case .checkmark:
-                break
-            case let .switch(isSelected):
-                let s = UISwitch()
-                s.isOn = isSelected
-                self.accessoryView = s
+                self.accessoryView = nil
+            case .switch:
+                self.accessoryView = switchControl
             case .unspecified:
-                break
+                self.accessoryView = nil
             }
         }
     }
@@ -30,6 +28,12 @@ class SettingsCell: UITableViewCell {
     private var rowType: TableRowType {
         return viewModel.type
     }
+    
+    private lazy var switchControl: UISwitch = {
+        let s = UISwitch()
+        s.addTarget(self, action: #selector(switchValueDidChange(_:)), for: .valueChanged)
+        return s
+    }()
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -37,10 +41,14 @@ class SettingsCell: UITableViewCell {
         case .checkmark:
             self.accessoryType = selected ? .checkmark : .none
         case .switch:
-            return
+            switchControl.isOn = selected
         case .unspecified:
-            return
+            break
         }
+    }
+    
+    @objc private func switchValueDidChange(_ sender: UISwitch) {
+        self.isSelected = sender.isOn
     }
 }
 
