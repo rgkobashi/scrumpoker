@@ -11,17 +11,16 @@ import Foundation
 enum TableSectionSelectionStyle {
     case single
     case multiple
-    case disable
+    case none
 }
 
 enum TableRowType {
-    case none
     case checkmark(Bool)
     case `switch`(Bool)
+    case action(() -> Void)
 }
 
 protocol TableRowViewModel {
     var text: String { get }
     var type: TableRowType { get }
-    var isAutoDeselectable: Bool { get }
 }
