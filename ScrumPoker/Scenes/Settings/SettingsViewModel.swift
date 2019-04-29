@@ -23,6 +23,7 @@ struct SettingsSectionViewModel {
 struct SettingsRowViewModel: RowViewModel {
     let text: String
     let type: RowType
+    let isAutoDeselectable: Bool
 }
 
 class SettingsViewModel {

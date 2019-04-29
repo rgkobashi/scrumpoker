@@ -17,4 +17,5 @@ enum RowType {
 protocol RowViewModel {
     var text: String { get }
     var type: RowType { get }
+    var isAutoDeselectable: Bool { get }
 }
