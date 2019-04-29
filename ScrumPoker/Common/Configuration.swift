@@ -12,6 +12,7 @@ import SideMenu
 
 private enum UserDefaultsKey: String {
     case selectedDeckName
+    case shakeToReveal
 }
 
 class Configuration {
@@ -60,6 +61,16 @@ class Configuration {
                 // return custom deck from DB
                 fatalError("Saved deck does not exists")
             }
+        }
+    }
+    
+    // TODO avoid reading userDefaults everytime selectedDeck is called
+    var shakeToReveal: Bool {
+        set {
+            userDefaults.set(newValue, forKey: UserDefaultsKey.shakeToReveal.rawValue)
+        }
+        get {
+            return userDefaults.bool(forKey: UserDefaultsKey.shakeToReveal.rawValue)
         }
     }
 }
