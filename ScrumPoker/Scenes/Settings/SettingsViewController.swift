@@ -37,7 +37,18 @@ extension SettingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SettingsCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.viewModel = viewModel.rowViewModel(for: indexPath)
+        let vm = viewModel.rowViewModel(for: indexPath)
+        cell.viewModel = vm
+        switch vm.type {
+        case .checkmark(let isSelected), .switch(let isSelected):
+            if isSelected {
+                tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+            } else {
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
+        case .unspecified:
+            break
+        }
         return cell
     }
 }
