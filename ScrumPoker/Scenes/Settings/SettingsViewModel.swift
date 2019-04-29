@@ -38,6 +38,18 @@ class SettingsViewModel {
         self.configuration = configuration
     }
     
+    private func selectDeck(name: String) {
+        switch name {
+        case Deck.fibonacci.name:
+            configuration.selectedDeck = .fibonacci
+        case Deck.standar.name:
+            configuration.selectedDeck = .standar
+        default:
+            // assign custom deck from DB
+            fatalError("Selected deck does not exists")
+        }
+    }
+    
     // MARK: Data source
     
     var numberOfSections: Int {
