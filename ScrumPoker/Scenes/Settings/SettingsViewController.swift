@@ -14,6 +14,7 @@ class SettingsViewController: UIViewController {
         didSet {
             tableView.dataSource = self
             tableView.delegate = self
+            tableView.allowsMultipleSelection = true
             tableView.register(SettingsCell.self)
         }
     }
