@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsCell: UITableViewCell {
     
-    var viewModel: RowViewModel! {
+    var viewModel: TableRowViewModel! {
         didSet {
             self.textLabel?.text = viewModel.text
         }

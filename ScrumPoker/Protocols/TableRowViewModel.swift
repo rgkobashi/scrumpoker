@@ -1,5 +1,5 @@
 //
-//  RowViewModel.swift
+//  TableRowViewModel.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/04/29.
@@ -8,14 +8,20 @@
 
 import Foundation
 
-enum RowType {
+enum TableSectionSelectionStyle {
+    case single
+    case multiple
+    case disable
+}
+
+enum TableRowType {
     case none
     case checkmark(Bool)
     case `switch`(Bool)
 }
 
-protocol RowViewModel {
+protocol TableRowViewModel {
     var text: String { get }
-    var type: RowType { get }
+    var type: TableRowType { get }
     var isAutoDeselectable: Bool { get }
 }

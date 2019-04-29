@@ -8,21 +8,15 @@
 
 import Foundation
 
-enum TableSectionSelectionStyle {
-    case single
-    case multiple
-    case disable
-}
-
 struct SettingsSectionViewModel {
     let title: String?
     let selectionStyle: TableSectionSelectionStyle
-    let rows: [RowViewModel]
+    let rows: [TableRowViewModel]
 }
 
-struct SettingsRowViewModel: RowViewModel {
+struct SettingsRowViewModel: TableRowViewModel {
     let text: String
-    let type: RowType
+    let type: TableRowType
     let isAutoDeselectable: Bool
 }
 
@@ -54,7 +48,7 @@ class SettingsViewModel {
         return settings[section].title
     }
     
-    func rowViewModel(for indexPath: IndexPath) -> RowViewModel {
+    func rowViewModel(for indexPath: IndexPath) -> TableRowViewModel {
         return settings[indexPath.section].rows[indexPath.row]
     }
     
