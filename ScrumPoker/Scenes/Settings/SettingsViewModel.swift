@@ -27,6 +27,14 @@ struct SettingsRowViewModel: RowViewModel {
 class SettingsViewModel {
     
     private let settings: [SettingsSectionViewModel]
+    private lazy var singleSelectionSections: [Int] = {
+        return settings
+            .enumerated()
+            .map { (index, setting) -> Int? in
+                setting.selectionStyle == .single ? index : nil
+            }
+            .compactMap { $0 }
+    }()
     
     init(settings: [SettingsSectionViewModel]) {
         self.settings = settings
