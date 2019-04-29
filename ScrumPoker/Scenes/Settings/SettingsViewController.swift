@@ -45,4 +45,17 @@ extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return viewModel.shouldHighlightRow(at: indexPath)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedIndexPaths = tableView.indexPathsForSelectedRows else {
+            return
+        }
+        guard viewModel.shouldDeselectWhenSelecting(at: indexPath) else {
+            return
+        }
+        let indexPathsToDeselect = viewModel.indexPathsToDeselectWhenSelecting(at: indexPath, selectedIndexPaths: selectedIndexPaths)
+        indexPathsToDeselect.forEach {
+            tableView.deselectRow(at: $0, animated: true)
+        }
+    }
 }

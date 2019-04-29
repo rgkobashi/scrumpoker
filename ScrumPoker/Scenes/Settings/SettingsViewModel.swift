@@ -67,4 +67,14 @@ class SettingsViewModel {
             return true
         }
     }
+    
+    func shouldDeselectWhenSelecting(at indexPath: IndexPath) -> Bool {
+        return singleSelectionSections.contains(indexPath.section)
+    }
+    
+    func indexPathsToDeselectWhenSelecting(at lastSelectedIndexPath: IndexPath, selectedIndexPaths: [IndexPath]) -> [IndexPath] {
+        return selectedIndexPaths.filter {
+            $0.section == lastSelectedIndexPath.section && $0.row != lastSelectedIndexPath.row
+        }
+    }
 }
