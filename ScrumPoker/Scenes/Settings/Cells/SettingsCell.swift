@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsCell: UITableViewCell {
     
-    var viewModel: SettingsRowViewModel! {
+    var viewModel: TableRowViewModel! {
         didSet {
             self.textLabel?.text = viewModel.text
             self.selectionStyle = .none
@@ -21,7 +21,7 @@ class SettingsCell: UITableViewCell {
                 let s = UISwitch()
                 s.isOn = isSelected
                 self.accessoryView = s
-            case .none:
+            case .action:
                 break
             }
         }
@@ -38,7 +38,7 @@ class SettingsCell: UITableViewCell {
             self.accessoryType = selected ? .checkmark : .none
         case .switch:
             return
-        case .none:
+        case .action:
             return
         }
     }

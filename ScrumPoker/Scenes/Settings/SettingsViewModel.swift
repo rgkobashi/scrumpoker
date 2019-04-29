@@ -11,14 +11,28 @@ import Foundation
 struct SettingsSectionViewModel {
     let title: String?
     let selectionStyle: TableSectionSelectionStyle
-    let rows: [SettingsRowViewModel]
+    let rows: [TableRowViewModel]
 }
 
-struct SettingsRowViewModel: TableRowViewModel {
+struct DeckRowViewModel: TableRowViewModel {
+    let deck: Deck
+    let type: TableRowType
+    var text: String {
+        return deck.name
+    }
+}
+
+struct PreferenceRowViewModel: TableRowViewModel {
     let text: String
     let type: TableRowType
-    let isAutoDeselectable: Bool
 }
+
+struct RegularRowViewModel: TableRowViewModel {
+    let text: String
+    let type: TableRowType
+}
+
+// MARK: -
 
 class SettingsViewModel {
     
@@ -64,7 +78,7 @@ class SettingsViewModel {
         return settings[section].title
     }
     
-    func rowViewModel(for indexPath: IndexPath) -> SettingsRowViewModel {
+    func rowViewModel(for indexPath: IndexPath) -> TableRowViewModel {
         return settings[indexPath.section].rows[indexPath.row]
     }
     
