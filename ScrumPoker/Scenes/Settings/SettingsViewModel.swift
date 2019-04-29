@@ -36,6 +36,8 @@ class SettingsViewModel {
         self.settings = settings
     }
     
+    // MARK: Data source
+    
     var numberOfSections: Int {
         return settings.count
     }
@@ -51,6 +53,8 @@ class SettingsViewModel {
     func rowViewModel(for indexPath: IndexPath) -> SettingsRowViewModel {
         return settings[indexPath.section].rows[indexPath.row]
     }
+    
+    // MARK: Delegate
     
     func shouldHighlightRow(at indexPath: IndexPath) -> Bool {
         return settings[indexPath.section].selectionStyle != .disable

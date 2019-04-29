@@ -18,9 +18,22 @@ class DeckViewModel {
     
     weak var delegate: DeckViewModelDelegate?
     
+    init(deck: Deck, layout: DeckLayout) {
+        self.deck = deck
+        self.layout = layout
+    }
+    
+    // MARK: Data source
+    
     var deckSize: Int {
         return deck.cards.count
     }
+    
+    func card(at index: Int) -> Card {
+        return deck.cards[index]
+    }
+    
+    // MARK: Layout
     
     var deckWidthMultiplier: CGFloat {
         return 1 - layout.horizontalDeckPadding
@@ -28,15 +41,6 @@ class DeckViewModel {
     
     var deckHeightMultiplier: CGFloat {
         return 1 - layout.verticalDeckPadding
-    }
-    
-    init(deck: Deck, layout: DeckLayout) {
-        self.deck = deck
-        self.layout = layout
-    }
-    
-    func card(at index: Int) -> Card {
-        return deck.cards[index]
     }
     
     func cardSize(for parentView: UIView) -> CGSize {
@@ -52,6 +56,8 @@ class DeckViewModel {
     func verticalCardSpacing(for parentView: UIView) -> CGFloat {
         return parentView.frame.height * layout.verticalCardSpacing
     }
+    
+    // MARK: Navigation
     
     func showSettings(from viewController: DeckViewController) {
         delegate?.didTapShowSettings(from: viewController)
