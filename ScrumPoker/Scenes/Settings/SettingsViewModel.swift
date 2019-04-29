@@ -55,18 +55,6 @@ class SettingsViewModel {
         self.configuration = configuration
     }
     
-    private func selectDeck(name: String) {
-        switch name {
-        case Deck.fibonacci.name:
-            configuration.selectedDeck = .fibonacci
-        case Deck.standar.name:
-            configuration.selectedDeck = .standar
-        default:
-            // assign custom deck from DB
-            fatalError("Selected deck does not exists")
-        }
-    }
-    
     // MARK: Data source
     
     var numberOfSections: Int {
@@ -88,14 +76,45 @@ class SettingsViewModel {
     // MARK: Delegate
     
     func shouldHighlightRow(at indexPath: IndexPath) -> Bool {
-        return settings[indexPath.section].selectionStyle != .disable
+        let vm = settings[indexPath.section].rows[indexPath.row]
+        switch vm {
+        case is DeckRowViewModel:
+            return configuration.selectedDeck.name != vm.text
+        case is PreferenceRowViewModel:
+            return false
+        case is ActionRowViewModel:
+            return true
+        default:
+            fatalError("Selected non existent row")
+        }
     }
     
     func didSelectRow(at indexPath: IndexPath) {
+        let vm = settings[indexPath.section].rows[indexPath.row]
+        switch vm {
+        case let dvm as DeckRowViewModel:
+            configuration.selectedDeck = dvm.deck
+        case is PreferenceRowViewModel:
+            break
+        case let rvm as ActionRowViewModel:
+            rvm.action()
+        default:
+            fatalError("Selected non existent row")
+        }
     }
     
     func shouldDeselectItselfWhenSelecting(at indexPath: IndexPath) -> Bool {
-        return settings[indexPath.section].rows[indexPath.row].isAutoDeselectable
+        let vm = settings[indexPath.section].rows[indexPath.row]
+        switch vm {
+        case is DeckRowViewModel:
+            return false
+        case is PreferenceRowViewModel:
+            return false
+        case is ActionRowViewModel:
+            return true
+        default:
+            fatalError("Selected non existent row")
+        }
     }
     
     func shouldDeselectIndexPathsWhenSelecting(at indexPath: IndexPath) -> Bool {
