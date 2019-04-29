@@ -11,6 +11,7 @@ import Foundation
 enum TableSectionSelectionStyle {
     case single
     case multiple
+    case disable
 }
 
 struct SettingsSectionViewModel {
@@ -57,15 +58,7 @@ class SettingsViewModel {
     }
     
     func shouldHighlightRow(at indexPath: IndexPath) -> Bool {
-        let row = settings[indexPath.section].rows[indexPath.row]
-        switch row.type {
-        case .checkmark:
-            return true
-        case .switch:
-            return false
-        case .none:
-            return true
-        }
+        return settings[indexPath.section].selectionStyle != .disable
     }
     
     func shouldDeselectWhenSelecting(at indexPath: IndexPath) -> Bool {
