@@ -26,8 +26,21 @@ struct DeckRowViewModel: TableRowViewModel {
 }
 
 struct PreferenceRowViewModel: TableRowViewModel {
-    let text: String
-    let type: TableRowType
+    let preference: Preference<Bool>
+    let configuration: Configuration
+    var isSelected: Bool {
+        return configuration.getValue(for: preference)
+    }
+    var text: String {
+        return preference.name
+    }
+    var type: TableRowType {
+        return .switch(isSelected)
+    }
+    
+    func toggle() {
+        configuration.setValue(!isSelected, for: preference)
+    }
 }
 
 struct ActionRowViewModel: TableRowViewModel {
