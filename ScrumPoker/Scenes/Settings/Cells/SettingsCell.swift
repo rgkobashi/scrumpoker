@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsCell: UITableViewCell {
     
-    var viewModel: TableRowViewModel! {
+    var viewModel: SettingsRowViewModel! {
         didSet {
             self.textLabel?.text = viewModel.text
             self.selectionStyle = .none

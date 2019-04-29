@@ -50,7 +50,9 @@ extension SettingsViewController: UITableViewDelegate {
         if viewModel.shouldDeselectIndexPathsWhenSelecting(at: indexPath), let selectedIndexPaths = tableView.indexPathsForSelectedRows {
             viewModel
                 .indexPathsToDeselectWhenSelecting(at: indexPath, selectedIndexPaths: selectedIndexPaths)
-                .forEach { tableView.deselectRow(at: $0, animated: true) }
+                .forEach {
+                    tableView.deselectRow(at: $0, animated: true)
+                }
         } else if viewModel.shouldDeselectItselfWhenSelecting(at: indexPath) {
             tableView.deselectRow(at: indexPath, animated: true)
         }

@@ -11,7 +11,7 @@ import Foundation
 struct SettingsSectionViewModel {
     let title: String?
     let selectionStyle: TableSectionSelectionStyle
-    let rows: [TableRowViewModel]
+    let rows: [SettingsRowViewModel]
 }
 
 struct SettingsRowViewModel: TableRowViewModel {
@@ -48,7 +48,7 @@ class SettingsViewModel {
         return settings[section].title
     }
     
-    func rowViewModel(for indexPath: IndexPath) -> TableRowViewModel {
+    func rowViewModel(for indexPath: IndexPath) -> SettingsRowViewModel {
         return settings[indexPath.section].rows[indexPath.row]
     }
     
