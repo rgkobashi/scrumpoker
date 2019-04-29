@@ -8,8 +8,14 @@
 
 import Foundation
 
+enum TableSectionSelectionStyle {
+    case single
+    case multiple
+}
+
 struct SettingsSectionViewModel {
     let title: String?
+    let selectionStyle: TableSectionSelectionStyle
     let rows: [RowViewModel]
 }
 
