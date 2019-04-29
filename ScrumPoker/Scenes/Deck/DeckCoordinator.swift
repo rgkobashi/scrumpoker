@@ -36,7 +36,7 @@ class DeckCoordinator {
         self.window = window
         self.configuration = configuration
         deckVC = storyboard.instantiateViewController()
-        deckVM = DeckViewModel(deck: .fibonacci, layout: .default)
+        deckVM = DeckViewModel(deck: configuration.selectedDeck, layout: .default)
         deckVM.delegate = self
         deckVC.viewModel = deckVM
     }
