@@ -16,9 +16,12 @@ struct SettingsSectionViewModel {
 
 struct DeckRowViewModel: TableRowViewModel {
     let deck: Deck
-    let type: TableRowType
+    let configuration: Configuration
     var text: String {
         return deck.name
+    }
+    var type: TableRowType {
+        return .checkmark(configuration.selectedDeck == deck)
     }
 }
 
