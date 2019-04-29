@@ -74,6 +74,8 @@ class SettingsViewModel {
         return settings[indexPath.section].selectionStyle != .disable
     }
     
+    func didSelectRow(at indexPath: IndexPath) {
+    }
     
     func shouldDeselectItselfWhenSelecting(at indexPath: IndexPath) -> Bool {
         return settings[indexPath.section].rows[indexPath.row].isAutoDeselectable

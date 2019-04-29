@@ -48,6 +48,7 @@ extension SettingsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRow(at: indexPath)
         if viewModel.shouldDeselectIndexPathsWhenSelecting(at: indexPath), let selectedIndexPaths = tableView.indexPathsForSelectedRows {
             viewModel
                 .indexPathsToDeselectWhenSelecting(at: indexPath, selectedIndexPaths: selectedIndexPaths)
