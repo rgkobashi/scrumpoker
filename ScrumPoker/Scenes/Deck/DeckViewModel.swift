@@ -13,13 +13,13 @@ protocol DeckViewModelDelegate: class {
 }
 
 class DeckViewModel {
-    private let deck: [Card]
+    private let deck: Deck
     private let layout: DeckLayout
     
     weak var delegate: DeckViewModelDelegate?
     
     var deckSize: Int {
-        return deck.count
+        return deck.cards.count
     }
     
     var deckWidthMultiplier: CGFloat {
@@ -30,13 +30,13 @@ class DeckViewModel {
         return 1 - layout.verticalDeckPadding
     }
     
-    init(deck: [Card], layout: DeckLayout) {
+    init(deck: Deck, layout: DeckLayout) {
         self.deck = deck
         self.layout = layout
     }
     
     func card(at index: Int) -> Card {
-        return deck[index]
+        return deck.cards[index]
     }
     
     func cardSize(for parentView: UIView) -> CGSize {
