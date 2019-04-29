@@ -55,4 +55,16 @@ class SettingsViewModel {
     func rowViewModel(for indexPath: IndexPath) -> RowViewModel {
         return settings[indexPath.section].rows[indexPath.row]
     }
+    
+    func shouldHighlightRow(at indexPath: IndexPath) -> Bool {
+        let row = settings[indexPath.section].rows[indexPath.row]
+        switch row.type {
+        case .checkmark:
+            return true
+        case .switch:
+            return false
+        case .none:
+            return true
+        }
+    }
 }

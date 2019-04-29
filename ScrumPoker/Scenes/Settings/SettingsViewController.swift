@@ -13,6 +13,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
+            tableView.delegate = self
             tableView.register(SettingsCell.self)
         }
     }
@@ -37,5 +38,11 @@ extension SettingsViewController: UITableViewDataSource {
         let cell: SettingsCell = tableView.dequeueReusableCell(for: indexPath)
         cell.viewModel = viewModel.rowViewModel(for: indexPath)
         return cell
+    }
+}
+
+extension SettingsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return viewModel.shouldHighlightRow(at: indexPath)
     }
 }
