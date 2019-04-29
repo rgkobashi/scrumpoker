@@ -64,13 +64,11 @@ class Configuration {
         }
     }
     
-    // TODO avoid reading userDefaults everytime selectedDeck is called
-    var shakeToReveal: Bool {
-        set {
-            userDefaults.set(newValue, forKey: UserDefaultsKey.shakeToReveal.rawValue)
-        }
-        get {
-            return userDefaults.bool(forKey: UserDefaultsKey.shakeToReveal.rawValue)
-        }
+    func setValue(_ value: Bool, for preference: Preference<Bool>) {
+        userDefaults.set(value, forKey: preference.id)
+    }
+    
+    func getValue(for preference: Preference<Bool>) -> Bool {
+        return userDefaults.bool(forKey: preference.id)
     }
 }
