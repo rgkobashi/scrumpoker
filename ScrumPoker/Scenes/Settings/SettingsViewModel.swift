@@ -85,7 +85,7 @@ class SettingsViewModel {
         case is ActionRowViewModel:
             return true
         default:
-            fatalError("Selected non existent row")
+            fatalError("Non existent row selected")
         }
     }
     
@@ -99,7 +99,7 @@ class SettingsViewModel {
         case let rvm as ActionRowViewModel:
             rvm.action()
         default:
-            fatalError("Selected non existent row")
+            fatalError("Non existent row selected")
         }
     }
     
@@ -113,7 +113,7 @@ class SettingsViewModel {
         case is ActionRowViewModel:
             return true
         default:
-            fatalError("Selected non existent row")
+            fatalError("Non existent row selected")
         }
     }
     
