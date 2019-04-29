@@ -19,8 +19,8 @@ class Configuration {
     
     private let sideMenuManager: SideMenuManager
     private let userDefaults: UserDefaults
-    private var defaultDeckName: String {
-        return Deck.fibonacci.name
+    private var defaultDeck: Deck {
+        return Deck.fibonacci
     }
     
     init(sideMenuManager: SideMenuManager = SideMenuManager.default, userDefaults: UserDefaults = UserDefaults.standard) {
@@ -42,18 +42,24 @@ class Configuration {
     
     // MARK: -
     
-    private var _selectedDeckName: String?
-    var selectedDeckName: String {
+    // TODO avoid reading userDefaults everytime selectedDeck is called
+    var selectedDeck: Deck {
         set {
-            _selectedDeckName = newValue
-            userDefaults.set(newValue, forKey: UserDefaultsKey.selectedDeckName.rawValue)
+            userDefaults.set(newValue.name, forKey: UserDefaultsKey.selectedDeckName.rawValue)
         }
         get {
-            if let s = _selectedDeckName {
-                return s
+            let savedDeckName = userDefaults.string(forKey: UserDefaultsKey.selectedDeckName.rawValue)
+            switch savedDeckName {
+            case nil:
+                return defaultDeck
+            case Deck.fibonacci.name:
+                return .fibonacci
+            case Deck.standar.name:
+                return .standar
+            default:
+                // return custom deck from DB
+                fatalError("Saved deck does not exists")
             }
-            _selectedDeckName = userDefaults.string(forKey: UserDefaultsKey.selectedDeckName.rawValue) ?? defaultDeckName
-            return _selectedDeckName!
         }
     }
 }
