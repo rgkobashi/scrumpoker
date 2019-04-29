@@ -17,7 +17,7 @@ enum TableSectionSelectionStyle {
 enum TableRowType {
     case checkmark(Bool)
     case `switch`(Bool)
-    case action(() -> Void)
+    case unspecified
 }
 
 protocol TableRowViewModel {

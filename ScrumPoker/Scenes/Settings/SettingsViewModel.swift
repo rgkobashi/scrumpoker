@@ -27,9 +27,12 @@ struct PreferenceRowViewModel: TableRowViewModel {
     let type: TableRowType
 }
 
-struct RegularRowViewModel: TableRowViewModel {
+struct ActionRowViewModel: TableRowViewModel {
     let text: String
-    let type: TableRowType
+    let action: () -> ()
+    var type: TableRowType {
+        return .unspecified
+    }
 }
 
 // MARK: -

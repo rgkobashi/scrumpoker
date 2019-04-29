@@ -21,7 +21,7 @@ class SettingsCell: UITableViewCell {
                 let s = UISwitch()
                 s.isOn = isSelected
                 self.accessoryView = s
-            case .action:
+            case .unspecified:
                 break
             }
         }
@@ -38,7 +38,7 @@ class SettingsCell: UITableViewCell {
             self.accessoryType = selected ? .checkmark : .none
         case .switch:
             return
-        case .action:
+        case .unspecified:
             return
         }
     }
