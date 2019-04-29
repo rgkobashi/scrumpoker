@@ -30,7 +30,7 @@ class SettingsCoordinator {
     private let settingsVC: SettingsViewController
     private let settingsVM: SettingsViewModel
     
-    init(sideMenuManager: SideMenuManager = SideMenuManager.default) {
+    init(sideMenuManager: SideMenuManager = SideMenuManager.default, configuration: Configuration) {
         self.sideMenuManager = sideMenuManager
         let settings = [SettingsSectionViewModel(title: "Deck",
                                                  rows: [SettingsRowViewModel(text: "Fibonnaci", type: .checkmark(true)),
@@ -40,7 +40,7 @@ class SettingsCoordinator {
                                                  rows: [SettingsRowViewModel(text: "Sound", type: .switch(true)),
                                                         SettingsRowViewModel(text: "Shake to reveal", type: .switch(false))])]
         settingsVC = storyboard.instantiateViewController()
-        settingsVM = SettingsViewModel(settings: settings)
+        settingsVM = SettingsViewModel(settings: settings, configuration: configuration)
         settingsVC.viewModel = settingsVM
     }
 }

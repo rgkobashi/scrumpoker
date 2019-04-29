@@ -23,6 +23,7 @@ struct SettingsRowViewModel: TableRowViewModel {
 class SettingsViewModel {
     
     private let settings: [SettingsSectionViewModel]
+    private let configuration: Configuration
     private lazy var singleSelectionSections: [Int] = {
         return settings
             .enumerated()
@@ -32,8 +33,9 @@ class SettingsViewModel {
             .compactMap { $0 }
     }()
     
-    init(settings: [SettingsSectionViewModel]) {
+    init(settings: [SettingsSectionViewModel], configuration: Configuration) {
         self.settings = settings
+        self.configuration = configuration
     }
     
     // MARK: Data source

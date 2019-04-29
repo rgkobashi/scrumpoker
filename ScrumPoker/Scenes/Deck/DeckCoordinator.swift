@@ -18,7 +18,7 @@ class DeckCoordinator {
     
     // MARK: Coordinators
     private lazy var settingsCoordinator: SettingsCoordinator = {
-        let c = SettingsCoordinator()
+        let c = SettingsCoordinator(configuration: configuration)
         c.delegate = self
         return c
     }()
