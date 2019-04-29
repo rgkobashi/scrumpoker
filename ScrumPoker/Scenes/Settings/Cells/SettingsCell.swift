@@ -13,20 +13,35 @@ class SettingsCell: UITableViewCell {
     var viewModel: TableRowViewModel! {
         didSet {
             self.textLabel?.text = viewModel.text
+            self.selectionStyle = .none
+            switch rowType {
+            case .checkmark:
+                break
+            case let .switch(isSelected):
+                let s = UISwitch()
+                s.isOn = isSelected
+                self.accessoryView = s
+            case .none:
+                break
+            }
         }
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    private var rowType: TableRowType {
+        return viewModel.type
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        switch rowType {
+        case .checkmark:
+            self.accessoryType = selected ? .checkmark : .none
+        case .switch:
+            return
+        case .none:
+            return
+        }
     }
-
 }
 
 extension SettingsCell: NibLoadableView {}
