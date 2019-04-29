@@ -23,6 +23,12 @@ extension Deck {
         return Deck(name: "Fibonacci", cards: cards)
     }
     
+    static var standar: Deck {
+        let cards = ["0", "½", "1", "2", "3", "5", "8", "13", "20", "40", "90", "100"]
+            .map(Card.init) + extraCards
+        return Deck(name: "Standar", cards: cards)
+    }
+    
     // MAR: Private
     
     private static var extraCards: [Card] {
