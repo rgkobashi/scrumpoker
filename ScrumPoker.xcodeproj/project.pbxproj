@@ -32,6 +32,7 @@
 		E266CE9D2276CDF2003451F6 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266CE9C2276CDF2003451F6 /* Deck.swift */; };
 		E26BFEDF239AA6CF00264688 /* TableSectionSelectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEDE239AA6CF00264688 /* TableSectionSelectionStyle.swift */; };
 		E26BFEE1239AA73D00264688 /* DeckRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */; };
+		E26BFEE3239AA83300264688 /* PreferenceRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE2239AA83300264688 /* PreferenceRowViewModel.swift */; };
 		E28E88D5227767F100DFF021 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28E88D4227767F100DFF021 /* Preference.swift */; };
 		E2CDBE072274AD660054957B /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE062274AD660054957B /* SettingsCoordinator.swift */; };
 		E2CDBE0B2274ADD10054957B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE0A2274ADD10054957B /* SettingsViewModel.swift */; };
@@ -101,6 +102,7 @@
 		E266CE9C2276CDF2003451F6 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		E26BFEDE239AA6CF00264688 /* TableSectionSelectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionSelectionStyle.swift; sourceTree = "<group>"; };
 		E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckRowViewModel.swift; sourceTree = "<group>"; };
+		E26BFEE2239AA83300264688 /* PreferenceRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceRowViewModel.swift; sourceTree = "<group>"; };
 		E28E88D4227767F100DFF021 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		E2CDBE062274AD660054957B /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		E2CDBE0A2274ADD10054957B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				E28E88D4227767F100DFF021 /* Preference.swift */,
 				E26BFEDE239AA6CF00264688 /* TableSectionSelectionStyle.swift */,
 				E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */,
+				E26BFEE2239AA83300264688 /* PreferenceRowViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				E2CDBE072274AD660054957B /* SettingsCoordinator.swift in Sources */,
 				E28E88D5227767F100DFF021 /* Preference.swift in Sources */,
 				E23288AA22744E3300A94F15 /* DeckViewModel.swift in Sources */,
+				E26BFEE3239AA83300264688 /* PreferenceRowViewModel.swift in Sources */,
 				E2CDBE1922760C0A0054957B /* SettingsCell.swift in Sources */,
 				E2CDBE1B22760CAC0054957B /* UITableView.swift in Sources */,
 				E23288B8227460F900A94F15 /* Card.swift in Sources */,
