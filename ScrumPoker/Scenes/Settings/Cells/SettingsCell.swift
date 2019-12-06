@@ -45,7 +45,7 @@ class SettingsCell: UITableViewCell {
     
     @objc private func switchValueDidChange(_ sender: UISwitch) { // needed to treat switch changes as if the cell was selected/unselected
         guard let tv = self.superview as? UITableView, let ip = tv.indexPath(for: self) else {
-            fatalError("Unable to parse self.superview as UITableView or get indexPath")
+            fatalError("Unable to cast self.superview as UITableView or get indexPath")
         }
         setSelected(sender.isOn, animated: true)
         if sender.isOn {
