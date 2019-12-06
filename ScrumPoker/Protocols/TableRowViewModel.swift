@@ -8,19 +8,14 @@
 
 import Foundation
 
-enum TableSectionSelectionStyle {
-    case single
-    case multiple
-    case none
+protocol TableRowViewModel {
+    var text: String { get }
+    var type: TableRowType { get }
+    func didSelect()
 }
 
 enum TableRowType {
     case checkmark(Bool)
     case `switch`(Bool)
     case unspecified
-}
-
-protocol TableRowViewModel {
-    var text: String { get }
-    var type: TableRowType { get }
 }
