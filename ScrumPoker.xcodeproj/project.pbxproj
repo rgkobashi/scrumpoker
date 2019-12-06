@@ -30,6 +30,7 @@
 		E242E07F22743EBE00C28204 /* ScrumPokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E07E22743EBE00C28204 /* ScrumPokerTests.swift */; };
 		E242E08A22743EBE00C28204 /* ScrumPokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */; };
 		E266CE9D2276CDF2003451F6 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266CE9C2276CDF2003451F6 /* Deck.swift */; };
+		E26BFEDF239AA6CF00264688 /* TableSectionSelectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEDE239AA6CF00264688 /* TableSectionSelectionStyle.swift */; };
 		E28E88D5227767F100DFF021 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28E88D4227767F100DFF021 /* Preference.swift */; };
 		E2CDBE072274AD660054957B /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE062274AD660054957B /* SettingsCoordinator.swift */; };
 		E2CDBE0B2274ADD10054957B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE0A2274ADD10054957B /* SettingsViewModel.swift */; };
@@ -97,6 +98,7 @@
 		E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumPokerUITests.swift; sourceTree = "<group>"; };
 		E242E08B22743EBE00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E266CE9C2276CDF2003451F6 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		E26BFEDE239AA6CF00264688 /* TableSectionSelectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionSelectionStyle.swift; sourceTree = "<group>"; };
 		E28E88D4227767F100DFF021 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		E2CDBE062274AD660054957B /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		E2CDBE0A2274ADD10054957B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				E266CE9C2276CDF2003451F6 /* Deck.swift */,
 				E23288B922748FAA00A94F15 /* DeckLayout.swift */,
 				E28E88D4227767F100DFF021 /* Preference.swift */,
+				E26BFEDE239AA6CF00264688 /* TableSectionSelectionStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 			files = (
 				E266CE9D2276CDF2003451F6 /* Deck.swift in Sources */,
 				E23288BA22748FAA00A94F15 /* DeckLayout.swift in Sources */,
+				E26BFEDF239AA6CF00264688 /* TableSectionSelectionStyle.swift in Sources */,
 				E23288B5227457F300A94F15 /* UICollectionView.swift in Sources */,
 				E23288AF2274508900A94F15 /* CardCell.swift in Sources */,
 				E2CDBE122275ED6E0054957B /* Configuration.swift in Sources */,
