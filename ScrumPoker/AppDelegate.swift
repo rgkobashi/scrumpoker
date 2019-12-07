@@ -31,6 +31,7 @@ import UIKit
  fix signing
  instead of Settings, use Menu
  check TODOs
+ add menu button on top bar
  */
 
 @UIApplicationMain
