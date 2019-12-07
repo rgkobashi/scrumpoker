@@ -8,51 +8,6 @@
 
 import Foundation
 
-struct SettingsSectionViewModel {
-    let title: String?
-    let selectionStyle: TableSectionSelectionStyle
-    let rows: [TableRowViewModel]
-}
-
-struct DeckRowViewModel: TableRowViewModel {
-    let deck: Deck
-    let configuration: Configuration
-    var text: String {
-        return deck.name
-    }
-    var type: TableRowType {
-        return .checkmark(configuration.selectedDeck == deck)
-    }
-}
-
-struct PreferenceRowViewModel: TableRowViewModel {
-    let preference: Preference<Bool>
-    let configuration: Configuration
-    var isSelected: Bool {
-        return configuration.getValue(for: preference)
-    }
-    var text: String {
-        return preference.name
-    }
-    var type: TableRowType {
-        return .switch(isSelected)
-    }
-    
-    func toggle() {
-        configuration.setValue(!isSelected, for: preference)
-    }
-}
-
-struct ActionRowViewModel: TableRowViewModel {
-    let text: String
-    let action: () -> ()
-    var type: TableRowType {
-        return .unspecified
-    }
-}
-
-// MARK: -
-
 class SettingsViewModel {
     
     private let settings: [SettingsSectionViewModel]
@@ -94,14 +49,14 @@ class SettingsViewModel {
     func shouldHighlightRow(at indexPath: IndexPath) -> Bool {
         let vm = settings[indexPath.section].rows[indexPath.row]
         switch vm {
-        case is DeckRowViewModel:
-            return configuration.selectedDeck.name != vm.text
+        case let dvm as DeckRowViewModel:
+            return configuration.selectedDeck != dvm.deck
         case is PreferenceRowViewModel:
             return false
         case is ActionRowViewModel:
             return true
         default:
-            fatalError("Non existent row selected")
+            fatalError("Non existent row about to highlight")
         }
     }
     
