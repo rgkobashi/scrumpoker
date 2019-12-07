@@ -19,8 +19,6 @@ class SettingsCoordinator {
     weak var delegate: SettingsCoordinatorDelegate?
     
     private let sideMenuManager: SideMenuManager
-    
-    // MARK: Stack
     private lazy var sideMenuNavigationController: UISideMenuNavigationController = {
         let nc = UISideMenuNavigationController(rootViewController: settingsVC)
         sideMenuManager.menuRightNavigationController = nc
@@ -41,6 +39,6 @@ class SettingsCoordinator {
 
 extension SettingsCoordinator: SettingsViewModelDelegate {
     func didTapFeedback(from viewController: SettingsViewController) {
-        // TODO
+        
     }
 }
