@@ -8,6 +8,31 @@
 
 import UIKit
 
+/* TODO
+ run lincenceplist
+ add shake to reveal
+ add feature request
+ add avoid autolock
+ avoid rorating device
+ refiew that everything is being deallocated
+ add localization, look for strings to localize
+ add contribute option
+ add support for custom decks
+ considera layout for more than 15 elements
+ check warnings
+ considering adding baselines for story points and share baselines to other devices
+ 
+ https://flawlessapp.io/blog/advanced-mvvm-tableview-tutorial/
+ https://cocoacasts.com/configuring-table-views-with-model-view-viewmodel-and-protocols
+ https://novemberfive.co/blog/creating-dynamic-screens-protocol-oriented-mvvm-swift
+ 
+ reorganize project and make sure the models and VM makes sense
+ reorganize models, consider adding it into viewModel file
+ fix signing
+ instead of Settings, use Menu
+ check TODOs
+ */
+
 typealias App = AppDelegate
 
 @UIApplicationMain

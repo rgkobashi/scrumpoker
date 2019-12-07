@@ -57,7 +57,6 @@ class Configuration {
             case Deck.standar.name:
                 return .standar
             default:
-                // return custom deck from DB
                 fatalError("Saved deck does not exists")
             }
         }
