@@ -53,6 +53,11 @@ extension DeckCoordinator {
     }
     
     func showCardScreen(_ card: Card, from viewController: UIViewController) {
+        let vc: CardViewController = storyboard.instantiateViewController()
+        let vm = CardViewModel(card: card)
+        vc.viewModel = vm
+        vm.delegate = self
+        viewController.present(vc, animated: true)
     }
 }
 
@@ -65,6 +70,12 @@ extension DeckCoordinator: DeckViewModelDelegate {
     
     func didTapShowCard(_ card: Card, from viewController: DeckViewController) {
         showCardScreen(card, from: viewController)
+    }
+}
+
+extension DeckCoordinator: CardViewModelDelegate {
+    func didTapClose(from viewController: CardViewController) {
+        viewController.dismiss(animated: true)
     }
 }
 

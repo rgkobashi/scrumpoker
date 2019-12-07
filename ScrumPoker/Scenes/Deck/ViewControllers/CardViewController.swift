@@ -17,4 +17,13 @@ class CardViewController: UIViewController {
     }
     
     var viewModel: CardViewModel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.close)))
+    }
+    
+    @objc private func close() {
+        viewModel.close(from: self)
+    }
 }

@@ -8,8 +8,14 @@
 
 import Foundation
 
+protocol CardViewModelDelegate: class {
+    func didTapClose(from viewController: CardViewController)
+}
+
 class CardViewModel {
     private let card: Card
+    
+    weak var delegate: CardViewModelDelegate?
     
     var cardText: String {
         return card.text
@@ -17,5 +23,9 @@ class CardViewModel {
     
     init(card: Card) {
         self.card = card
+    }
+    
+    func close(from viewController: CardViewController) {
+        delegate?.didTapClose(from: viewController)
     }
 }
