@@ -1,5 +1,5 @@
 //
-//  SettingsCoordinator.swift
+//  MenuCoordinator.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/04/28.
@@ -8,15 +8,15 @@
 
 import SideMenu
 
-protocol SettingsCoordinatorDelegate: class {
+protocol MenuCoordinatorDelegate: class {
     
 }
 
-class SettingsCoordinator {
+class MenuCoordinator {
     var rootViewController: UIViewController {
         return sideMenuNavigationController
     }
-    weak var delegate: SettingsCoordinatorDelegate?
+    weak var delegate: MenuCoordinatorDelegate?
     
     private let sideMenuManager: SideMenuManager
     private lazy var sideMenuNavigationController: UISideMenuNavigationController = {
@@ -37,7 +37,7 @@ class SettingsCoordinator {
     }
 }
 
-extension SettingsCoordinator: SettingsViewModelDelegate {
+extension MenuCoordinator: SettingsViewModelDelegate {
     func didTapFeedback(from viewController: SettingsViewController) {
         
     }

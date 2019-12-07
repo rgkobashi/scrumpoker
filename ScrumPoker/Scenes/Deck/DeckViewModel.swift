@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DeckViewModelDelegate: class {
-    func didTapShowSettings(from: DeckViewController)
+    func didTapShowMenu(from: DeckViewController)
 }
 
 class DeckViewModel {

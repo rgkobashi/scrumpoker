@@ -16,14 +16,12 @@ class DeckCoordinator {
     private let window: UIWindow
     private let configuration: Configuration
     
-    // MARK: Coordinators
-    private lazy var settingsCoordinator: SettingsCoordinator = {
-        let c = SettingsCoordinator(configuration: configuration)
+    private lazy var menuCoordinator: MenuCoordinator = {
+        let c = MenuCoordinator(configuration: configuration)
         c.delegate = self
         return c
     }()
     
-    // MARK: Stack
     private lazy var navigationController: UINavigationController = {
         let nc = UINavigationController(rootViewController: deckVC)
         return nc
@@ -50,21 +48,21 @@ class DeckCoordinator {
 // MARK: - Navigation
 
 extension DeckCoordinator {
-    func showSettings() {
-        navigationController.present(settingsCoordinator.rootViewController, animated: true, completion: nil)
+    func showMenu() {
+        navigationController.present(menuCoordinator.rootViewController, animated: true, completion: nil)
     }
 }
 
 // MARK: - ViewModels callbacks
 
 extension DeckCoordinator: DeckViewModelDelegate {
-    func didTapShowSettings(from: DeckViewController) {
-        showSettings()
+    func didTapShowMenu(from: DeckViewController) {
+        showMenu()
     }
 }
 
 // MARK: - Coordinators callbacks
 
-extension DeckCoordinator: SettingsCoordinatorDelegate {
+extension DeckCoordinator: MenuCoordinatorDelegate {
     
 }
