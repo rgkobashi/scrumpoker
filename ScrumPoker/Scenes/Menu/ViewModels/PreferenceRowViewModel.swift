@@ -12,13 +12,11 @@ struct PreferenceRowViewModel: TableRowViewModel {
     let preference: Preference<Bool>
     let configuration: Configuration
     
-    var isSelected: Bool {
-        return configuration.getValue(for: preference)
-    }
     var text: String {
         return preference.name
     }
     var type: TableRowType {
+        let isSelected = configuration.getValue(for: preference)
         return .switch(isSelected)
     }
 }
