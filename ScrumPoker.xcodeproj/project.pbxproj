@@ -260,7 +260,6 @@
 				E23288B922748FAA00A94F15 /* DeckLayout.swift */,
 				E28E88D4227767F100DFF021 /* Preference.swift */,
 				E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */,
-				E26BFEE4239AA9BD00264688 /* SettingsSectionViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				E2CDBE0A2274ADD10054957B /* SettingsViewModel.swift */,
+				E26BFEE4239AA9BD00264688 /* SettingsSectionViewModel.swift */,
 				E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */,
 				E26BFEE2239AA83300264688 /* PreferenceRowViewModel.swift */,
 				E26BFEE6239AAA0100264688 /* ActionRowViewModel.swift */,
