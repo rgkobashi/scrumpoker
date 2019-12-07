@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct ActionRowViewModel: TableRowViewModel {
+struct ActionRowViewModel<T>: TableRowViewModel {
     let text: String
-    let action: () -> ()
+    let action: (T) -> ()
     
     var type: TableRowType {
         return .unspecified
