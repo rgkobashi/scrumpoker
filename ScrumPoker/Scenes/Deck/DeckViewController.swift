@@ -24,8 +24,19 @@ class DeckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = viewModel.deckName
+        setupNavigationBar()
         layoutCollectionView()
+    }
+    
+    private func setupNavigationBar() {
+        self.title = viewModel.deckName
+        self.navigationItem.rightBarButtonItem = {
+            if #available(iOS 13.0, *) {
+                return UIBarButtonItem(image: UIImage(systemName: "ellipsis"), style: .plain, target: self, action: #selector(self.showMenu))
+            } else {
+                return UIBarButtonItem(image: #imageLiteral(resourceName: "menuIcon"), style: .plain, target: self, action: #selector(self.showMenu))
+            }
+        }()
     }
     
     private func layoutCollectionView() {
@@ -61,6 +72,10 @@ class DeckViewController: UIViewController {
                                          constant: 0)
         holderView.addConstraints([horizontalC, verticalC, widthC, heightC])
     }
+    
+    @objc private func showMenu() {
+        viewModel.showMenu(from: self)
+    }
 }
 
 extension DeckViewController: UICollectionViewDataSource {
@@ -91,6 +106,6 @@ extension DeckViewController: UICollectionViewDelegateFlowLayout {
 
 extension DeckViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.showMenu(from: self)
+        
     }
 }

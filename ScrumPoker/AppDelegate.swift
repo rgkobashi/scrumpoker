@@ -28,7 +28,6 @@ import UIKit
  
  fix signing
  check TODOs
- add menu button on top bar
  */
 
 @UIApplicationMain
