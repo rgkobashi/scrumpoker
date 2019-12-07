@@ -66,7 +66,7 @@ extension SettingsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelectRow(at: indexPath)
+        viewModel.didSelectRow(at: indexPath, from: self)
         
         if viewModel.shouldDeselectAfterSelectingRow(at: indexPath) {
             if viewModel.shouldDeselectRestOfSectionAfterSelectingRow(at: indexPath) {
@@ -78,6 +78,6 @@ extension SettingsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        viewModel.didDeselectRow(at: indexPath)
+        viewModel.didDeselectRow(at: indexPath, from: self)
     }
 }

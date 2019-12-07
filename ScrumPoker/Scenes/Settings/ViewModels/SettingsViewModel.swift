@@ -92,7 +92,7 @@ class SettingsViewModel {
     
     // MARK: Actions
     
-    func didSelectRow(at indexPath: IndexPath) {
+    func didSelectRow(at indexPath: IndexPath, from viewController: SettingsViewController) {
         let vm = settings[indexPath.section].rows[indexPath.row]
         switch vm {
         case let dvm as DeckRowViewModel:
@@ -106,7 +106,7 @@ class SettingsViewModel {
         }
     }
     
-    func didDeselectRow(at indexPath: IndexPath) {
+    func didDeselectRow(at indexPath: IndexPath, from viewController: SettingsViewController) {
         let vm = settings[indexPath.section].rows[indexPath.row]
         switch vm {
         case is DeckRowViewModel:
