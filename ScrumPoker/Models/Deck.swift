@@ -29,15 +29,13 @@ extension Deck {
         return Deck(name: "Standar", cards: cards)
     }
     
-    // MAR: Private
-    
+    // MARK: Private
+
     private static var extraCards: [Card] {
         let values = ["?","∞","☕️"]
         return values.map(Card.init)
     }
 }
-
-// MARK: -
 
 private func generateFibonacci(_ n: Int) -> [Int] {
     guard n > 1 else {
