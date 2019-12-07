@@ -38,7 +38,7 @@ class SettingsViewModel {
     
     // MARK: - Delegate
     
-    func shouldHighlightRow(at indexPath: IndexPath) -> Bool {
+    func shouldEnableRegularRowSelection(at indexPath: IndexPath) -> Bool {
         let vm = settings[indexPath.section].rows[indexPath.row]
         switch vm {
         case let dvm as DeckRowViewModel:
@@ -48,9 +48,49 @@ class SettingsViewModel {
         case is ActionRowViewModel:
             return true
         default:
-            fatalError("Non existent row about to highlight")
+            fatalError("Non existent row to enable: \(indexPath)")
         }
     }
+    
+    func shouldDeselectAfterSelectingRow(at indexPath: IndexPath) -> Bool {
+        let vm = settings[indexPath.section]
+        switch vm.selectionStyle {
+        case .single:
+            return true
+        case .multiple, .none:
+            return false
+        }
+    }
+    
+    func shouldDeselectRestOfSectionAfterSelectingRow(at indexPath: IndexPath) -> Bool {
+        let vm = settings[indexPath.section].rows[indexPath.row]
+        switch vm {
+        case is DeckRowViewModel:
+            return true
+        case is PreferenceRowViewModel:
+            return false
+        case is ActionRowViewModel:
+            return false
+        default:
+            fatalError("Non existent row to deselect rest of section: \(indexPath)")
+        }
+    }
+    
+    func shouldDeselectItselfAfterSelectingRow(at indexPath: IndexPath) -> Bool {
+        let vm = settings[indexPath.section].rows[indexPath.row]
+        switch vm {
+        case is DeckRowViewModel:
+            return false
+        case is PreferenceRowViewModel:
+            return false
+        case is ActionRowViewModel:
+            return true
+        default:
+            fatalError("Non existent row to deselect itself: \(indexPath)")
+        }
+    }
+    
+    // MARK: Actions
     
     func didSelectRow(at indexPath: IndexPath) {
         let vm = settings[indexPath.section].rows[indexPath.row]
@@ -62,7 +102,7 @@ class SettingsViewModel {
         case let avm as ActionRowViewModel:
             avm.action()
         default:
-            fatalError("Non existent row selected")
+            fatalError("Non existent row selected: \(indexPath)")
         }
     }
     
@@ -76,31 +116,7 @@ class SettingsViewModel {
         case is ActionRowViewModel:
             break
         default:
-            fatalError("Non existent row deselected")
-        }
-    }
-    
-    func shouldDeselectItselfWhenSelecting(at indexPath: IndexPath) -> Bool {
-        let vm = settings[indexPath.section].rows[indexPath.row]
-        switch vm {
-        case is DeckRowViewModel:
-            return false
-        case is PreferenceRowViewModel:
-            return false
-        case is ActionRowViewModel:
-            return true
-        default:
-            fatalError("Non existent row selected")
-        }
-    }
-    
-    func shouldDeselectIndexPathsWhenSelecting(at indexPath: IndexPath) -> Bool {
-        return singleSelectionSections.contains(indexPath.section)
-    }
-    
-    func indexPathsToDeselectWhenSelecting(at lastSelectedIndexPath: IndexPath, selectedIndexPaths: [IndexPath]) -> [IndexPath] {
-        return selectedIndexPaths.filter {
-            $0.section == lastSelectedIndexPath.section && $0.row != lastSelectedIndexPath.row
+            fatalError("Non existent row deselected: \(indexPath)")
         }
     }
 }
