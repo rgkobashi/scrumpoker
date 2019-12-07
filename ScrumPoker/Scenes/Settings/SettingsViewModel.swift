@@ -65,12 +65,26 @@ class SettingsViewModel {
         switch vm {
         case let dvm as DeckRowViewModel:
             configuration.selectedDeck = dvm.deck
-        case is PreferenceRowViewModel:
-            break
-        case let rvm as ActionRowViewModel:
-            rvm.action()
+        case let pvm as PreferenceRowViewModel:
+            configuration.setValue(true, for: pvm.preference)
+        case let avm as ActionRowViewModel:
+            avm.action()
         default:
             fatalError("Non existent row selected")
+        }
+    }
+    
+    func didDeselectRow(at indexPath: IndexPath) {
+        let vm = settings[indexPath.section].rows[indexPath.row]
+        switch vm {
+        case is DeckRowViewModel:
+            break
+        case let pvm as PreferenceRowViewModel:
+            configuration.setValue(false, for: pvm.preference)
+        case is ActionRowViewModel:
+            break
+        default:
+            fatalError("Non existent row deselected")
         }
     }
     
