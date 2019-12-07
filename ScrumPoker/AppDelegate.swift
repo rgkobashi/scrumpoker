@@ -33,22 +33,19 @@ import UIKit
  check TODOs
  */
 
-typealias App = AppDelegate
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    static let configuration = Configuration()
-
     var window: UIWindow?
+    
+    private let configuration = Configuration()
     private var deckCoordinator: DeckCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        App.configuration.setFabric()
-        App.configuration.setSideMenu()
+        configuration.setFabric()
+        configuration.setSideMenu()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        deckCoordinator = DeckCoordinator(window: window!, configuration: App.configuration)
+        deckCoordinator = DeckCoordinator(window: window!, configuration: configuration)
         deckCoordinator.start()
         
         return true
