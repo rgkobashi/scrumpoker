@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol SettingsViewModelDelegate: class {
+    func didTapFeedback(from viewController: SettingsViewController)
+}
+
 class SettingsViewModel {
     private let configuration: Configuration
     private lazy var settings: [SettingsSectionViewModel] = {
@@ -26,10 +30,13 @@ class SettingsViewModel {
                                          selectionType: .multiple,
                                          rows: [
                                             ActionRowViewModel<SettingsViewController>(text: "Feedback & feature request", action: { [weak self] vc in // TODO localize
+                                                self?.delegate?.didTapFeedback(from: vc)
                                             })
                 ])
         ]
     }()
+    
+    weak var delegate: SettingsViewModelDelegate?
     
     init(configuration: Configuration) {
         self.configuration = configuration

@@ -34,6 +34,13 @@ class SettingsCoordinator {
         self.sideMenuManager = sideMenuManager
         settingsVC = storyboard.instantiateViewController()
         settingsVM = SettingsViewModel(configuration: configuration)
+        settingsVM.delegate = self
         settingsVC.viewModel = settingsVM
+    }
+}
+
+extension SettingsCoordinator: SettingsViewModelDelegate {
+    func didTapFeedback(from viewController: SettingsViewController) {
+        // TODO
     }
 }
