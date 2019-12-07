@@ -18,7 +18,7 @@ class SettingsViewModel {
         self.configuration = configuration
     }
     
-    // MARK: Data source
+    // MARK: - Data source
     
     var numberOfSections: Int {
         return settings.count
@@ -36,7 +36,7 @@ class SettingsViewModel {
         return settings[indexPath.section].rows[indexPath.row]
     }
     
-    // MARK: Delegate
+    // MARK: - Delegate
     
     func shouldHighlightRow(at indexPath: IndexPath) -> Bool {
         let vm = settings[indexPath.section].rows[indexPath.row]
