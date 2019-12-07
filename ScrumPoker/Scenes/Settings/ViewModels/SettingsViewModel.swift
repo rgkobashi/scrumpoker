@@ -57,7 +57,7 @@ class SettingsViewModel {
         switch vm.selectionType {
         case .single:
             return true
-        case .multiple, .none:
+        case .multiple:
             return false
         }
     }

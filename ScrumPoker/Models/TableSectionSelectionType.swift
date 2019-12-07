@@ -11,5 +11,4 @@ import Foundation
 enum TableSectionSelectionType {
     case single
     case multiple
-    case none
 }
