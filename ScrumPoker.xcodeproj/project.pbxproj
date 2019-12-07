@@ -260,9 +260,6 @@
 				E23288B922748FAA00A94F15 /* DeckLayout.swift */,
 				E28E88D4227767F100DFF021 /* Preference.swift */,
 				E26BFEDE239AA6CF00264688 /* TableSectionSelectionStyle.swift */,
-				E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */,
-				E26BFEE2239AA83300264688 /* PreferenceRowViewModel.swift */,
-				E26BFEE6239AAA0100264688 /* ActionRowViewModel.swift */,
 				E26BFEE4239AA9BD00264688 /* SettingsSectionViewModel.swift */,
 			);
 			path = Models;
@@ -327,11 +324,9 @@
 		E2CDBE052274AD520054957B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				E2CDBE1522760BC20054957B /* Cells */,
 				E2CDBE062274AD660054957B /* SettingsCoordinator.swift */,
-				E2CDBE0C2274ADD80054957B /* Settings.storyboard */,
-				E2CDBE0E2274ADF10054957B /* SettingsViewController.swift */,
-				E2CDBE0A2274ADD10054957B /* SettingsViewModel.swift */,
+				E2D2FB25239B96D5006DA9C0 /* Views */,
+				E2D2FB26239B96DD006DA9C0 /* ViewModels */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -344,13 +339,26 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		E2CDBE1522760BC20054957B /* Cells */ = {
+		E2D2FB25239B96D5006DA9C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E2CDBE0C2274ADD80054957B /* Settings.storyboard */,
+				E2CDBE0E2274ADF10054957B /* SettingsViewController.swift */,
 				E2CDBE1622760BFD0054957B /* SettingsCell.xib */,
 				E2CDBE1822760C0A0054957B /* SettingsCell.swift */,
 			);
-			path = Cells;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E2D2FB26239B96DD006DA9C0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E2CDBE0A2274ADD10054957B /* SettingsViewModel.swift */,
+				E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */,
+				E26BFEE2239AA83300264688 /* PreferenceRowViewModel.swift */,
+				E26BFEE6239AAA0100264688 /* ActionRowViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
