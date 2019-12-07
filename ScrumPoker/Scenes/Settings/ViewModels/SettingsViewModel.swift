@@ -69,7 +69,7 @@ class SettingsViewModel {
             return configuration.selectedDeck != dvm.deck
         case is PreferenceRowViewModel:
             return false
-        case is ActionRowViewModel<Any>:
+        case is ActionRowViewModel<SettingsViewController>:
             return true
         default:
             fatalError("Non existent row to enable: \(indexPath)")
@@ -93,7 +93,7 @@ class SettingsViewModel {
             return true
         case is PreferenceRowViewModel:
             return false
-        case is ActionRowViewModel<Any>:
+        case is ActionRowViewModel<SettingsViewController>:
             return false
         default:
             fatalError("Non existent row to deselect rest of section: \(indexPath)")
@@ -107,7 +107,7 @@ class SettingsViewModel {
             return false
         case is PreferenceRowViewModel:
             return false
-        case is ActionRowViewModel<Any>:
+        case is ActionRowViewModel<SettingsViewController>:
             return true
         default:
             fatalError("Non existent row to deselect itself: \(indexPath)")
@@ -137,7 +137,7 @@ class SettingsViewModel {
             fatalError("Deselecting DeckRowViewModel at \(indexPath) due its section allows multiple selection")
         case let pvm as PreferenceRowViewModel:
             configuration.setValue(false, for: pvm.preference)
-        case is ActionRowViewModel<Any>:
+        case is ActionRowViewModel<SettingsViewController>:
             fatalError("Deselecting ActionRowViewModel at \(indexPath) due its section allows multiple selection")
         default:
             fatalError("Non existent row deselected: \(indexPath)")
