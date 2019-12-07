@@ -12,7 +12,6 @@ import SideMenu
 
 private enum UserDefaultsKey: String {
     case selectedDeckName
-    case shakeToReveal
 }
 
 class Configuration {
