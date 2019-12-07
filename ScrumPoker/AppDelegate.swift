@@ -29,7 +29,6 @@ import UIKit
  reorganize project and make sure the models and VM makes sense
  reorganize models, consider adding it into viewModel file
  fix signing
- instead of Settings, use Menu
  check TODOs
  add menu button on top bar
  */

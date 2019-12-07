@@ -63,7 +63,7 @@ class DeckViewModel {
     
     // MARK: Navigation
     
-    func showSettings(from viewController: DeckViewController) {
-        delegate?.didTapShowSettings(from: viewController)
+    func showMenu(from viewController: DeckViewController) {
+        delegate?.didTapShowMenu(from: viewController)
     }
 }

@@ -20,25 +20,25 @@ class MenuCoordinator {
     
     private let sideMenuManager: SideMenuManager
     private lazy var sideMenuNavigationController: UISideMenuNavigationController = {
-        let nc = UISideMenuNavigationController(rootViewController: settingsVC)
+        let nc = UISideMenuNavigationController(rootViewController: menuVC)
         sideMenuManager.menuRightNavigationController = nc
         return nc
     }()
-    private let storyboard = UIStoryboard(name: "Settings")
-    private let settingsVC: SettingsViewController
-    private let settingsVM: SettingsViewModel
+    private let storyboard = UIStoryboard(name: "Menu")
+    private let menuVC: MenuViewController
+    private let menuVM: MenuViewModel
     
     init(sideMenuManager: SideMenuManager = SideMenuManager.default, configuration: Configuration) {
         self.sideMenuManager = sideMenuManager
-        settingsVC = storyboard.instantiateViewController()
-        settingsVM = SettingsViewModel(configuration: configuration)
-        settingsVM.delegate = self
-        settingsVC.viewModel = settingsVM
+        menuVC = storyboard.instantiateViewController()
+        menuVM = MenuViewModel(configuration: configuration)
+        menuVM.delegate = self
+        menuVC.viewModel = menuVM
     }
 }
 
-extension MenuCoordinator: SettingsViewModelDelegate {
-    func didTapFeedback(from viewController: SettingsViewController) {
+extension MenuCoordinator: MenuViewModelDelegate {
+    func didTapFeedback(from viewController: MenuViewController) {
         
     }
 }

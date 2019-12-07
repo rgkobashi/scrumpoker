@@ -1,5 +1,5 @@
 //
-//  SettingsViewModel.swift
+//  MenuViewModel.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/04/28.
@@ -8,35 +8,35 @@
 
 import Foundation
 
-protocol SettingsViewModelDelegate: class {
-    func didTapFeedback(from viewController: SettingsViewController)
+protocol MenuViewModelDelegate: class {
+    func didTapFeedback(from viewController: MenuViewController)
 }
 
-class SettingsViewModel {
+class MenuViewModel {
     private let configuration: Configuration
-    private lazy var settings: [SettingsSectionViewModel] = {
-        return [SettingsSectionViewModel(title: nil, // Decks
-                                         selectionType: .single,
-                                         rows: [
-                                            DeckRowViewModel(deck: .fibonacci, configuration: configuration),
-                                            DeckRowViewModel(deck: .standar, configuration: configuration)
+    private lazy var menuItems: [MenuSectionViewModel] = {
+        return [MenuSectionViewModel(title: nil, // Decks
+                                     selectionType: .single,
+                                     rows: [
+                                        DeckRowViewModel(deck: .fibonacci, configuration: configuration),
+                                        DeckRowViewModel(deck: .standar, configuration: configuration)
                 ]),
-                SettingsSectionViewModel(title: nil, // Preferences
-                                         selectionType: .multiple,
-                                         rows: [
-                                            PreferenceRowViewModel(preference: .shakeToReveal, configuration: configuration)
+                MenuSectionViewModel(title: nil, // Preferences
+                                     selectionType: .multiple,
+                                     rows: [
+                                        PreferenceRowViewModel(preference: .shakeToReveal, configuration: configuration)
                 ]),
-                SettingsSectionViewModel(title: nil,
-                                         selectionType: .single,
-                                         rows: [
-                                            ActionRowViewModel<SettingsViewController>(text: "Feedback & feature request", action: { [weak self] vc in // TODO localize
-                                                self?.delegate?.didTapFeedback(from: vc)
-                                            })
+                MenuSectionViewModel(title: nil,
+                                     selectionType: .single,
+                                     rows: [
+                                        ActionRowViewModel<MenuViewController>(text: "Feedback & feature request", action: { [weak self] vc in // TODO localize
+                                            self?.delegate?.didTapFeedback(from: vc)
+                                        })
                 ])
         ]
     }()
     
-    weak var delegate: SettingsViewModelDelegate?
+    weak var delegate: MenuViewModelDelegate?
     
     init(configuration: Configuration) {
         self.configuration = configuration
@@ -45,31 +45,31 @@ class SettingsViewModel {
     // MARK: - Data source
     
     var numberOfSections: Int {
-        return settings.count
+        return menuItems.count
     }
     
     func numberOfRows(in section: Int) -> Int {
-        return settings[section].rows.count
+        return menuItems[section].rows.count
     }
     
     func headerTitle(in section: Int) -> String? {
-        return settings[section].title
+        return menuItems[section].title
     }
     
     func rowViewModel(for indexPath: IndexPath) -> TableRowViewModel {
-        return settings[indexPath.section].rows[indexPath.row]
+        return menuItems[indexPath.section].rows[indexPath.row]
     }
     
     // MARK: - Delegate
     
     func shouldEnableRegularRowSelection(at indexPath: IndexPath) -> Bool {
-        let vm = settings[indexPath.section].rows[indexPath.row]
+        let vm = menuItems[indexPath.section].rows[indexPath.row]
         switch vm {
         case let dvm as DeckRowViewModel:
             return configuration.selectedDeck != dvm.deck
         case is PreferenceRowViewModel:
             return false
-        case is ActionRowViewModel<SettingsViewController>:
+        case is ActionRowViewModel<MenuViewController>:
             return true
         default:
             fatalError("Non existent row to enable: \(indexPath)")
@@ -77,7 +77,7 @@ class SettingsViewModel {
     }
     
     func shouldDeselectAfterSelectingRow(at indexPath: IndexPath) -> Bool {
-        let vm = settings[indexPath.section]
+        let vm = menuItems[indexPath.section]
         switch vm.selectionType {
         case .single:
             return true
@@ -87,13 +87,13 @@ class SettingsViewModel {
     }
     
     func shouldDeselectRestOfSectionAfterSelectingRow(at indexPath: IndexPath) -> Bool {
-        let vm = settings[indexPath.section].rows[indexPath.row]
+        let vm = menuItems[indexPath.section].rows[indexPath.row]
         switch vm {
         case is DeckRowViewModel:
             return true
         case is PreferenceRowViewModel:
             return false
-        case is ActionRowViewModel<SettingsViewController>:
+        case is ActionRowViewModel<MenuViewController>:
             return false
         default:
             fatalError("Non existent row to deselect rest of section: \(indexPath)")
@@ -101,13 +101,13 @@ class SettingsViewModel {
     }
     
     func shouldDeselectItselfAfterSelectingRow(at indexPath: IndexPath) -> Bool {
-        let vm = settings[indexPath.section].rows[indexPath.row]
+        let vm = menuItems[indexPath.section].rows[indexPath.row]
         switch vm {
         case is DeckRowViewModel:
             return false
         case is PreferenceRowViewModel:
             return false
-        case is ActionRowViewModel<SettingsViewController>:
+        case is ActionRowViewModel<MenuViewController>:
             return true
         default:
             fatalError("Non existent row to deselect itself: \(indexPath)")
@@ -116,28 +116,28 @@ class SettingsViewModel {
     
     // MARK: Actions
     
-    func didSelectRow(at indexPath: IndexPath, from viewController: SettingsViewController) {
-        let vm = settings[indexPath.section].rows[indexPath.row]
+    func didSelectRow(at indexPath: IndexPath, from viewController: MenuViewController) {
+        let vm = menuItems[indexPath.section].rows[indexPath.row]
         switch vm {
         case let dvm as DeckRowViewModel:
             configuration.selectedDeck = dvm.deck
         case let pvm as PreferenceRowViewModel:
             configuration.setValue(true, for: pvm.preference)
-        case let avm as ActionRowViewModel<SettingsViewController>:
+        case let avm as ActionRowViewModel<MenuViewController>:
             avm.action(viewController)
         default:
             fatalError("Non existent row selected: \(indexPath)")
         }
     }
     
-    func didDeselectRow(at indexPath: IndexPath, from viewController: SettingsViewController) {
-        let vm = settings[indexPath.section].rows[indexPath.row]
+    func didDeselectRow(at indexPath: IndexPath, from viewController: MenuViewController) {
+        let vm = menuItems[indexPath.section].rows[indexPath.row]
         switch vm {
         case is DeckRowViewModel:
             fatalError("Deselecting DeckRowViewModel at \(indexPath) due its section allows multiple selection")
         case let pvm as PreferenceRowViewModel:
             configuration.setValue(false, for: pvm.preference)
-        case is ActionRowViewModel<SettingsViewController>:
+        case is ActionRowViewModel<MenuViewController>:
             fatalError("Deselecting ActionRowViewModel at \(indexPath) due its section allows multiple selection")
         default:
             fatalError("Non existent row deselected: \(indexPath)")

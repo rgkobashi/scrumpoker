@@ -1,5 +1,5 @@
 //
-//  SettingsSectionViewModel.swift
+//  MenuSectionViewModel.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/12/07.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SettingsSectionViewModel {
+struct MenuSectionViewModel {
     let title: String?
     let selectionType: TableSectionSelectionType
     let rows: [TableRowViewModel]

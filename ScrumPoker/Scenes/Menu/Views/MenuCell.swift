@@ -1,5 +1,5 @@
 //
-//  SettingsCell.swift
+//  MenuCell.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/04/29.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsCell: UITableViewCell {
+class MenuCell: UITableViewCell {
     
     var viewModel: TableRowViewModel! {
         didSet {
@@ -57,4 +57,4 @@ class SettingsCell: UITableViewCell {
     }
 }
 
-extension SettingsCell: NibLoadableView {}
+extension MenuCell: NibLoadableView {}

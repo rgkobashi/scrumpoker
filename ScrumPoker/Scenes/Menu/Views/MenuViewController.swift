@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  MenuViewController.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/04/28.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class MenuViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
             tableView.delegate = self
             tableView.allowsMultipleSelection = true
-            tableView.register(SettingsCell.self)
+            tableView.register(MenuCell.self)
         }
     }
     
-    var viewModel: SettingsViewModel!
+    var viewModel: MenuViewModel!
     
     private func deselectRestOfSection(for indexPath: IndexPath) {
         tableView
@@ -29,7 +29,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
-extension SettingsViewController: UITableViewDataSource {
+extension MenuViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections
     }
@@ -43,7 +43,7 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: SettingsCell = tableView.dequeueReusableCell(for: indexPath)
+        let cell: MenuCell = tableView.dequeueReusableCell(for: indexPath)
         let vm = viewModel.rowViewModel(for: indexPath)
         cell.viewModel = vm
         switch vm.type {
@@ -60,7 +60,7 @@ extension SettingsViewController: UITableViewDataSource {
     }
 }
 
-extension SettingsViewController: UITableViewDelegate {
+extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return viewModel.shouldEnableRegularRowSelection(at: indexPath)
     }
