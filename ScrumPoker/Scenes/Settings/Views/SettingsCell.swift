@@ -13,12 +13,13 @@ class SettingsCell: UITableViewCell {
     var viewModel: TableRowViewModel! {
         didSet {
             self.textLabel?.text = viewModel.text
-            self.selectionStyle = .none
             switch viewModel.type {
             case .checkmark:
                 self.accessoryView = nil
+                self.selectionStyle = .none
             case .switch:
                 self.accessoryView = switchControl
+                self.selectionStyle = .none
             case .unspecified:
                 self.accessoryView = nil
             }
