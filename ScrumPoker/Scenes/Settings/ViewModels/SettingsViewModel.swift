@@ -134,11 +134,11 @@ class SettingsViewModel {
         let vm = settings[indexPath.section].rows[indexPath.row]
         switch vm {
         case is DeckRowViewModel:
-            break
+            fatalError("Deselecting DeckRowViewModel at \(indexPath) due its section allows multiple selection")
         case let pvm as PreferenceRowViewModel:
             configuration.setValue(false, for: pvm.preference)
-        case is ActionRowViewModel:
-            break
+        case is ActionRowViewModel<Any>:
+            fatalError("Deselecting ActionRowViewModel at \(indexPath) due its section allows multiple selection")
         default:
             fatalError("Non existent row deselected: \(indexPath)")
         }
