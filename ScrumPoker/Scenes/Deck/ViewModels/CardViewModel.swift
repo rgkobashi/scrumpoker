@@ -9,5 +9,13 @@
 import Foundation
 
 class CardViewModel {
+    private let card: Card
     
+    var cardText: String {
+        return card.text
+    }
+    
+    init(card: Card) {
+        self.card = card
+    }
 }

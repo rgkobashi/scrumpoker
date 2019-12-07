@@ -10,10 +10,11 @@ import UIKit
 
 class CardViewController: UIViewController {
     
-    var viewModel: CardViewModel!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var cardLabel: UILabel! {
+        didSet {
+            cardLabel.text = viewModel.cardText
+        }
     }
-
+    
+    var viewModel: CardViewModel!
 }

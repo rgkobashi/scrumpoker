@@ -45,13 +45,37 @@
                     <view key="view" contentMode="scaleToFill" id="PEp-cN-Dtp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUm-4u-qaR">
+                                <rect key="frame" x="57.666666666666657" y="155" width="299" height="426"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wx-P2-bcx">
+                                        <rect key="frame" x="107" y="188" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sUm-4u-qaR" firstAttribute="centerY" secondItem="PEp-cN-Dtp" secondAttribute="centerY" id="8bL-pt-1wm"/>
+                            <constraint firstItem="sUm-4u-qaR" firstAttribute="centerX" secondItem="PEp-cN-Dtp" secondAttribute="centerX" id="96M-b4-vPW"/>
+                            <constraint firstItem="sUm-4u-qaR" firstAttribute="width" secondItem="PEp-cN-Dtp" secondAttribute="width" multiplier="0.722222" id="CyO-ND-Fpe"/>
+                            <constraint firstItem="sUm-4u-qaR" firstAttribute="height" secondItem="PEp-cN-Dtp" secondAttribute="height" multiplier="0.578804" id="XmC-Pi-syo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LpV-Kf-cv7"/>
                     </view>
+                    <connections>
+                        <outlet property="cardLabel" destination="1wx-P2-bcx" id="4B9-be-lem"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qx8-0M-xXf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="28"/>
+            <point key="canvasLocation" x="1818.840579710145" y="27.717391304347828"/>
         </scene>
     </scenes>
 </document>
