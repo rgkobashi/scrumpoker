@@ -9,12 +9,29 @@
 import Foundation
 
 class SettingsViewModel {
-    
-    private let settings: [SettingsSectionViewModel]
     private let configuration: Configuration
+    private lazy var settings: [SettingsSectionViewModel] = {
+        return [SettingsSectionViewModel(title: nil, // Decks
+                                         selectionType: .single,
+                                         rows: [
+                                            DeckRowViewModel(deck: .fibonacci, configuration: configuration),
+                                            DeckRowViewModel(deck: .standar, configuration: configuration)
+                ]),
+                SettingsSectionViewModel(title: nil, // Preferences
+                                         selectionType: .multiple,
+                                         rows: [
+                                            PreferenceRowViewModel(preference: .shakeToReveal, configuration: configuration)
+                ]),
+                SettingsSectionViewModel(title: nil,
+                                         selectionType: .multiple,
+                                         rows: [
+                                            ActionRowViewModel<SettingsViewController>(text: "Feedback & feature request", action: { [weak self] vc in // TODO localize
+                                            })
+                ])
+        ]
+    }()
     
-    init(settings: [SettingsSectionViewModel], configuration: Configuration) {
-        self.settings = settings
+    init(configuration: Configuration) {
         self.configuration = configuration
     }
     
