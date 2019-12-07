@@ -15,6 +15,6 @@ struct Preference<T> {
 
 extension Preference {
     static var shakeToReveal: Preference<Bool> {
-        return Preference<Bool>(name: "Shake to reveal", id: "shakeToReveal")
+        return Preference<Bool>(name: "Shake to reveal", id: "shakeToReveal")// TODO localize
     }
 }
