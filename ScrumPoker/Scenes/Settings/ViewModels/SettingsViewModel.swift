@@ -99,8 +99,8 @@ class SettingsViewModel {
             configuration.selectedDeck = dvm.deck
         case let pvm as PreferenceRowViewModel:
             configuration.setValue(true, for: pvm.preference)
-        case let avm as ActionRowViewModel:
-            avm.action()
+        case let avm as ActionRowViewModel<SettingsViewController>:
+            avm.action(viewController)
         default:
             fatalError("Non existent row selected: \(indexPath)")
         }
