@@ -47,3 +47,17 @@ private func generateFibonacci(_ n: Int) -> [Int] {
     }
     return array
 }
+
+private extension Collection where Element: Equatable {
+    func removeDuplicates() -> [Element] {
+        var array: [Element] = []
+        return self.compactMap {
+            if array.contains($0) {
+                return nil
+            } else {
+                array.append($0)
+                return $0
+            }
+        }
+    }
+}
