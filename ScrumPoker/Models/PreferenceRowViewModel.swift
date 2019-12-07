@@ -21,8 +21,4 @@ struct PreferenceRowViewModel: TableRowViewModel {
     var type: TableRowType {
         return .switch(isSelected)
     }
-    
-    func didSelect() {
-        configuration.setValue(!isSelected, for: preference)
-    }
 }

@@ -15,8 +15,4 @@ struct ActionRowViewModel: TableRowViewModel {
     var type: TableRowType {
         return .unspecified
     }
-    
-    func didSelect() {
-        action()
-    }
 }

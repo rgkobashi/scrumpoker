@@ -11,7 +11,6 @@ import Foundation
 protocol TableRowViewModel {
     var text: String { get }
     var type: TableRowType { get }
-    func didSelect()
 }
 
 enum TableRowType {

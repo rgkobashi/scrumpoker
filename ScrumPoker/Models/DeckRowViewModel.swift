@@ -18,8 +18,4 @@ struct DeckRowViewModel: TableRowViewModel {
     var type: TableRowType {
         return .checkmark(configuration.selectedDeck == deck)
     }
-    
-    func didSelect() {
-        configuration.selectedDeck = deck
-    }
 }
