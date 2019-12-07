@@ -10,6 +10,6 @@ import Foundation
 
 struct SettingsSectionViewModel {
     let title: String?
-    let selectionStyle: TableSectionSelectionStyle
+    let selectionType: TableSectionSelectionType
     let rows: [TableRowViewModel]
 }

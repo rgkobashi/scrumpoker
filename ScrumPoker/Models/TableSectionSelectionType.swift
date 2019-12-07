@@ -1,5 +1,5 @@
 //
-//  TableSectionSelectionStyle.swift
+//  TableSectionSelectionType.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/12/07.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum TableSectionSelectionStyle {
+enum TableSectionSelectionType {
     case single
     case multiple
     case none

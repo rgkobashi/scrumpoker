@@ -30,7 +30,7 @@
 		E242E07F22743EBE00C28204 /* ScrumPokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E07E22743EBE00C28204 /* ScrumPokerTests.swift */; };
 		E242E08A22743EBE00C28204 /* ScrumPokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */; };
 		E266CE9D2276CDF2003451F6 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266CE9C2276CDF2003451F6 /* Deck.swift */; };
-		E26BFEDF239AA6CF00264688 /* TableSectionSelectionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEDE239AA6CF00264688 /* TableSectionSelectionStyle.swift */; };
+		E26BFEDF239AA6CF00264688 /* TableSectionSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */; };
 		E26BFEE1239AA73D00264688 /* DeckRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */; };
 		E26BFEE3239AA83300264688 /* PreferenceRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE2239AA83300264688 /* PreferenceRowViewModel.swift */; };
 		E26BFEE5239AA9BD00264688 /* SettingsSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE4239AA9BD00264688 /* SettingsSectionViewModel.swift */; };
@@ -102,7 +102,7 @@
 		E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumPokerUITests.swift; sourceTree = "<group>"; };
 		E242E08B22743EBE00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E266CE9C2276CDF2003451F6 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
-		E26BFEDE239AA6CF00264688 /* TableSectionSelectionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionSelectionStyle.swift; sourceTree = "<group>"; };
+		E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionSelectionType.swift; sourceTree = "<group>"; };
 		E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckRowViewModel.swift; sourceTree = "<group>"; };
 		E26BFEE2239AA83300264688 /* PreferenceRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceRowViewModel.swift; sourceTree = "<group>"; };
 		E26BFEE4239AA9BD00264688 /* SettingsSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionViewModel.swift; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 				E266CE9C2276CDF2003451F6 /* Deck.swift */,
 				E23288B922748FAA00A94F15 /* DeckLayout.swift */,
 				E28E88D4227767F100DFF021 /* Preference.swift */,
-				E26BFEDE239AA6CF00264688 /* TableSectionSelectionStyle.swift */,
+				E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */,
 				E26BFEE4239AA9BD00264688 /* SettingsSectionViewModel.swift */,
 			);
 			path = Models;
@@ -637,7 +637,7 @@
 			files = (
 				E266CE9D2276CDF2003451F6 /* Deck.swift in Sources */,
 				E23288BA22748FAA00A94F15 /* DeckLayout.swift in Sources */,
-				E26BFEDF239AA6CF00264688 /* TableSectionSelectionStyle.swift in Sources */,
+				E26BFEDF239AA6CF00264688 /* TableSectionSelectionType.swift in Sources */,
 				E23288B5227457F300A94F15 /* UICollectionView.swift in Sources */,
 				E23288AF2274508900A94F15 /* CardCell.swift in Sources */,
 				E2CDBE122275ED6E0054957B /* Configuration.swift in Sources */,

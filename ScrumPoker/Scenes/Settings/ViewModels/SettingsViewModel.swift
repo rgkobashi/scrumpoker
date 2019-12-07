@@ -54,7 +54,7 @@ class SettingsViewModel {
     
     func shouldDeselectAfterSelectingRow(at indexPath: IndexPath) -> Bool {
         let vm = settings[indexPath.section]
-        switch vm.selectionStyle {
+        switch vm.selectionType {
         case .single:
             return true
         case .multiple, .none:
