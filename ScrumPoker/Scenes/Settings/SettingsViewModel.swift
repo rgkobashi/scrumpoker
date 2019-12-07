@@ -12,14 +12,6 @@ class SettingsViewModel {
     
     private let settings: [SettingsSectionViewModel]
     private let configuration: Configuration
-    private lazy var singleSelectionSections: [Int] = {
-        return settings
-            .enumerated()
-            .map { (index, setting) -> Int? in
-                setting.selectionStyle == .single ? index : nil
-            }
-            .compactMap { $0 }
-    }()
     
     init(settings: [SettingsSectionViewModel], configuration: Configuration) {
         self.settings = settings
