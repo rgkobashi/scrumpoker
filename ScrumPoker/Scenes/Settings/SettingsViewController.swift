@@ -20,6 +20,13 @@ class SettingsViewController: UIViewController {
     }
     
     var viewModel: SettingsViewModel!
+    
+    private func deselectRestOfSection(for indexPath: IndexPath) {
+        tableView
+            .indexPathsForSelectedRows?.compactMap { $0 }
+            .filter { $0.section == indexPath.section && $0.row != indexPath.row }
+            .forEach { tableView.deselectRow(at: $0, animated: true) }
+    }
 }
 
 extension SettingsViewController: UITableViewDataSource {
@@ -55,19 +62,22 @@ extension SettingsViewController: UITableViewDataSource {
 
 extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        return viewModel.shouldHighlightRow(at: indexPath)
+        return viewModel.shouldEnableRegularRowSelection(at: indexPath)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRow(at: indexPath)
-        if viewModel.shouldDeselectIndexPathsWhenSelecting(at: indexPath), let selectedIndexPaths = tableView.indexPathsForSelectedRows {
-            viewModel
-                .indexPathsToDeselectWhenSelecting(at: indexPath, selectedIndexPaths: selectedIndexPaths)
-                .forEach {
-                    tableView.deselectRow(at: $0, animated: true)
-                }
-        } else if viewModel.shouldDeselectItselfWhenSelecting(at: indexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
+        
+        if viewModel.shouldDeselectAfterSelectingRow(at: indexPath) {
+            if viewModel.shouldDeselectRestOfSectionAfterSelectingRow(at: indexPath) {
+                deselectRestOfSection(for: indexPath)
+            } else if viewModel.shouldDeselectItselfAfterSelectingRow(at: indexPath) {
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        viewModel.didDeselectRow(at: indexPath)
     }
 }
