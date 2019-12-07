@@ -9,6 +9,8 @@
 import UIKit
 
 class CardViewController: UIViewController {
+    
+    var viewModel: CardViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
