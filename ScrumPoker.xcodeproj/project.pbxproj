@@ -290,9 +290,9 @@
 			isa = PBXGroup;
 			children = (
 				E242E06922743EBC00C28204 /* AppDelegate.swift */,
+				E23288B6227460EB00A94F15 /* Models */,
 				E23288A622744DC800A94F15 /* Protocols */,
 				E23288A322744D7100A94F15 /* Extensions */,
-				E23288B6227460EB00A94F15 /* Models */,
 				E2CDBE102275ED510054957B /* Common */,
 				E232889C22744CEE00A94F15 /* Scenes */,
 				E2328897227449B400A94F15 /* Support */,

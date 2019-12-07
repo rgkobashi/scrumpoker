@@ -18,13 +18,4 @@ extension StoryboardIdentifiable where Self: UIViewController {
     }
 }
 
-extension UIStoryboard {
-    func instantiateViewController<T: UIViewController>() -> T {
-        guard let viewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
-            fatalError("Could not instantiate view controller with identifier \(T.storyboardIdentifier) ")
-        }
-        return viewController
-    }
-}
-
 extension UIViewController: StoryboardIdentifiable { }
