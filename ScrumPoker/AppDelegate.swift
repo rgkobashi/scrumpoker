@@ -26,8 +26,6 @@ import UIKit
  https://cocoacasts.com/configuring-table-views-with-model-view-viewmodel-and-protocols
  https://novemberfive.co/blog/creating-dynamic-screens-protocol-oriented-mvvm-swift
  
- reorganize project and make sure the models and VM makes sense
- reorganize models, consider adding it into viewModel file
  fix signing
  check TODOs
  add menu button on top bar
