@@ -106,6 +106,7 @@ extension DeckViewController: UICollectionViewDelegateFlowLayout {
 
 extension DeckViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let card = viewModel.card(at: indexPath.row)
+        viewModel.showCard(card, from: self)
     }
 }

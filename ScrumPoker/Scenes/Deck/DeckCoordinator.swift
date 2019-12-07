@@ -51,13 +51,20 @@ extension DeckCoordinator {
     func showMenu() {
         navigationController.present(menuCoordinator.rootViewController, animated: true, completion: nil)
     }
+    
+    func showCardScreen(_ card: Card, from viewController: UIViewController) {
+    }
 }
 
 // MARK: - ViewModels callbacks
 
 extension DeckCoordinator: DeckViewModelDelegate {
-    func didTapShowMenu(from: DeckViewController) {
+    func didTapShowMenu(from viewController: DeckViewController) {
         showMenu()
+    }
+    
+    func didTapShowCard(_ card: Card, from viewController: DeckViewController) {
+        showCardScreen(card, from: viewController)
     }
 }
 

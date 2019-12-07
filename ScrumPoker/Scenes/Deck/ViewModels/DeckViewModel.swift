@@ -9,7 +9,8 @@
 import UIKit
 
 protocol DeckViewModelDelegate: class {
-    func didTapShowMenu(from: DeckViewController)
+    func didTapShowMenu(from viewController: DeckViewController)
+    func didTapShowCard(_ card: Card, from viewController: DeckViewController)
 }
 
 class DeckViewModel {
@@ -65,5 +66,9 @@ class DeckViewModel {
     
     func showMenu(from viewController: DeckViewController) {
         delegate?.didTapShowMenu(from: viewController)
+    }
+    
+    func showCard(_ card: Card, from viewController: DeckViewController) {
+        delegate?.didTapShowCard(card, from: viewController)
     }
 }
