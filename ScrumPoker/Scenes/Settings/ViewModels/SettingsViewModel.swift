@@ -27,7 +27,7 @@ class SettingsViewModel {
                                             PreferenceRowViewModel(preference: .shakeToReveal, configuration: configuration)
                 ]),
                 SettingsSectionViewModel(title: nil,
-                                         selectionType: .multiple,
+                                         selectionType: .single,
                                          rows: [
                                             ActionRowViewModel<SettingsViewController>(text: "Feedback & feature request", action: { [weak self] vc in // TODO localize
                                                 self?.delegate?.didTapFeedback(from: vc)
