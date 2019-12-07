@@ -45,7 +45,7 @@ class SettingsViewModel {
             return configuration.selectedDeck != dvm.deck
         case is PreferenceRowViewModel:
             return false
-        case is ActionRowViewModel:
+        case is ActionRowViewModel<Any>:
             return true
         default:
             fatalError("Non existent row to enable: \(indexPath)")
@@ -69,7 +69,7 @@ class SettingsViewModel {
             return true
         case is PreferenceRowViewModel:
             return false
-        case is ActionRowViewModel:
+        case is ActionRowViewModel<Any>:
             return false
         default:
             fatalError("Non existent row to deselect rest of section: \(indexPath)")
@@ -83,7 +83,7 @@ class SettingsViewModel {
             return false
         case is PreferenceRowViewModel:
             return false
-        case is ActionRowViewModel:
+        case is ActionRowViewModel<Any>:
             return true
         default:
             fatalError("Non existent row to deselect itself: \(indexPath)")
