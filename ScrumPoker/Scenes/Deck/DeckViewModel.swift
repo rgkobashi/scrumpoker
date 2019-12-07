@@ -25,6 +25,10 @@ class DeckViewModel {
     
     // MARK: Data source
     
+    var deckName: String {
+        return deck.name
+    }
+    
     var deckSize: Int {
         return deck.cards.count
     }

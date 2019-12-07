@@ -24,6 +24,7 @@ class DeckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = viewModel.deckName
         layoutCollectionView()
     }
     
