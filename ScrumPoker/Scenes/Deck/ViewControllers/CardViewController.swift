@@ -18,12 +18,20 @@ class CardViewController: UIViewController {
     
     var viewModel: CardViewModel!
     
+    private var isCardFlipped = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.close)))
+        self.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapCardView)))
     }
     
-    @objc private func close() {
-        viewModel.close(from: self)
+    @objc private func tapCardView() {
+        if isCardFlipped {
+            viewModel.close(from: self)
+            return
+        }
+        cardView.flip { [weak self] in
+            self?.isCardFlipped = true
+        }
     }
 }
