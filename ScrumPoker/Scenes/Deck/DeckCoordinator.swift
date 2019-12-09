@@ -54,7 +54,7 @@ extension DeckCoordinator {
     
     func showCardScreen(_ card: Card, from viewController: UIViewController) {
         let vc: CardViewController = storyboard.instantiateViewController()
-        let vm = CardViewModel(card: card)
+        let vm = CardViewModel(card: card, configuration: configuration)
         vc.viewModel = vm
         vm.delegate = self
         viewController.present(vc, animated: true)

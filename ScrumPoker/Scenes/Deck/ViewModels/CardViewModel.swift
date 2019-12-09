@@ -14,6 +14,7 @@ protocol CardViewModelDelegate: class {
 
 class CardViewModel {
     private let card: Card
+    private let configuration: Configuration
     
     weak var delegate: CardViewModelDelegate?
     
@@ -21,8 +22,13 @@ class CardViewModel {
         return card.text
     }
     
-    init(card: Card) {
+    var isShakeToRevealEnabled: Bool {
+        configuration.getValue(for: .shakeToReveal)
+    }
+    
+    init(card: Card, configuration: Configuration) {
         self.card = card
+        self.configuration = configuration
     }
     
     func close(from viewController: CardViewController) {
