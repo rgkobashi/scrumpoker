@@ -9,6 +9,7 @@
 import Foundation
 
 protocol MenuViewModelDelegate: class {
+    func didUpdateDeck(_ deck: Deck, from viewController: MenuViewController)
     func didTapFeedback(from viewController: MenuViewController)
 }
 
@@ -40,6 +41,11 @@ class MenuViewModel {
     
     init(configuration: Configuration) {
         self.configuration = configuration
+    }
+    
+    func updateDeck(_ deck: Deck, from viewController: MenuViewController) {
+        configuration.selectedDeck = deck
+        delegate?.didUpdateDeck(deck, from: viewController)
     }
     
     // MARK: - Data source
@@ -120,7 +126,7 @@ class MenuViewModel {
         let vm = menuItems[indexPath.section].rows[indexPath.row]
         switch vm {
         case let dvm as DeckRowViewModel:
-            configuration.selectedDeck = dvm.deck
+            updateDeck(dvm.deck, from: viewController)
         case let pvm as PreferenceRowViewModel:
             configuration.setValue(true, for: pvm.preference)
         case let avm as ActionRowViewModel<MenuViewController>:
