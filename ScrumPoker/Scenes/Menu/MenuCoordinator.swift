@@ -9,7 +9,7 @@
 import SideMenu
 
 protocol MenuCoordinatorDelegate: class {
-    
+    func didUpdateDeck(_ deck: Deck, from coordinator: MenuCoordinator)
 }
 
 class MenuCoordinator {
@@ -38,6 +38,10 @@ class MenuCoordinator {
 }
 
 extension MenuCoordinator: MenuViewModelDelegate {
+    func didUpdateDeck(_ deck: Deck, from viewController: MenuViewController) {
+        delegate?.didUpdateDeck(deck, from: self)
+    }
+    
     func didTapFeedback(from viewController: MenuViewController) {
         
     }
