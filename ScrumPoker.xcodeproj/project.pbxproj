@@ -42,6 +42,7 @@
 		E29BD3C5239E957D006355F2 /* CardFrontDesignView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29BD3C4239E957D006355F2 /* CardFrontDesignView.xib */; };
 		E29BD3C7239EA778006355F2 /* CardBackDesignView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29BD3C6239EA778006355F2 /* CardBackDesignView.xib */; };
 		E29BD3C9239EA780006355F2 /* CardBackDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BD3C8239EA780006355F2 /* CardBackDesignView.swift */; };
+		E29BD3CB239EA831006355F2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BD3CA239EA831006355F2 /* CardView.swift */; };
 		E2CDBE072274AD660054957B /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE062274AD660054957B /* MenuCoordinator.swift */; };
 		E2CDBE0B2274ADD10054957B /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE0A2274ADD10054957B /* MenuViewModel.swift */; };
 		E2CDBE0D2274ADD80054957B /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CDBE0C2274ADD80054957B /* Menu.storyboard */; };
@@ -120,6 +121,7 @@
 		E29BD3C4239E957D006355F2 /* CardFrontDesignView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardFrontDesignView.xib; sourceTree = "<group>"; };
 		E29BD3C6239EA778006355F2 /* CardBackDesignView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardBackDesignView.xib; sourceTree = "<group>"; };
 		E29BD3C8239EA780006355F2 /* CardBackDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackDesignView.swift; sourceTree = "<group>"; };
+		E29BD3CA239EA831006355F2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E2CDBE062274AD660054957B /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		E2CDBE0A2274ADD10054957B /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		E2CDBE0C2274ADD80054957B /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 		E29BD3C1239E9546006355F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E29BD3CA239EA831006355F2 /* CardView.swift */,
 				E29BD3C4239E957D006355F2 /* CardFrontDesignView.xib */,
 				E29BD3C2239E9566006355F2 /* CardFrontDesignView.swift */,
 				E29BD3C6239EA778006355F2 /* CardBackDesignView.xib */,
@@ -709,6 +712,7 @@
 				E2CDBE1B22760CAC0054957B /* UITableView.swift in Sources */,
 				E23288B8227460F900A94F15 /* Card.swift in Sources */,
 				E26BFEE7239AAA0100264688 /* ActionRowViewModel.swift in Sources */,
+				E29BD3CB239EA831006355F2 /* CardView.swift in Sources */,
 				E2CDBE0B2274ADD10054957B /* MenuViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
