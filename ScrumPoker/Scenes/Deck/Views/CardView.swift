@@ -23,7 +23,7 @@ class CardView: UIView {
         self.addSubview(cardDesigns.back)
     }
     
-    func flip() {
+    func flip(completion: @escaping () -> Void) {
         guard cardDesigns != nil else {
             fatalError("CardView not properly set up, call setup(with:) before calling flip()")
         }
@@ -35,6 +35,6 @@ class CardView: UIView {
         UIView.transition(with: self, duration: 0.5, options: .transitionFlipFromLeft, animations: {
             self.cardDesigns.back.removeFromSuperview()
             self.addSubview(self.cardDesigns.front)
-        }, completion: nil)
+        }, completion: { _ in completion() } )
     }
 }
