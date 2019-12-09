@@ -82,5 +82,7 @@ extension DeckCoordinator: CardViewModelDelegate {
 // MARK: - Coordinators callbacks
 
 extension DeckCoordinator: MenuCoordinatorDelegate {
-    
+    func didUpdateDeck(_ deck: Deck, from coordinator: MenuCoordinator) {
+        deckVM.updateDeck(deck)
+    }
 }
