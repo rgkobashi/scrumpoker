@@ -27,9 +27,17 @@ class CardViewController: UIViewController {
     
     @objc private func tapCardView() {
         if isCardFlipped {
-            viewModel.close(from: self)
-            return
+            close()
+        } else {
+            flipCard()
         }
+    }
+    
+    private func close() {
+        viewModel.close(from: self)
+    }
+    
+    private func flipCard() {
         cardView.flip { [weak self] in
             self?.isCardFlipped = true
         }
