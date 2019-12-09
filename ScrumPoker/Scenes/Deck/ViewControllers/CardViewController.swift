@@ -10,9 +10,9 @@ import UIKit
 
 class CardViewController: UIViewController {
     
-    @IBOutlet weak var cardLabel: UILabel! {
+    @IBOutlet weak var cardView: CardView! {
         didSet {
-            cardLabel.text = viewModel.cardText
+            cardView.setup(with: viewModel.cardText)
         }
     }
     
