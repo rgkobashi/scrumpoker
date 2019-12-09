@@ -12,7 +12,11 @@ class DeckViewController: UIViewController {
     
     @IBOutlet weak var holderView: UIView!
     
-    var viewModel: DeckViewModel!
+    var viewModel: DeckViewModel! {
+        didSet {
+            viewModel.viewDelegate = self
+        }
+    }
     
     private lazy var collectionView: UICollectionView = {
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -108,5 +112,11 @@ extension DeckViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let card = viewModel.card(at: indexPath.row)
         viewModel.showCard(card, from: self)
+    }
+}
+
+extension DeckViewController: DeckViewModelViewDelegate {
+    func didUpdateDeck() {
+        collectionView.reloadData()
     }
 }
