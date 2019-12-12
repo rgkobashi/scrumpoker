@@ -11,6 +11,7 @@ import Foundation
 protocol MenuViewModelDelegate: class {
     func didUpdateDeck(_ deck: Deck, from viewController: MenuViewController)
     func didTapFeedback(from viewController: MenuViewController)
+    func didTapContribute(from viewController: MenuViewController)
 }
 
 class MenuViewModel {
@@ -30,7 +31,10 @@ class MenuViewModel {
                 MenuSectionViewModel(title: nil,
                                      selectionType: .single,
                                      rows: [
-                                        ActionRowViewModel<MenuViewController>(text: "Feedback & feature request", action: { [weak self] vc in // TODO localize
+                                        ActionRowViewModel<MenuViewController>(text: "Feedback", action: { [weak self] vc in // TODO localize
+                                            self?.delegate?.didTapFeedback(from: vc)
+                                        }),
+                                        ActionRowViewModel<MenuViewController>(text: "Contribute", action: { [weak self] vc in // TODO localize
                                             self?.delegate?.didTapFeedback(from: vc)
                                         })
                 ])

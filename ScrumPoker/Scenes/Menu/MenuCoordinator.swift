@@ -45,4 +45,8 @@ extension MenuCoordinator: MenuViewModelDelegate {
     func didTapFeedback(from viewController: MenuViewController) {
         
     }
+    
+    func didTapContribute(from viewController: MenuViewController) {
+        
+    }
 }
