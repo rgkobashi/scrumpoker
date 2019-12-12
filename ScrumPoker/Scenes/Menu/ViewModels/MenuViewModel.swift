@@ -6,7 +6,7 @@
 //  Copyright © 2019 rgkobashi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol MenuViewModelDelegate: class {
     func didUpdateDeck(_ deck: Deck, from viewController: MenuViewController)
@@ -14,6 +14,7 @@ protocol MenuViewModelDelegate: class {
 
 class MenuViewModel {
     private let configuration: Configuration
+    private let application: UIApplication
     private lazy var menuItems: [MenuSectionViewModel] = {
         return [MenuSectionViewModel(title: nil, // Decks
                                      selectionType: .single,
@@ -41,8 +42,9 @@ class MenuViewModel {
     
     weak var delegate: MenuViewModelDelegate?
     
-    init(configuration: Configuration) {
+    init(configuration: Configuration, application: UIApplication = .shared) {
         self.configuration = configuration
+        self.application = application
     }
     
     private func updateDeck(_ deck: Deck, from viewController: MenuViewController) {
@@ -55,7 +57,7 @@ class MenuViewModel {
     }
     
     private func contribute() {
-        
+        application.open(configuration.contributeURL, options: [:])
     }
     
     // MARK: - Data source
