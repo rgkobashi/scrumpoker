@@ -35,15 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     private let configuration = Configuration()
-    private var deckCoordinator: DeckCoordinator!
+    private var mainCoordinator: MainCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configuration.setFabric()
         configuration.setSideMenu()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        deckCoordinator = DeckCoordinator(window: window!, configuration: configuration)
-        deckCoordinator.start()
+        mainCoordinator = MainCoordinator(window: window!, configuration: configuration)
+        mainCoordinator.start()
         
         return true
     }

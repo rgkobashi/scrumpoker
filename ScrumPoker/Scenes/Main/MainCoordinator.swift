@@ -1,5 +1,5 @@
 //
-//  DeckCoordinator.swift
+//  MainCoordinator.swift
 //  ScrumPoker
 //
 //  Created by Rogelio Kobashi on 2019/04/27.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeckCoordinator {
+class MainCoordinator {
     var rootViewController: UIViewController {
         return navigationController
     }
@@ -26,7 +26,7 @@ class DeckCoordinator {
         let nc = UINavigationController(rootViewController: deckVC)
         return nc
     }()
-    private let storyboard = UIStoryboard(name: "Deck")
+    private let storyboard = UIStoryboard(name: "Main")
     private let deckVC: DeckViewController
     private let deckVM: DeckViewModel
     
@@ -47,7 +47,7 @@ class DeckCoordinator {
 
 // MARK: - Navigation
 
-extension DeckCoordinator {
+extension MainCoordinator {
     func showMenu() {
         navigationController.present(menuCoordinator.rootViewController, animated: true, completion: nil)
     }
@@ -63,7 +63,7 @@ extension DeckCoordinator {
 
 // MARK: - ViewModels callbacks
 
-extension DeckCoordinator: DeckViewModelDelegate {
+extension MainCoordinator: DeckViewModelDelegate {
     func didTapShowMenu(from viewController: DeckViewController) {
         showMenu()
     }
@@ -73,7 +73,7 @@ extension DeckCoordinator: DeckViewModelDelegate {
     }
 }
 
-extension DeckCoordinator: CardViewModelDelegate {
+extension MainCoordinator: CardViewModelDelegate {
     func didTapClose(from viewController: CardViewController) {
         viewController.dismiss(animated: true)
     }
@@ -81,7 +81,7 @@ extension DeckCoordinator: CardViewModelDelegate {
 
 // MARK: - Coordinators callbacks
 
-extension DeckCoordinator: MenuCoordinatorDelegate {
+extension MainCoordinator: MenuCoordinatorDelegate {
     func didUpdateDeck(_ deck: Deck, from coordinator: MenuCoordinator) {
         deckVM.updateDeck(deck)
     }
