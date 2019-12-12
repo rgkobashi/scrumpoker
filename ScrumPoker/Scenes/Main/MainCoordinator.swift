@@ -106,6 +106,6 @@ extension MainCoordinator: MenuCoordinatorDelegate {
     }
     
     func didTapContribute(from coordinator: MenuCoordinator) {
-        
+        try? openBrowser(with: configuration.contributeURL)
     }
 }
