@@ -57,8 +57,8 @@ class MenuViewModel {
     private func sendFeedback(from viewController: MenuViewController) {
         do {
             try feedbackSender.sendFeedback(.mail(recipients: [configuration.feedbackEmail],
-                                                  subject: "[\(configuration.appName)]",
-                                                  message: "\n\nv\(configuration.version) (\(configuration.build))",
+                                                  subject: "[\(configuration.appName) v\(configuration.version) (\(configuration.build))]",
+                                                  message: "",
                                                   from: viewController))
         } catch {
             // TODO
