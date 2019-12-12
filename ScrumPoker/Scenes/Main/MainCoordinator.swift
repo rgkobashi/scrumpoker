@@ -8,6 +8,12 @@
 
 import UIKit
 
+extension MainCoordinator {
+    enum Error: Swift.Error {
+        case invalidBrowserURL
+    }
+}
+
 class MainCoordinator {
     var rootViewController: UIViewController {
         return navigationController
@@ -48,16 +54,23 @@ class MainCoordinator {
 // MARK: - Navigation
 
 extension MainCoordinator {
-    func showMenu() {
+    private func showMenu() {
         navigationController.present(menuCoordinator.rootViewController, animated: true, completion: nil)
     }
     
-    func showCardScreen(_ card: Card, from viewController: UIViewController) {
+    private func showCardScreen(_ card: Card, from viewController: UIViewController) {
         let vc: CardViewController = storyboard.instantiateViewController()
         let vm = CardViewModel(card: card, configuration: configuration)
         vc.viewModel = vm
         vm.delegate = self
         viewController.present(vc, animated: true)
+    }
+    
+    private func openBrowser(with url: URL) throws {
+        guard application.canOpenURL(url) else {
+            throw Error.invalidBrowserURL
+        }
+        application.open(url, options: [:])
     }
 }
 
