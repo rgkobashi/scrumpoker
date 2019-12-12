@@ -28,12 +28,16 @@ class DeckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateTitle()
         setupNavigationBar()
         layoutCollectionView()
     }
     
-    private func setupNavigationBar() {
+    private func updateTitle() {
         self.title = viewModel.deckName
+    }
+    
+    private func setupNavigationBar() {
         self.navigationItem.rightBarButtonItem = {
             if #available(iOS 13.0, *) {
                 return UIBarButtonItem(image: UIImage(systemName: "ellipsis"), style: .plain, target: self, action: #selector(self.showMenu))
