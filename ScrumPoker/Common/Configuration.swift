@@ -17,17 +17,19 @@ private enum UserDefaultsKey: String {
 class Configuration {
     private static var isInitialized = false
     
+    private let application: UIApplication
     private let sideMenuManager: SideMenuManager
     private let userDefaults: UserDefaults
     private var defaultDeck: Deck {
         return Deck.fibonacci
     }
     
-    init(sideMenuManager: SideMenuManager = SideMenuManager.default, userDefaults: UserDefaults = UserDefaults.standard) {
+    init(application: UIApplication = .shared, sideMenuManager: SideMenuManager = SideMenuManager.default, userDefaults: UserDefaults = UserDefaults.standard) {
         guard !Configuration.isInitialized else {
             fatalError("Configuration should be initialized only once from AppDelegate")
         }
         Configuration.isInitialized = true
+        self.application = application
         self.sideMenuManager = sideMenuManager
         self.userDefaults = userDefaults
     }
@@ -38,6 +40,10 @@ class Configuration {
     
     func setSideMenu() {
         sideMenuManager.menuFadeStatusBar = false
+    }
+    
+    func disableAutoLock() {
+        application.isIdleTimerDisabled = true
     }
     
     // MARK: -
