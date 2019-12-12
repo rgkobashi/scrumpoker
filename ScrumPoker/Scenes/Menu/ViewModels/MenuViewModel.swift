@@ -32,7 +32,7 @@ class MenuViewModel {
                                      selectionType: .single,
                                      rows: [
                                         ActionRowViewModel<MenuViewController>(text: "Feedback", action: { [weak self] vc in // TODO localize
-                                            self?.sendFeedback()
+                                            self?.sendFeedback(from: vc)
                                         }),
                                         ActionRowViewModel<MenuViewController>(text: "Contribute", action: { [weak self] vc in // TODO localize
                                             self?.contribute()
@@ -54,8 +54,15 @@ class MenuViewModel {
         delegate?.didUpdateDeck(deck, from: viewController)
     }
     
-    private func sendFeedback() {
-        
+    private func sendFeedback(from viewController: MenuViewController) {
+        do {
+            try feedbackSender.sendFeedback(.mail(recipients: [configuration.feedbackEmail],
+                                                  subject: "[\(configuration.appName)]",
+                                                  message: "\n\nv\(configuration.version) (\(configuration.build))",
+                                                  from: viewController))
+        } catch {
+            // TODO
+        }
     }
     
     private func contribute() {
