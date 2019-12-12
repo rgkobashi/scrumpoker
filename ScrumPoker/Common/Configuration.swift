@@ -25,9 +25,25 @@ class Configuration {
         return Deck.fibonacci
     }
     
+    var feedbackEmail: String {
+        return "rgkobashi@gmail.com"
+    }
     var contributeURL: URL {
         return URL(string: "https://github.com/rgkobashi/scrumpoker")!
     }
+    var version: String {
+        guard let v = bundle.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else {
+            fatalError("Unable to get app version number")
+        }
+        return v
+    }
+    var build: String {
+        guard let b = bundle.object(forInfoDictionaryKey: "CFBundleVersion") as? String else {
+            fatalError("Unable to get app build number")
+        }
+        return b
+    }
+    
     
     init(bundle: Bundle = .main, application: UIApplication = .shared, sideMenuManager: SideMenuManager = SideMenuManager.default, userDefaults: UserDefaults = UserDefaults.standard) {
         guard !Configuration.isInitialized else {
