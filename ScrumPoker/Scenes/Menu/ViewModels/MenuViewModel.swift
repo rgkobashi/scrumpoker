@@ -10,8 +10,6 @@ import Foundation
 
 protocol MenuViewModelDelegate: class {
     func didUpdateDeck(_ deck: Deck, from viewController: MenuViewController)
-    func didTapFeedback(from viewController: MenuViewController)
-    func didTapContribute(from viewController: MenuViewController)
 }
 
 class MenuViewModel {
@@ -32,10 +30,10 @@ class MenuViewModel {
                                      selectionType: .single,
                                      rows: [
                                         ActionRowViewModel<MenuViewController>(text: "Feedback", action: { [weak self] vc in // TODO localize
-                                            self?.delegate?.didTapFeedback(from: vc)
+                                            self?.sendFeedback()
                                         }),
                                         ActionRowViewModel<MenuViewController>(text: "Contribute", action: { [weak self] vc in // TODO localize
-                                            self?.delegate?.didTapContribute(from: vc)
+                                            self?.contribute()
                                         })
                 ])
         ]
@@ -47,9 +45,17 @@ class MenuViewModel {
         self.configuration = configuration
     }
     
-    func updateDeck(_ deck: Deck, from viewController: MenuViewController) {
+    private func updateDeck(_ deck: Deck, from viewController: MenuViewController) {
         configuration.selectedDeck = deck
         delegate?.didUpdateDeck(deck, from: viewController)
+    }
+    
+    private func sendFeedback() {
+        
+    }
+    
+    private func contribute() {
+        
     }
     
     // MARK: - Data source

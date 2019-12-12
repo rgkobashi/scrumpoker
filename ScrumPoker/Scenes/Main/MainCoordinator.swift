@@ -8,12 +8,6 @@
 
 import UIKit
 
-extension MainCoordinator {
-    enum Error: Swift.Error {
-        case invalidBrowserURL
-    }
-}
-
 class MainCoordinator {
     var rootViewController: UIViewController {
         return navigationController
@@ -21,7 +15,6 @@ class MainCoordinator {
     
     private let window: UIWindow
     private let configuration: Configuration
-    private let application: UIApplication
     
     private lazy var menuCoordinator: MenuCoordinator = {
         let c = MenuCoordinator(configuration: configuration)
@@ -37,10 +30,9 @@ class MainCoordinator {
     private let deckVC: DeckViewController
     private let deckVM: DeckViewModel
     
-    init(window: UIWindow, configuration: Configuration, application: UIApplication = .shared) {
+    init(window: UIWindow, configuration: Configuration) {
         self.window = window
         self.configuration = configuration
-        self.application = application
         deckVC = storyboard.instantiateViewController()
         deckVM = DeckViewModel(deck: configuration.selectedDeck, layout: .default)
         deckVM.delegate = self
@@ -67,13 +59,6 @@ extension MainCoordinator {
         vm.delegate = self
         viewController.present(vc, animated: true)
     }
-    
-    private func openBrowser(with url: URL) throws {
-        guard application.canOpenURL(url) else {
-            throw Error.invalidBrowserURL
-        }
-        application.open(url, options: [:])
-    }
 }
 
 // MARK: - ViewModels callbacks
@@ -99,13 +84,5 @@ extension MainCoordinator: CardViewModelDelegate {
 extension MainCoordinator: MenuCoordinatorDelegate {
     func didUpdateDeck(_ deck: Deck, from coordinator: MenuCoordinator) {
         deckVM.updateDeck(deck)
-    }
-    
-    func didTapFeedback(from coordinator: MenuCoordinator) {
-        
-    }
-    
-    func didTapContribute(from coordinator: MenuCoordinator) {
-        try? openBrowser(with: configuration.contributeURL)
     }
 }
