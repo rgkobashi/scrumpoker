@@ -85,4 +85,12 @@ extension MainCoordinator: MenuCoordinatorDelegate {
     func didUpdateDeck(_ deck: Deck, from coordinator: MenuCoordinator) {
         deckVM.updateDeck(deck)
     }
+    
+    func didTapFeedback(from coordinator: MenuCoordinator) {
+        
+    }
+    
+    func didTapContribute(from coordinator: MenuCoordinator) {
+        
+    }
 }
