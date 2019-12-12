@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol CardViewModelViewDelegate: class {
+    func flipCard(completion: @escaping () -> Void)
+}
+
 protocol CardViewModelDelegate: class {
     func didTapClose(from viewController: CardViewController)
 }
@@ -15,20 +19,34 @@ protocol CardViewModelDelegate: class {
 class CardViewModel {
     private let card: Card
     private let configuration: Configuration
+    private var isShakeToRevealEnabled: Bool {
+        configuration.getValue(for: .shakeToReveal)
+    }
+    private(set) var isCardFlipped = false
     
     weak var delegate: CardViewModelDelegate?
+    weak var viewDelegate: CardViewModelViewDelegate?
     
     var cardText: String {
         return card.text
     }
     
-    var isShakeToRevealEnabled: Bool {
-        configuration.getValue(for: .shakeToReveal)
-    }
-    
     init(card: Card, configuration: Configuration) {
         self.card = card
         self.configuration = configuration
+    }
+    
+    func flipCard() {
+        viewDelegate?.flipCard { [weak self] in
+            self?.isCardFlipped = true
+        }
+    }
+    
+    func flipCardWhenShakingIfNeeded() {
+        guard isShakeToRevealEnabled, !isCardFlipped else {
+            return
+        }
+        flipCard()
     }
     
     func close(from viewController: CardViewController) {

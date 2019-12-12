@@ -16,9 +16,11 @@ class CardViewController: UIViewController {
         }
     }
     
-    var viewModel: CardViewModel!
-    
-    private var isCardFlipped = false
+    var viewModel: CardViewModel! {
+        didSet {
+            viewModel.viewDelegate = self
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,20 +28,20 @@ class CardViewController: UIViewController {
     }
     
     @objc private func tapCardView() {
-        if isCardFlipped {
-            close()
+        if viewModel.isCardFlipped {
+            viewModel.close(from: self)
         } else {
-            flipCard()
+            viewModel.flipCard()
         }
     }
     
-    private func close() {
-        viewModel.close(from: self)
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        viewModel.flipCardWhenShakingIfNeeded()
     }
-    
-    private func flipCard() {
-        cardView.flip { [weak self] in
-            self?.isCardFlipped = true
-        }
+}
+
+extension CardViewController: CardViewModelViewDelegate {
+    func flipCard(completion: @escaping () -> Void) {
+        cardView.flip(completion: completion)
     }
 }
