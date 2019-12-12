@@ -18,6 +18,7 @@ class Configuration {
     private static var isInitialized = false
     
     private let application: UIApplication
+    private let bundle: Bundle
     private let sideMenuManager: SideMenuManager
     private let userDefaults: UserDefaults
     private var defaultDeck: Deck {
@@ -28,11 +29,12 @@ class Configuration {
         return URL(string: "https://github.com/rgkobashi/scrumpoker")!
     }
     
-    init(application: UIApplication = .shared, sideMenuManager: SideMenuManager = SideMenuManager.default, userDefaults: UserDefaults = UserDefaults.standard) {
+    init(bundle: Bundle = .main, application: UIApplication = .shared, sideMenuManager: SideMenuManager = SideMenuManager.default, userDefaults: UserDefaults = UserDefaults.standard) {
         guard !Configuration.isInitialized else {
             fatalError("Configuration should be initialized only once from AppDelegate")
         }
         Configuration.isInitialized = true
+        self.bundle = bundle
         self.application = application
         self.sideMenuManager = sideMenuManager
         self.userDefaults = userDefaults
