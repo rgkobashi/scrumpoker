@@ -10,17 +10,11 @@ import UIKit
 
 /* TODO
  run lincenceplist
- add shake to reveal
- add feature request
- add avoid autolock
- avoid rorating device
  refiew that everything is being deallocated
  add localization, look for strings to localize
- add contribute option
- add support for custom decks
- considera layout for more than 15 elements
+ test that the layout is correct when it is less than 15 elements
  check warnings
- considering adding baselines for story points and share baselines to other devices
+ see if we can fully follow the architecture
  
  https://flawlessapp.io/blog/advanced-mvvm-tableview-tutorial/
  https://cocoacasts.com/configuring-table-views-with-model-view-viewmodel-and-protocols
@@ -28,6 +22,10 @@ import UIKit
  
  fix signing
  check TODOs
+ add tests
+ add analytics
+ add linter
+ Condiguration is getting bigger, consider to split it up, AppInfo for example
  */
 
 @UIApplicationMain
