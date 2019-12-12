@@ -21,6 +21,7 @@ class MainCoordinator {
     
     private let window: UIWindow
     private let configuration: Configuration
+    private let application: UIApplication
     
     private lazy var menuCoordinator: MenuCoordinator = {
         let c = MenuCoordinator(configuration: configuration)
@@ -36,9 +37,10 @@ class MainCoordinator {
     private let deckVC: DeckViewController
     private let deckVM: DeckViewModel
     
-    init(window: UIWindow, configuration: Configuration) {
+    init(window: UIWindow, configuration: Configuration, application: UIApplication = .shared) {
         self.window = window
         self.configuration = configuration
+        self.application = application
         deckVC = storyboard.instantiateViewController()
         deckVM = DeckViewModel(deck: configuration.selectedDeck, layout: .default)
         deckVM.delegate = self
