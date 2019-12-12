@@ -24,6 +24,10 @@ class Configuration {
         return Deck.fibonacci
     }
     
+    var contributeURL: URL {
+        return URL(string: "https://github.com/rgkobashi/scrumpoker")!
+    }
+    
     init(application: UIApplication = .shared, sideMenuManager: SideMenuManager = SideMenuManager.default, userDefaults: UserDefaults = UserDefaults.standard) {
         guard !Configuration.isInitialized else {
             fatalError("Configuration should be initialized only once from AppDelegate")
