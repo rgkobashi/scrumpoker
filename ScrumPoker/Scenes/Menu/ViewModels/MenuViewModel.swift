@@ -35,7 +35,7 @@ class MenuViewModel {
                                             self?.delegate?.didTapFeedback(from: vc)
                                         }),
                                         ActionRowViewModel<MenuViewController>(text: "Contribute", action: { [weak self] vc in // TODO localize
-                                            self?.delegate?.didTapFeedback(from: vc)
+                                            self?.delegate?.didTapContribute(from: vc)
                                         })
                 ])
         ]
