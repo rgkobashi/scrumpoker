@@ -13,6 +13,7 @@ protocol MenuViewModelDelegate: class {
 }
 
 class MenuViewModel {
+    private let feedbackSender: FeedbackSender
     private let configuration: Configuration
     private let application: UIApplication
     private lazy var menuItems: [MenuSectionViewModel] = {
@@ -42,7 +43,8 @@ class MenuViewModel {
     
     weak var delegate: MenuViewModelDelegate?
     
-    init(configuration: Configuration, application: UIApplication = .shared) {
+    init(feedbackSender: FeedbackSender, configuration: Configuration, application: UIApplication = .shared) {
+        self.feedbackSender = feedbackSender
         self.configuration = configuration
         self.application = application
     }
