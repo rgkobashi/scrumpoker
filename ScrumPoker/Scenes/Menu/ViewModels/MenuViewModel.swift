@@ -36,6 +36,9 @@ class MenuViewModel {
                                         }),
                                         ActionRowViewModel<MenuViewController>(text: "Contribute", action: { [weak self] vc in // TODO localize
                                             self?.contribute()
+                                        }),
+                                        ActionRowViewModel<MenuViewController>(text: "Write a review", action: { [weak self] vc in // TODO localize
+                                            self?.writeReview()
                                         })
                 ])
         ]
@@ -67,6 +70,10 @@ class MenuViewModel {
     
     private func contribute() {
         application.open(configuration.contributeURL, options: [:])
+    }
+    
+    private func writeReview() {
+        application.open(configuration.writeReviewURL, options: [:])
     }
     
     // MARK: - Data source
