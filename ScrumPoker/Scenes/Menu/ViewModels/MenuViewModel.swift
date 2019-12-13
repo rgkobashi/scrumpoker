@@ -61,8 +61,8 @@ class MenuViewModel {
     
     private func sendFeedback(from viewController: MenuViewController) {
         do {
-            try feedbackSender.sendFeedback(.mail(recipients: [configuration.feedbackEmail],
-                                                  subject: "[\(configuration.appName) v\(configuration.version) (\(configuration.build))]",
+            try feedbackSender.sendFeedback(.mail(recipients: [appInformation.feedbackEmail],
+                                                  subject: "[\(appInformation.name) v\(appInformation.version) (\(appInformation.build))]", // TODO review this subject
                                                   message: "",
                                                   from: viewController))
         } catch {
@@ -71,11 +71,11 @@ class MenuViewModel {
     }
     
     private func contribute() {
-        application.open(configuration.contributeURL, options: [:])
+        application.open(appInformation.contributeURL, options: [:])
     }
     
     private func writeReview() {
-        application.open(configuration.writeReviewURL, options: [:])
+        application.open(appInformation.writeReviewURL, options: [:])
     }
     
     // MARK: - Data source
