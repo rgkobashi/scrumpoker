@@ -15,17 +15,16 @@ import UIKit
  test that the layout is correct when it is less than 15 elements
  check warnings
  see if we can fully follow the architecture
- 
- https://flawlessapp.io/blog/advanced-mvvm-tableview-tutorial/
- https://cocoacasts.com/configuring-table-views-with-model-view-viewmodel-and-protocols
- https://novemberfive.co/blog/creating-dynamic-screens-protocol-oriented-mvvm-swift
- 
  fix signing
  check TODOs
  add tests
  add analytics
  add linter
- Condiguration is getting bigger, consider to split it up, AppInfo for example
+ add to share app
+ 
+ https://flawlessapp.io/blog/advanced-mvvm-tableview-tutorial/
+ https://cocoacasts.com/configuring-table-views-with-model-view-viewmodel-and-protocols
+ https://novemberfive.co/blog/creating-dynamic-screens-protocol-oriented-mvvm-swift
  */
 
 @UIApplicationMain
