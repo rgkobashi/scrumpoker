@@ -24,12 +24,18 @@ class Configuration {
     private var defaultDeck: Deck {
         return Deck.fibonacci
     }
+    private var appAppleId: String {
+        return "1461657631"
+    }
     
     var feedbackEmail: String {
         return "rgkobashi@gmail.com"
     }
     var contributeURL: URL {
         return URL(string: "https://github.com/rgkobashi/scrumpoker")!
+    }
+    var writeReviewURL: URL {
+        return URL(string: "itms-apps://itunes.apple.com/app/\(appAppleId)?action=write-review")!
     }
     var appName: String {
         guard let n = bundle.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String else {
