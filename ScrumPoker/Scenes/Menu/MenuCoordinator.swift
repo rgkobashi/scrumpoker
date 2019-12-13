@@ -31,7 +31,8 @@ class MenuCoordinator {
     init(sideMenuManager: SideMenuManager = SideMenuManager.default, configuration: Configuration) {
         self.sideMenuManager = sideMenuManager
         menuVC = storyboard.instantiateViewController()
-        menuVM = MenuViewModel(feedbackSender: FeedbackSender(),
+        menuVM = MenuViewModel(appInformation: AppInformation(),
+                               feedbackSender: FeedbackSender(),
                                configuration: configuration)
         menuVM.delegate = self
         menuVC.viewModel = menuVM
