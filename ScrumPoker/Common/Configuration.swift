@@ -18,51 +18,17 @@ class Configuration {
     private static var isInitialized = false
     
     private let application: UIApplication
-    private let bundle: Bundle
     private let sideMenuManager: SideMenuManager
     private let userDefaults: UserDefaults
     private var defaultDeck: Deck {
         return Deck.fibonacci
     }
-    private var appAppleId: String {
-        return "1461657631"
-    }
     
-    var feedbackEmail: String {
-        return "rgkobashi@gmail.com"
-    }
-    var contributeURL: URL {
-        return URL(string: "https://github.com/rgkobashi/scrumpoker")!
-    }
-    var writeReviewURL: URL {
-        return URL(string: "itms-apps://itunes.apple.com/app/\(appAppleId)?action=write-review")!
-    }
-    var appName: String {
-        guard let n = bundle.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String else {
-            fatalError("Unable to get app version number")
-        }
-        return n
-    }
-    var version: String {
-        guard let v = bundle.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else {
-            fatalError("Unable to get app version number")
-        }
-        return v
-    }
-    var build: String {
-        guard let b = bundle.object(forInfoDictionaryKey: "CFBundleVersion") as? String else {
-            fatalError("Unable to get app build number")
-        }
-        return b
-    }
-    
-    
-    init(bundle: Bundle = .main, application: UIApplication = .shared, sideMenuManager: SideMenuManager = SideMenuManager.default, userDefaults: UserDefaults = UserDefaults.standard) {
+    init(application: UIApplication = .shared, sideMenuManager: SideMenuManager = SideMenuManager.default, userDefaults: UserDefaults = UserDefaults.standard) {
         guard !Configuration.isInitialized else {
             fatalError("Configuration should be initialized only once from AppDelegate")
         }
         Configuration.isInitialized = true
-        self.bundle = bundle
         self.application = application
         self.sideMenuManager = sideMenuManager
         self.userDefaults = userDefaults
