@@ -20,6 +20,7 @@ class DeckViewController: UIViewController {
     
     private lazy var collectionView: UICollectionView = {
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+        cv.backgroundColor = .clear
         cv.dataSource = self
         cv.delegate = self
         cv.register(CardCell.self)
