@@ -12,15 +12,27 @@ protocol CardDesign: UIView {}
 extension CardFrontDesignView: CardDesign {}
 extension CardBackDesignView: CardDesign {}
 
+extension CardView {
+    enum Side {
+        case front
+        case back
+    }
+}
+
 class CardView: UIView {
     
     private var cardDesigns: (front: CardDesign, back: CardDesign)!
     
-    func setup(with text: String) {
+    func setup(card: Card, initialSide: Side) {
         let frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-        cardDesigns = (front: CardFrontDesignView(text: text, frame: frame),
+        cardDesigns = (front: CardFrontDesignView(text: card.text, frame: frame),
                        back: CardBackDesignView(frame: frame))
-        self.addSubview(cardDesigns.back)
+        switch initialSide {
+        case .front:
+            self.addSubview(cardDesigns.front)
+        case .back:
+            self.addSubview(cardDesigns.back)
+        }
     }
     
     func flip(completion: @escaping () -> Void) {
