@@ -39,6 +39,10 @@ class Configuration {
     func disableAutoLock() {
         application.isIdleTimerDisabled = true
     }
+    
+    func setGlobalAppearance(from window: UIWindow) {
+        window.tintColor = .black
+    }
 }
 
 // MARK: - Settings

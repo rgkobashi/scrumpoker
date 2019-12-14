@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainCoordinator = MainCoordinator(window: window!, configuration: configuration)
         mainCoordinator.start()
         
+        configuration.setGlobalAppearance(from: window!)
         return true
     }
 }
