@@ -44,4 +44,6 @@ DerivedData/
 
 # End of https://www.gitignore.io/api/xcode,cocoapods
 
+### Secrets ###
 Secrets/
+ScrumPoker/GoogleService-Info.plist
