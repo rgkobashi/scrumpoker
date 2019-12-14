@@ -9,6 +9,7 @@
 import Foundation
 
 struct Deck: Equatable {
+    let id: String
     let name: String
     let cards: [Card]
 }
@@ -20,13 +21,13 @@ extension Deck {
             .removeDuplicates()
             .map(String.init)
             .map(Card.init) + extraCards
-        return Deck(name: "Fibonacci", cards: cards)
+        return Deck(id: "fibonacci", name: "Fibonacci", cards: cards)
     }
     
     static var standar: Deck {
         let cards = ["0", "½", "1", "2", "3", "5", "8", "13", "20", "40", "90", "100"]
             .map(Card.init) + extraCards
-        return Deck(name: "Standar", cards: cards)
+        return Deck(id: "standar", name: "Standar", cards: cards)
     }
     
     // MARK: Private
