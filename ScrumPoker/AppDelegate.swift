@@ -36,13 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configuration.setupFabric()
-        configuration.setupSideMenu()
         configuration.disableAutoLock()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         mainCoordinator = MainCoordinator(window: window!, configuration: configuration)
         mainCoordinator.start()
         
+        configuration.setupSideMenu(from: window!)
         configuration.setupGlobalAppearance(from: window!)
         return true
     }

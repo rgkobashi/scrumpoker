@@ -32,8 +32,9 @@ class Configuration {
         Fabric.with([Crashlytics.self])
     }
     
-    func setupSideMenu() {
+    func setupSideMenu(from window: UIWindow) {
         sideMenuManager.menuFadeStatusBar = false
+        sideMenuManager.menuWidth = window.screen.bounds.size.width * 0.60
     }
     
     func disableAutoLock() {
