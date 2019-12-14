@@ -21,3 +21,4 @@ class CardBackDesignView: UIView {
 }
 
 extension CardBackDesignView: NibLoadableView {}
+extension CardBackDesignView: CardDesign {}

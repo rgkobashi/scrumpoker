@@ -28,3 +28,4 @@ class CardFrontDesignView: UIView {
 }
 
 extension CardFrontDesignView: NibLoadableView {}
+extension CardFrontDesignView: CardDesign {}

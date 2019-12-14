@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol CardDesign: UIView {}
-extension CardFrontDesignView: CardDesign {}
-extension CardBackDesignView: CardDesign {}
-
 extension CardView {
     enum Side {
         case front
