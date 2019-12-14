@@ -6,13 +6,14 @@
 //  Copyright © 2019 rgkobashi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct ActionRowViewModel<T>: TableRowViewModel {
     let text: String
+    let image: UIImage?
     let action: (T) -> ()
     
     var type: TableRowType {
-        return .unspecified
+        return .unspecified(image)
     }
 }
