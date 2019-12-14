@@ -29,10 +29,14 @@ class CardViewController: UIViewController {
     
     @objc private func tapCardView() {
         if viewModel.isCardFlipped {
-            viewModel.close(from: self)
+            close()
         } else {
             viewModel.flipCard()
         }
+    }
+    
+    @objc private func close() {
+        viewModel.close(from: self)
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
