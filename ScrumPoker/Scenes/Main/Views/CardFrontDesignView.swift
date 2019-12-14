@@ -16,7 +16,7 @@ class CardFrontDesignView: UIView {
         super.init(frame: frame)
         setupFromNib()
         setupBorder()
-        self.textLabel.text = text
+        setupLabel(with: text)
     }
     
     override init(frame: CGRect) {
@@ -25,6 +25,13 @@ class CardFrontDesignView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("CardFrontDesignView should be initialized by calling init(text:frame:)")
+    }
+    
+    private func setupLabel(with text: String) {
+        self.textLabel.text = text
+        self.textLabel.font = .systemFont(ofSize: 500) // making it really big to be resized later and fill the whole view
+        self.textLabel.numberOfLines = 0
+        self.textLabel.adjustsFontSizeToFitWidth = true
     }
 }
 
