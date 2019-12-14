@@ -102,4 +102,5 @@ extension MenuViewController: MenuViewModelViewDelegate {
     }
 }
 
+extension MenuViewController: ViewControllerAlertable {}
 extension MenuViewController: ViewControllerSharable {}
