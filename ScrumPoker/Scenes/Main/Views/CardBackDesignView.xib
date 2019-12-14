@@ -3,16 +3,32 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardBackDesignView" customModule="ScrumPoker" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardBackDesignView" customModule="ScrumPoker" customModuleProvider="target">
+            <connections>
+                <outlet property="helperView" destination="ebC-cM-arj" id="aJg-tW-cz5"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebC-cM-arj">
+                    <rect key="frame" x="6" y="6" width="388" height="488"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ebC-cM-arj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="ElL-89-rIQ"/>
+                <constraint firstItem="ebC-cM-arj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="HQY-5m-BxG"/>
+                <constraint firstAttribute="bottom" secondItem="ebC-cM-arj" secondAttribute="bottom" constant="6" id="gSP-sB-Sad"/>
+                <constraint firstAttribute="trailing" secondItem="ebC-cM-arj" secondAttribute="trailing" constant="6" id="ogO-ja-xgY"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="139" y="112"/>
         </view>

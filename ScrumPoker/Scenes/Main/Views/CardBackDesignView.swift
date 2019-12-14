@@ -9,6 +9,8 @@
 import UIKit
 
 class CardBackDesignView: UIView {
+    @IBOutlet weak var helperView: UIView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -22,6 +24,7 @@ class CardBackDesignView: UIView {
     private func commonInit() {
         setupFromNib()
         setupBorder()
+        helperView.layer.cornerRadius = 5
     }
 }
 
