@@ -17,7 +17,6 @@ protocol CardViewModelDelegate: class {
 }
 
 class CardViewModel {
-    private let card: Card
     private let configuration: Configuration
     private let hapticFeedbackGenerator: HapticFeedbackGenerator
     private var isShakeToRevealEnabled: Bool {
@@ -28,12 +27,9 @@ class CardViewModel {
     }
     private(set) var isCardFlipped = false
     
+    let card: Card
     weak var delegate: CardViewModelDelegate?
     weak var viewDelegate: CardViewModelViewDelegate?
-    
-    var cardText: String {
-        return card.text
-    }
     
     init(card: Card, configuration: Configuration, hapticFeedbackGenerator: HapticFeedbackGenerator) {
         self.card = card
