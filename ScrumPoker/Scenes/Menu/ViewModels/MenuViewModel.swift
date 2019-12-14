@@ -27,7 +27,8 @@ class MenuViewModel {
                 MenuSectionViewModel(title: nil, // Preferences
                                      selectionType: .multiple,
                                      rows: [
-                                        PreferenceRowViewModel(preference: .shakeToReveal, configuration: configuration)
+                                        PreferenceRowViewModel(preference: .shakeToReveal, configuration: configuration),
+                                        PreferenceRowViewModel(preference: .shakeOnReveal, configuration: configuration)
                 ]),
                 MenuSectionViewModel(title: nil,
                                      selectionType: .single,

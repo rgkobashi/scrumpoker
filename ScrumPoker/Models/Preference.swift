@@ -17,4 +17,8 @@ extension Preference {
     static var shakeToReveal: Preference<Bool> {
         return Preference<Bool>(name: "Shake to reveal", id: "shakeToReveal")// TODO localize
     }
+
+    static var shakeOnReveal: Preference<Bool> {
+        return Preference<Bool>(name: "Shake on reveal", id: "shakeOnReveal")// TODO localize
+    }
 }
