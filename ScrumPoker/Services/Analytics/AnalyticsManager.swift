@@ -9,7 +9,32 @@
 import Foundation
 
 enum AnalyticsEvent {
-    case foo // TODO add real events
+    case selectedDeck(Deck)
+    case preference(Preference<Bool>)
+    case shareApp
+    case writeReview
+    case feedback
+    case contribute
+    case donate
+    
+    var name: String {
+        switch self {
+        case .selectedDeck:
+            return "selected_deck"
+        case .preference:
+            return "preference"
+        case .shareApp:
+            return "share_app"
+        case .writeReview:
+            return "write_review"
+        case .feedback:
+            return "feedback"
+        case .contribute:
+            return "contribute:"
+        case .donate:
+            return "donate"
+        }
+    }
 }
 
 protocol AnalyticsEngine {
