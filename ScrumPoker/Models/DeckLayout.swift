@@ -32,10 +32,10 @@ struct DeckLayout {
 
 extension DeckLayout {
     /// Layout for 3 cards per row and 5 per column without the need of scrolling.
-    static let `default` = DeckLayout(cardWidth: 0.25,
+    static let `default` = DeckLayout(cardWidth: 0.28,
                                       cardHeight: 0.166,
-                                      horizontalCardSpacing: 0.125,
+                                      horizontalCardSpacing: 0.08,
                                       verticalCardSpacing: 0.0425,
-                                      horizontalDeckPadding: 0.1,
+                                      horizontalDeckPadding: 0.15,
                                       verticalDeckPadding: 0.1)
 }
