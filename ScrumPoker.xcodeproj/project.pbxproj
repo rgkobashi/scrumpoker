@@ -54,6 +54,7 @@
 		E2CDBE1722760BFD0054957B /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CDBE1622760BFD0054957B /* MenuCell.xib */; };
 		E2CDBE1922760C0A0054957B /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE1822760C0A0054957B /* MenuCell.swift */; };
 		E2CDBE1B22760CAC0054957B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE1A22760CAB0054957B /* UITableView.swift */; };
+		E2D2BA5923A4C5360039A960 /* HapticFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		E2CDBE1622760BFD0054957B /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		E2CDBE1822760C0A0054957B /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		E2CDBE1A22760CAB0054957B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackGenerator.swift; sourceTree = "<group>"; };
 		ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -374,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				E2A9DB1A23A2962D00E1AD4C /* FeedbackSender.swift */,
+				E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -723,6 +726,7 @@
 				E26BFEE3239AA83300264688 /* PreferenceRowViewModel.swift in Sources */,
 				E29BD3C3239E9566006355F2 /* CardFrontDesignView.swift in Sources */,
 				E2CDBE1922760C0A0054957B /* MenuCell.swift in Sources */,
+				E2D2BA5923A4C5360039A960 /* HapticFeedbackGenerator.swift in Sources */,
 				E265D99C239BD1EA005F02A1 /* TableRowType.swift in Sources */,
 				E265D9A0239BDF73005F02A1 /* CardViewModel.swift in Sources */,
 				E2CDBE1B22760CAC0054957B /* UITableView.swift in Sources */,
