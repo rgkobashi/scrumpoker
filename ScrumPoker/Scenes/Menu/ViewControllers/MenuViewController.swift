@@ -19,7 +19,11 @@ class MenuViewController: UIViewController {
         }
     }
     
-    var viewModel: MenuViewModel!
+    var viewModel: MenuViewModel! {
+        didSet {
+            viewModel.viewDelegate = self
+        }
+    }
     
     private func deselectRestOfSection(for indexPath: IndexPath) {
         tableView
@@ -81,3 +85,11 @@ extension MenuViewController: UITableViewDelegate {
         viewModel.didDeselectRow(at: indexPath, from: self)
     }
 }
+
+extension MenuViewController: MenuViewModelViewDelegate {
+    func shareApp(_ url: URL) {
+        showShareActivity(with: [url])
+    }
+}
+
+extension MenuViewController: ViewControllerSharable {}

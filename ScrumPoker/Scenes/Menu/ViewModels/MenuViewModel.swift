@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MenuViewModelViewDelegate: class {
+    func shareApp(_ url: URL)
+}
+
 protocol MenuViewModelDelegate: class {
     func didUpdateDeck(_ deck: Deck, from viewController: MenuViewController)
 }
@@ -18,13 +22,13 @@ class MenuViewModel {
     private let configuration: Configuration
     private let application: UIApplication
     private lazy var menuItems: [MenuSectionViewModel] = {
-        return [MenuSectionViewModel(title: nil, // Decks
+        return [MenuSectionViewModel(title: "Decks",
                                      selectionType: .single,
                                      rows: [
                                         DeckRowViewModel(deck: .fibonacci, configuration: configuration),
                                         DeckRowViewModel(deck: .standar, configuration: configuration)
                 ]),
-                MenuSectionViewModel(title: nil, // Preferences
+                MenuSectionViewModel(title: "Preferences",
                                      selectionType: .multiple,
                                      rows: [
                                         PreferenceRowViewModel(preference: .shakeToReveal, configuration: configuration),
@@ -33,23 +37,31 @@ class MenuViewModel {
                 MenuSectionViewModel(title: nil,
                                      selectionType: .single,
                                      rows: [
-                                        ActionRowViewModel<MenuViewController>(text: "Feedback", action: { [weak self] vc in // TODO localize
-                                            self?.sendFeedback(from: vc)
+                                        ActionRowViewModel<MenuViewController>(text: "Share", action: { [weak self] vc in
+                                            self?.share()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Contribute", action: { [weak self] vc in // TODO localize
-                                            self?.contribute()
-                                        }),
-                                        ActionRowViewModel<MenuViewController>(text: "Write a review", action: { [weak self] vc in // TODO localize
+                                        ActionRowViewModel<MenuViewController>(text: "Write a review", action: { [weak self] vc in
                                             self?.writeReview()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Donate", action: { [weak self] vc in // TODO localize
-                                            self?.donate()
+                                        ActionRowViewModel<MenuViewController>(text: "Feedback", action: { [weak self] vc in
+                                            self?.sendFeedback(from: vc)
                                         })
+                ]),
+                MenuSectionViewModel(title: nil,
+                                     selectionType: .single,
+                                     rows: [
+                                        ActionRowViewModel<MenuViewController>(text: "Contribute", action: { [weak self] vc in
+                                            self?.contribute()
+                                        }),
+                                        ActionRowViewModel<MenuViewController>(text: "Donate", action: { [weak self] vc in
+                                            self?.donate()
+                                        }),
                 ])
         ]
     }()
     
     weak var delegate: MenuViewModelDelegate?
+    weak var viewDelegate: MenuViewModelViewDelegate?
     
     init(appInformation: AppInformation, feedbackSender: FeedbackSender, configuration: Configuration, application: UIApplication = .shared) {
         self.appInformation = appInformation
@@ -84,6 +96,10 @@ class MenuViewModel {
     
     private func donate() {
         application.open(appInformation.donateURL, options: [:])
+    }
+    
+    private func share() {
+        viewDelegate?.shareApp(appInformation.appURL)
     }
 }
 
