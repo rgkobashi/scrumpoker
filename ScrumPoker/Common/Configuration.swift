@@ -9,6 +9,7 @@
 import Fabric
 import Crashlytics
 import SideMenu
+import Firebase
 
 private enum UserDefaultsKey: String {
     case selectedDeckName
@@ -17,15 +18,17 @@ private enum UserDefaultsKey: String {
 class Configuration {
     private let application: UIApplication
     private let userDefaults: UserDefaults
+    private let firebaseApp: FirebaseApp.Type
     private let sideMenuManager: SideMenuManager
     private var defaultDeck: Deck {
         return Deck.fibonacci
     }
     
-    init(application: UIApplication = .shared, userDefaults: UserDefaults = .standard, sideMenuManager: SideMenuManager = .default) {
+    init(application: UIApplication = .shared, userDefaults: UserDefaults = .standard, firebaseApp: FirebaseApp.Type = FirebaseApp.self, sideMenuManager: SideMenuManager = .default) {
         self.application = application
         self.sideMenuManager = sideMenuManager
         self.userDefaults = userDefaults
+        self.firebaseApp = firebaseApp   
     }
     
     func setupFabric() {
