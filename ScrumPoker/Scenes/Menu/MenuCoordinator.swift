@@ -33,7 +33,8 @@ class MenuCoordinator {
         menuVC = storyboard.instantiateViewController()
         menuVM = MenuViewModel(appInformation: AppInformation(),
                                feedbackSender: FeedbackSender(),
-                               configuration: configuration)
+                               configuration: configuration,
+                               analyticsManager: AnalyticsManager(engine: FirebaseAnalyticsEngine()))
         menuVM.delegate = self
         menuVC.viewModel = menuVM
     }

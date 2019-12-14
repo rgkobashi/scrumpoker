@@ -21,6 +21,7 @@ class MenuViewModel {
     private let appInformation: AppInformation
     private let feedbackSender: FeedbackSender
     private let configuration: Configuration
+    private let analyticsManager: AnalyticsManager
     private let application: UIApplication
     private lazy var menuItems: [MenuSectionViewModel] = {
         let shareImage: UIImage?
@@ -85,10 +86,11 @@ class MenuViewModel {
         return "Version \(appInformation.version)"
     }
     
-    init(appInformation: AppInformation, feedbackSender: FeedbackSender, configuration: Configuration, application: UIApplication = .shared) {
+    init(appInformation: AppInformation, feedbackSender: FeedbackSender, configuration: Configuration, analyticsManager: AnalyticsManager, application: UIApplication = .shared) {
         self.appInformation = appInformation
         self.feedbackSender = feedbackSender
         self.configuration = configuration
+        self.analyticsManager = analyticsManager
         self.application = application
     }
     
