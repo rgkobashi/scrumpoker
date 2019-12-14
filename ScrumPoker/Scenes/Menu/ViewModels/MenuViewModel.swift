@@ -84,9 +84,11 @@ class MenuViewModel {
     private func donate() {
         application.open(appInformation.donateURL, options: [:])
     }
-    
-    // MARK: - Data source
-    
+}
+
+// MARK: - Data Source
+
+extension MenuViewModel {
     var numberOfSections: Int {
         return menuItems.count
     }
@@ -102,9 +104,11 @@ class MenuViewModel {
     func rowViewModel(for indexPath: IndexPath) -> TableRowViewModel {
         return menuItems[indexPath.section].rows[indexPath.row]
     }
-    
-    // MARK: - Delegate
-    
+}
+
+// MARK: - Delegate
+
+extension MenuViewModel {
     func shouldEnableRegularRowSelection(at indexPath: IndexPath) -> Bool {
         let vm = menuItems[indexPath.section].rows[indexPath.row]
         switch vm {
