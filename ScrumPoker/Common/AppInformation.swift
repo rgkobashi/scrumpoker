@@ -26,12 +26,6 @@ class AppInformation {
         }
         return v
     }
-    var build: String {
-        guard let b = bundle.object(forInfoDictionaryKey: "CFBundleVersion") as? String else {
-            fatalError("Unable to get app build")
-        }
-        return b
-    }
     var appURL: URL {
         return URL(string: "https://apps.apple.com/app/id\(appAppleId)")!
     }
