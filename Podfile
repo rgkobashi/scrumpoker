@@ -3,6 +3,7 @@ target 'ScrumPoker' do
 
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'Firebase/Analytics'
   pod 'LicensePlist'
   pod 'SideMenu'
 
@@ -15,7 +16,6 @@ target 'ScrumPoker' do
 
   target 'ScrumPokerUITests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
 end
