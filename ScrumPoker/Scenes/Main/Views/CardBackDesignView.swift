@@ -11,12 +11,17 @@ import UIKit
 class CardBackDesignView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupFromNib()
+        commonInit()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        commonInit()
+    }
+    
+    private func commonInit() {
         setupFromNib()
+        setupBorder()
     }
 }
 

@@ -15,6 +15,7 @@ class CardFrontDesignView: UIView {
     init(text: String, frame: CGRect) {
         super.init(frame: frame)
         setupFromNib()
+        setupBorder()
         self.textLabel.text = text
     }
     
