@@ -55,6 +55,7 @@
 		E2CDBE1922760C0A0054957B /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE1822760C0A0054957B /* MenuCell.swift */; };
 		E2CDBE1B22760CAC0054957B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE1A22760CAB0054957B /* UITableView.swift */; };
 		E2D2BA5923A4C5360039A960 /* HapticFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */; };
+		E2D2BA5C23A4C9440039A960 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		E2CDBE1822760C0A0054957B /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		E2CDBE1A22760CAB0054957B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackGenerator.swift; sourceTree = "<group>"; };
+		E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -377,6 +379,7 @@
 			children = (
 				E2A9DB1A23A2962D00E1AD4C /* FeedbackSender.swift */,
 				E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */,
+				E2D2BA5A23A4C9300039A960 /* Analytics */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -400,6 +403,14 @@
 				E2C5AF7A23A3ED6800BF686C /* AppInformation.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E2D2BA5A23A4C9300039A960 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		E2D2FB25239B96D5006DA9C0 /* Views */ = {
@@ -699,6 +710,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D2BA5C23A4C9440039A960 /* AnalyticsManager.swift in Sources */,
 				E266CE9D2276CDF2003451F6 /* Deck.swift in Sources */,
 				E23288BA22748FAA00A94F15 /* DeckLayout.swift in Sources */,
 				E26BFEDF239AA6CF00264688 /* TableSectionSelectionType.swift in Sources */,
