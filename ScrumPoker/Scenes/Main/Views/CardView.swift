@@ -29,9 +29,9 @@ class CardView: UIView {
                        back: CardBackDesignView(frame: frame))
         switch initialSide {
         case .front:
-            self.addSubview(cardDesigns.front)
+            useDesign(cardDesigns.front)
         case .back:
-            self.addSubview(cardDesigns.back)
+            useDesign(cardDesigns.back)
         }
     }
     
@@ -46,7 +46,13 @@ class CardView: UIView {
         }
         UIView.transition(with: self, duration: 0.5, options: .transitionFlipFromLeft, animations: {
             self.cardDesigns.back.removeFromSuperview()
-            self.addSubview(self.cardDesigns.front)
+            self.useDesign(self.cardDesigns.front)
         }, completion: { _ in completion() } )
+    }
+    
+    private func useDesign(_ design: CardDesign) {
+        design.frame = self.bounds
+        design.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(design)
     }
 }
