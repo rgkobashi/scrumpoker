@@ -9,6 +9,7 @@
 import UIKit
 
 protocol MenuViewModelViewDelegate: class {
+    func showAlert(title: String?, message: String, action: (() -> Void)?)
     func shareApp(_ url: URL)
 }
 
@@ -103,7 +104,8 @@ class MenuViewModel {
                                                   message: "",
                                                   from: viewController))
         } catch {
-            // TODO
+            let message = "Please send an email to \(appInformation.feedbackEmail)"
+            viewDelegate?.showAlert(title: nil, message: message, action: nil)
         }
     }
     

@@ -97,6 +97,10 @@ extension MenuViewController: UITableViewDelegate {
 }
 
 extension MenuViewController: MenuViewModelViewDelegate {
+    func showAlert(title: String?, message: String, action: (() -> Void)?) {
+        showAlert(message: message, type: .informable(action: action))
+    }
+    
     func shareApp(_ url: URL) {
         showShareActivity(with: [url])
     }
