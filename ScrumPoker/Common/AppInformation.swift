@@ -32,6 +32,9 @@ class AppInformation {
         }
         return b
     }
+    var appURL: URL {
+        return URL(string: "https://apps.apple.com/app/id\(appAppleId)")!
+    }
     var donateURL: URL {
         return URL(string: "https://www.paypal.me/rgkobashi")!
     }
