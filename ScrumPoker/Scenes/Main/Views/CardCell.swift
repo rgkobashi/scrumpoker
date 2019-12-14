@@ -10,11 +10,11 @@ import UIKit
 
 class CardCell: UICollectionViewCell {
     
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var cardView: CardView!
     
     var card: Card! {
         didSet {
-            textLabel.text = card.text
+            cardView.setup(card: card, initialSide: .front)
         }
     }
 }
