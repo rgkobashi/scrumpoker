@@ -10,6 +10,7 @@
 		0D8497ECAC64B22DDDC05A24 /* Pods_ScrumPokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */; };
 		17367E1EDA1D59A34E5FFF82 /* Pods_ScrumPokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */; };
 		65982F83EE22C95E29C64909 /* Pods_ScrumPoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */; };
+		E215EDAB23A552790077FFE7 /* FirebaseAnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */; };
 		E23288A122744D5300A94F15 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A022744D5300A94F15 /* MainCoordinator.swift */; };
 		E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A422744D7B00A94F15 /* UIStoryboard.swift */; };
 		E23288A822744DD400A94F15 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A722744DD400A94F15 /* StoryboardIdentifiable.swift */; };
@@ -86,6 +87,7 @@
 		80E89707AECA3BF1647A5934 /* Pods-ScrumPokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsEngine.swift; sourceTree = "<group>"; };
 		E23288952274493E00A94F15 /* fabric.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fabric.sh; sourceTree = "<group>"; };
 		E2328899227449DF00A94F15 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = secrets.xcconfig; path = Secrets/secrets.xcconfig; sourceTree = SOURCE_ROOT; };
 		E232889A227449DF00A94F15 /* fabric.apikey */ = {isa = PBXFileReference; lastKnownFileType = text; name = fabric.apikey; path = Secrets/fabric.apikey; sourceTree = SOURCE_ROOT; };
@@ -421,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */,
+				E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				E26BFEE7239AAA0100264688 /* ActionRowViewModel.swift in Sources */,
 				E29BD3CB239EA831006355F2 /* CardView.swift in Sources */,
 				E2CDBE0B2274ADD10054957B /* MenuViewModel.swift in Sources */,
+				E215EDAB23A552790077FFE7 /* FirebaseAnalyticsEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
