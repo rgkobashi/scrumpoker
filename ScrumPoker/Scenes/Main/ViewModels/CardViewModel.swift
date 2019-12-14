@@ -19,6 +19,7 @@ protocol CardViewModelDelegate: class {
 class CardViewModel {
     private let card: Card
     private let configuration: Configuration
+    private let hapticFeedbackGenerator: HapticFeedbackGenerator
     private var isShakeToRevealEnabled: Bool {
         configuration.getValue(for: .shakeToReveal)
     }
@@ -31,9 +32,10 @@ class CardViewModel {
         return card.text
     }
     
-    init(card: Card, configuration: Configuration) {
+    init(card: Card, configuration: Configuration, hapticFeedbackGenerator: HapticFeedbackGenerator) {
         self.card = card
         self.configuration = configuration
+        self.hapticFeedbackGenerator = hapticFeedbackGenerator
     }
     
     func flipCard() {
