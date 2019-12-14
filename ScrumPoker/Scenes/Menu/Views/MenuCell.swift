@@ -20,8 +20,8 @@ class MenuCell: UITableViewCell {
             case .switch:
                 self.accessoryView = switchControl
                 self.selectionStyle = .none
-            case .unspecified:
-                self.accessoryView = nil
+            case .unspecified(let image):
+                self.accessoryView = UIImageView(image: image)
             }
         }
     }
