@@ -100,15 +100,15 @@ extension DeckViewController: UICollectionViewDataSource {
 
 extension DeckViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return viewModel.cardSize(for: holderView)
+        return viewModel.cardSize(for: collectionView)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return viewModel.horizontalCardSpacing(for: holderView)
+        return viewModel.horizontalCardSpacing(for: collectionView)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return viewModel.verticalCardSpacing(for: holderView)
+        return viewModel.verticalCardSpacing(for: collectionView)
     }
 }
 
