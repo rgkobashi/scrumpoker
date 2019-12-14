@@ -22,7 +22,7 @@ class CardViewController: UIViewController {
     }
     @IBOutlet weak var cardView: CardView! {
         didSet {
-            cardView.setup(with: viewModel.cardText)
+            cardView.setup(card: viewModel.card, initialSide: .back)
         }
     }
     
