@@ -10,6 +10,16 @@ import UIKit
 
 class CardViewController: UIViewController {
     
+    @IBOutlet weak var closeButton: UIButton! {
+        didSet {
+            if #available(iOS 13.0, *) {
+                closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+            } else {
+                closeButton.setImage(#imageLiteral(resourceName: "closeIcon"), for: .normal)
+            }
+            closeButton.addTarget(self, action: #selector(self.close), for: .touchUpInside)
+        }
+    }
     @IBOutlet weak var cardView: CardView! {
         didSet {
             cardView.setup(with: viewModel.cardText)
