@@ -62,6 +62,9 @@ class MenuViewModel {
     
     weak var delegate: MenuViewModelDelegate?
     weak var viewDelegate: MenuViewModelViewDelegate?
+    var versionText: String {
+        return "Version \(appInformation.version) (\(appInformation.build))"
+    }
     
     init(appInformation: AppInformation, feedbackSender: FeedbackSender, configuration: Configuration, application: UIApplication = .shared) {
         self.appInformation = appInformation

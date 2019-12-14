@@ -15,6 +15,7 @@ class MenuViewController: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
             tableView.allowsMultipleSelection = true
+            tableView.tableFooterView = versionLabel
             tableView.register(MenuCell.self)
         }
     }
@@ -24,6 +25,15 @@ class MenuViewController: UIViewController {
             viewModel.viewDelegate = self
         }
     }
+    
+    private lazy var versionLabel: UILabel = {
+        let l = UILabel()
+        l.text = viewModel.versionText
+        l.textAlignment = .center
+        l.font = .systemFont(ofSize: 14)
+        l.sizeToFit()
+        return l
+    }()
     
     private func deselectRestOfSection(for indexPath: IndexPath) {
         tableView
