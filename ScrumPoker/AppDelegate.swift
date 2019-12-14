@@ -8,25 +8,6 @@
 
 import UIKit
 
-/* TODO
- run lincenceplist
- refiew that everything is being deallocated
- add localization, look for strings to localize
- test that the layout is correct when it is less than 15 elements
- check warnings
- see if we can fully follow the architecture
- fix signing
- check TODOs
- add tests
- add analytics
- add linter
- add to share app
- 
- https://flawlessapp.io/blog/advanced-mvvm-tableview-tutorial/
- https://cocoacasts.com/configuring-table-views-with-model-view-viewmodel-and-protocols
- https://novemberfive.co/blog/creating-dynamic-screens-protocol-oriented-mvvm-swift
- */
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
