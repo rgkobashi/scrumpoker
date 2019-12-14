@@ -10,7 +10,7 @@ import Foundation
 
 enum AnalyticsEvent {
     case selectedDeck(Deck)
-    case preference(Preference<Bool>)
+    case preferenceBool(Preference<Bool>, Bool)
     case shareApp
     case writeReview
     case feedback
@@ -21,8 +21,8 @@ enum AnalyticsEvent {
         switch self {
         case .selectedDeck:
             return "selected_deck"
-        case .preference:
-            return "preference"
+        case .preferenceBool:
+            return "preference_bool"
         case .shareApp:
             return "share_app"
         case .writeReview:

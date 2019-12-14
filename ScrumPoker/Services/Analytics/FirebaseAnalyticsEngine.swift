@@ -22,10 +22,10 @@ class FirebaseAnalyticsEngine: AnalyticsEngine {
             analytics.logEvent(event.name, parameters: [
                 "id": sd.id
             ])
-        case .preference(let p):
+        case let .preferenceBool(p, value):
             analytics.logEvent(event.name, parameters: [
-                "id": p.id
-//                "value" : p.value // TODO get value from preference
+                "id": p.id,
+                "value" : value
             ])
         case .shareApp, .writeReview, .feedback, .contribute, .donate:
             analytics.logEvent(event.name, parameters: nil)
