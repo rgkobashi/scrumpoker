@@ -465,6 +465,7 @@
 				E242E06422743EBC00C28204 /* Resources */,
 				E23288962274495600A94F15 /* Fabric Script */,
 				6917455A6DDA20081811D52D /* [CP] Embed Pods Frameworks */,
+				E215EDB623A565E40077FFE7 /* LicensePlist Script */,
 			);
 			buildRules = (
 			);
@@ -691,6 +692,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E215EDB623A565E40077FFE7 /* LicensePlist Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "LicensePlist Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n    ${PODS_ROOT}/LicensePlist/license-plist --output-path $PRODUCT_NAME/Settings.bundle\nfi\n";
 		};
 		E23288962274495600A94F15 /* Fabric Script */ = {
 			isa = PBXShellScriptBuildPhase;
