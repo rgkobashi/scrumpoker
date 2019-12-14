@@ -22,6 +22,24 @@ class MenuViewModel {
     private let configuration: Configuration
     private let application: UIApplication
     private lazy var menuItems: [MenuSectionViewModel] = {
+        let shareImage: UIImage?
+        let feedbackImage: UIImage?
+        let writeReviewImage: UIImage?
+        let contributeImage: UIImage?
+        let donateImage: UIImage?
+        if #available(iOS 13.0, *) {
+            shareImage = UIImage(systemName: "square.and.arrow.up")
+            feedbackImage = UIImage(systemName: "envelope")
+            writeReviewImage = UIImage(systemName: "star")
+            contributeImage = UIImage(systemName: "chevron.left.slash.chevron.right")
+            donateImage = UIImage(systemName: "dollarsign.circle")
+        } else {
+            shareImage = #imageLiteral(resourceName: "shareIcon")
+            feedbackImage = #imageLiteral(resourceName: "feedbackIcon")
+            writeReviewImage = #imageLiteral(resourceName: "writeReviewIcon")
+            contributeImage = #imageLiteral(resourceName: "contributeIcon")
+            donateImage = #imageLiteral(resourceName: "donateIcon")
+        }
         return [MenuSectionViewModel(title: "Decks",
                                      selectionType: .single,
                                      rows: [
@@ -37,23 +55,23 @@ class MenuViewModel {
                 MenuSectionViewModel(title: nil,
                                      selectionType: .single,
                                      rows: [
-                                        ActionRowViewModel<MenuViewController>(text: "Share", action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Share", image: shareImage, action: { [weak self] vc in
                                             self?.share()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Write a review", action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Write a review", image: writeReviewImage, action: { [weak self] vc in
                                             self?.writeReview()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Feedback", action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Feedback", image: feedbackImage, action: { [weak self] vc in
                                             self?.sendFeedback(from: vc)
                                         })
                 ]),
                 MenuSectionViewModel(title: nil,
                                      selectionType: .single,
                                      rows: [
-                                        ActionRowViewModel<MenuViewController>(text: "Contribute", action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Contribute", image: contributeImage, action: { [weak self] vc in
                                             self?.contribute()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Donate", action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Donate", image: donateImage, action: { [weak self] vc in
                                             self?.donate()
                                         }),
                 ])
