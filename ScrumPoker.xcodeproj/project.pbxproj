@@ -38,6 +38,7 @@
 		E26BFEE5239AA9BD00264688 /* MenuSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE4239AA9BD00264688 /* MenuSectionViewModel.swift */; };
 		E26BFEE7239AAA0100264688 /* ActionRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE6239AAA0100264688 /* ActionRowViewModel.swift */; };
 		E26C738523A50F770034B6D6 /* CardDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C738423A50F770034B6D6 /* CardDesign.swift */; };
+		E26C738723A53F5D0034B6D6 /* ViewControllerAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C738623A53F5D0034B6D6 /* ViewControllerAlertable.swift */; };
 		E28E88D5227767F100DFF021 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28E88D4227767F100DFF021 /* Preference.swift */; };
 		E29BD3C3239E9566006355F2 /* CardFrontDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BD3C2239E9566006355F2 /* CardFrontDesignView.swift */; };
 		E29BD3C5239E957D006355F2 /* CardFrontDesignView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E29BD3C4239E957D006355F2 /* CardFrontDesignView.xib */; };
@@ -123,6 +124,7 @@
 		E26BFEE4239AA9BD00264688 /* MenuSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSectionViewModel.swift; sourceTree = "<group>"; };
 		E26BFEE6239AAA0100264688 /* ActionRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRowViewModel.swift; sourceTree = "<group>"; };
 		E26C738423A50F770034B6D6 /* CardDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDesign.swift; sourceTree = "<group>"; };
+		E26C738623A53F5D0034B6D6 /* ViewControllerAlertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAlertable.swift; sourceTree = "<group>"; };
 		E28E88D4227767F100DFF021 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		E29BD3C2239E9566006355F2 /* CardFrontDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontDesignView.swift; sourceTree = "<group>"; };
 		E29BD3C4239E957D006355F2 /* CardFrontDesignView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardFrontDesignView.xib; sourceTree = "<group>"; };
@@ -264,8 +266,9 @@
 				E23288B0227455B000A94F15 /* ReusableView.swift */,
 				E23288B22274560000A94F15 /* NibLoadableView.swift */,
 				E2CDBE132275FEAC0054957B /* TableRowViewModel.swift */,
-				E2D2BA5D23A4E73F0039A960 /* ViewControllerSharable.swift */,
 				E26C738423A50F770034B6D6 /* CardDesign.swift */,
+				E26C738623A53F5D0034B6D6 /* ViewControllerAlertable.swift */,
+				E2D2BA5D23A4E73F0039A960 /* ViewControllerSharable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 			files = (
 				E2D2BA5C23A4C9440039A960 /* AnalyticsManager.swift in Sources */,
 				E266CE9D2276CDF2003451F6 /* Deck.swift in Sources */,
+				E26C738723A53F5D0034B6D6 /* ViewControllerAlertable.swift in Sources */,
 				E23288BA22748FAA00A94F15 /* DeckLayout.swift in Sources */,
 				E26BFEDF239AA6CF00264688 /* TableSectionSelectionType.swift in Sources */,
 				E23288B5227457F300A94F15 /* UICollectionView.swift in Sources */,
