@@ -32,6 +32,9 @@ class AppInformation {
         }
         return b
     }
+    var donateURL: URL {
+        return URL(string: "https://www.paypal.me/rgkobashi")!
+    }
     var contributeURL: URL {
         return URL(string: "https://github.com/rgkobashi/scrumpoker")!
     }
