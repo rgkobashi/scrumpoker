@@ -38,8 +38,8 @@ class CardViewModel {
     }
     
     func flipCard() {
-        vibrateIfNeeded()
         viewDelegate?.flipCard { [weak self] in
+            self?.vibrateIfNeeded()
             self?.isCardFlipped = true
         }
     }
