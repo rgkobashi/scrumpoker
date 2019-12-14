@@ -28,11 +28,11 @@ class Configuration {
         self.userDefaults = userDefaults
     }
     
-    func setFabric() {
+    func setupFabric() {
         Fabric.with([Crashlytics.self])
     }
     
-    func setSideMenu() {
+    func setupSideMenu() {
         sideMenuManager.menuFadeStatusBar = false
     }
     
@@ -40,7 +40,7 @@ class Configuration {
         application.isIdleTimerDisabled = true
     }
     
-    func setGlobalAppearance(from window: UIWindow) {
+    func setupGlobalAppearance(from window: UIWindow) {
         window.tintColor = .black
     }
 }
