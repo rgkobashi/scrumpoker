@@ -13,6 +13,7 @@ class MenuCell: UITableViewCell {
     var viewModel: TableRowViewModel! {
         didSet {
             self.textLabel?.text = viewModel.text
+            self.textLabel?.adjustsFontSizeToFitWidth = true
             switch viewModel.type {
             case .checkmark:
                 self.accessoryView = nil
