@@ -35,6 +35,10 @@ class Configuration {
         Fabric.with([Crashlytics.self])
     }
     
+    func setupFirebase() {
+        firebaseApp.configure()
+    }
+    
     func setupSideMenu(from window: UIWindow) {
         sideMenuManager.menuFadeStatusBar = false
         sideMenuManager.menuWidth = window.screen.bounds.size.width * 0.60

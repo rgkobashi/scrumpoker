@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configuration.setupFabric()
+        configuration.setupFirebase()
         configuration.disableAutoLock()
         
         window = UIWindow(frame: UIScreen.main.bounds)
