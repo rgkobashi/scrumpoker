@@ -23,6 +23,9 @@ class CardViewModel {
     private var isShakeToRevealEnabled: Bool {
         configuration.getValue(for: .shakeToReveal)
     }
+    private var isShakeOnRevealEnabled: Bool {
+        configuration.getValue(for: .shakeOnReveal)
+    }
     private(set) var isCardFlipped = false
     
     weak var delegate: CardViewModelDelegate?
@@ -39,9 +42,17 @@ class CardViewModel {
     }
     
     func flipCard() {
+        vibrateIfNeeded()
         viewDelegate?.flipCard { [weak self] in
             self?.isCardFlipped = true
         }
+    }
+    
+    func vibrateIfNeeded() {
+        guard isShakeOnRevealEnabled else {
+            return
+        }
+        hapticFeedbackGenerator.generate(.success)
     }
     
     func flipCardWhenShakingIfNeeded() {
