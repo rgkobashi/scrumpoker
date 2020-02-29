@@ -19,12 +19,4 @@ struct PreferenceBoolRowViewModel: TableRowViewModel {
         let isEnable = configuration.getValue(for: preference)
         return .switch(isEnable)
     }
-    
-    func enable() {
-        configuration.setValue(true, for: preference)
-    }
-    
-    func disable() {
-        configuration.setValue(false, for: preference)
-    }
 }
