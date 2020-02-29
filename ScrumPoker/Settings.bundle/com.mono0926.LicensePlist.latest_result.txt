@@ -74,6 +74,10 @@ body: Apache License
      …
 version: 2.1.0
 
+name: Reusable, nameSpecified: 
+body: The MIT License (MIT…
+version: 4.1.0
+
 name: SideMenu, nameSpecified: 
 body: Copyright (c) 2015 J…
 version: 5.0.3

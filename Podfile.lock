@@ -70,6 +70,11 @@ PODS:
   - nanopb/encode (0.3.9011)
   - Nimble (8.0.1)
   - Quick (2.1.0)
+  - Reusable (4.1.0):
+    - Reusable/Storyboard (= 4.1.0)
+    - Reusable/View (= 4.1.0)
+  - Reusable/Storyboard (4.1.0)
+  - Reusable/View (4.1.0)
   - SideMenu (5.0.3)
 
 DEPENDENCIES:
@@ -79,6 +84,7 @@ DEPENDENCIES:
   - LicensePlist
   - Nimble
   - Quick
+  - Reusable
   - SideMenu
 
 SPEC REPOS:
@@ -101,6 +107,7 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - nanopb
+    - Reusable
 
 SPEC CHECKSUMS:
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
@@ -119,8 +126,9 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
 
-PODFILE CHECKSUM: 18cba0f9bb0964b23373a8dc21cc76f789747dd2
+PODFILE CHECKSUM: 7fecacb08eea599435158535674ff8a6017a007e
 
 COCOAPODS: 1.8.4
