@@ -16,15 +16,15 @@ struct PreferenceBoolRowViewModel: TableRowViewModel {
         return preference.name
     }
     var type: TableRowType {
+        let isEnable = configuration.getValue(for: preference)
         return .switch(isEnable)
     }
     
-    var isEnable: Bool {
-        set {
-            configuration.setValue(newValue, for: preference)
-        }
-        get {
-            return configuration.getValue(for: preference)
-        }
+    func enable() {
+        configuration.setValue(true, for: preference)
+    }
+    
+    func disable() {
+        configuration.setValue(false, for: preference)
     }
 }
