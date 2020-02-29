@@ -51,8 +51,8 @@ class MenuViewModel {
                 MenuSectionViewModel(title: "Preferences",
                                      selectionType: .multiple,
                                      rows: [
-                                        PreferenceRowViewModel(preference: .shakeToReveal, configuration: configuration),
-                                        PreferenceRowViewModel(preference: .shakeOnReveal, configuration: configuration)
+                                        PreferenceBoolRowViewModel(preference: .shakeToReveal, configuration: configuration),
+                                        PreferenceBoolRowViewModel(preference: .shakeOnReveal, configuration: configuration)
                 ]),
                 MenuSectionViewModel(title: nil,
                                      selectionType: .single,
@@ -162,7 +162,7 @@ extension MenuViewModel {
         switch vm {
         case let dvm as DeckRowViewModel:
             return configuration.selectedDeck != dvm.deck
-        case is PreferenceRowViewModel:
+        case is PreferenceBoolRowViewModel:
             return false
         case is ActionRowViewModel<MenuViewController>:
             return true
@@ -186,7 +186,7 @@ extension MenuViewModel {
         switch vm {
         case is DeckRowViewModel:
             return true
-        case is PreferenceRowViewModel:
+        case is PreferenceBoolRowViewModel:
             return false
         case is ActionRowViewModel<MenuViewController>:
             return false
@@ -200,7 +200,7 @@ extension MenuViewModel {
         switch vm {
         case is DeckRowViewModel:
             return false
-        case is PreferenceRowViewModel:
+        case is PreferenceBoolRowViewModel:
             return false
         case is ActionRowViewModel<MenuViewController>:
             return true
