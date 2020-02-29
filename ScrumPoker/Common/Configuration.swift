@@ -14,10 +14,20 @@ private enum UserDefaultsKey: String {
 }
 
 class Configuration {
+    var menuWidth: CGFloat {
+        return screenSize.width * 0.60
+    }
+    
     private let application: UIApplication
     private let userDefaults: UserDefaults
     private let firebaseApp: FirebaseApp.Type
     private let sideMenuManager: SideMenuManager
+    private var screenSize: CGSize {
+        guard let kw = application.keyWindow else {
+            fatalError("application does not have keyWindow")
+        }
+        return kw.screen.bounds.size
+    }
     private var defaultDeck: Deck {
         return Deck.fibonacci
     }
