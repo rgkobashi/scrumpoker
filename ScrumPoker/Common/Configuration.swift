@@ -77,9 +77,16 @@ extension Configuration {
     
     func setValue(_ value: Bool, for preference: Preference<Bool>) {
         userDefaults.set(value, forKey: preference.id)
+        handlePreferenceBool(preference, with: value)
     }
     
     func getValue(for preference: Preference<Bool>) -> Bool {
         return userDefaults.bool(forKey: preference.id)
+    }
+    
+    private func handlePreferenceBool(_ preference: Preference<Bool>, with value: Bool) {
+        if preference == .disableAutoLock {
+            application.isIdleTimerDisabled = value
+        }
     }
 }
