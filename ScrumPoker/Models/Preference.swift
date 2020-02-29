@@ -16,4 +16,5 @@ struct Preference<T> {
 extension Preference where T == Bool {
     static let shakeToReveal = Preference(name: "Shake to reveal", id: "shakeToReveal")
     static let shakeOnReveal = Preference(name: "Shake on reveal", id: "shakeOnReveal")
+    static let disableAutoLock = Preference(name: "Disable auto-lock", id: "disableAutoLock")
 }
