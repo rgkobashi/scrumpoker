@@ -26,9 +26,11 @@ class MenuCoordinator {
     }()
     private let menuVC: MenuViewController
     private let menuVM: MenuViewModel
+    private let configuration: Configuration
     
     init(sideMenuManager: SideMenuManager = SideMenuManager.default, configuration: Configuration) {
         self.sideMenuManager = sideMenuManager
+        self.configuration = configuration
         menuVC = MenuViewController.instantiate()
         menuVM = MenuViewModel(appInformation: AppInformation(),
                                feedbackSender: FeedbackSender(),
