@@ -1,3 +1,5 @@
+platform :ios, '11.0'
+
 target 'ScrumPoker' do
   use_frameworks!
 
