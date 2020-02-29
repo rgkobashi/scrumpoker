@@ -100,6 +100,16 @@ class MenuViewModel {
         delegate?.didUpdateDeck(deck, from: viewController)
     }
     
+    private func selectPreferenceBool(_ preference: Preference<Bool>) {
+        analyticsManager.log(.preferenceBool(preference, true))
+        configuration.setValue(true, for: preference)
+    }
+    
+    private func deselectPreferenceBool(_ preference: Preference<Bool>) {
+        analyticsManager.log(.preferenceBool(preference, false))
+        configuration.setValue(false, for: preference)
+    }
+    
     private func sendFeedback(from viewController: MenuViewController) {
         analyticsManager.log(.feedback)
         do {
@@ -216,9 +226,8 @@ extension MenuViewModel {
         switch vm {
         case let dvm as DeckRowViewModel:
             updateDeck(dvm.deck, from: viewController)
-        case let pvm as PreferenceRowViewModel:
-            analyticsManager.log(.preferenceBool(pvm.preference, true))
-            configuration.setValue(true, for: pvm.preference)
+        case let pvm as PreferenceBoolRowViewModel:
+            selectPreferenceBool(pvm.preference)
         case let avm as ActionRowViewModel<MenuViewController>:
             avm.action(viewController)
         default:
@@ -231,9 +240,8 @@ extension MenuViewModel {
         switch vm {
         case is DeckRowViewModel:
             fatalError("Deselecting DeckRowViewModel at \(indexPath) due its section allows multiple selection")
-        case let pvm as PreferenceRowViewModel:
-            analyticsManager.log(.preferenceBool(pvm.preference, false))
-            configuration.setValue(false, for: pvm.preference)
+        case let pvm as PreferenceBoolRowViewModel:
+            deselectPreferenceBool(pvm.preference)
         case is ActionRowViewModel<MenuViewController>:
             fatalError("Deselecting ActionRowViewModel at \(indexPath) due its section allows multiple selection")
         default:
