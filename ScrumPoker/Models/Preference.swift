@@ -13,12 +13,7 @@ struct Preference<T> {
     let id: String
 }
 
-extension Preference {
-    static var shakeToReveal: Preference<Bool> {
-        return Preference<Bool>(name: "Shake to reveal", id: "shakeToReveal")
-    }
-
-    static var shakeOnReveal: Preference<Bool> {
-        return Preference<Bool>(name: "Shake on reveal", id: "shakeOnReveal")
-    }
+extension Preference where T == Bool {
+    static let shakeToReveal = Preference(name: "Shake to reveal", id: "shakeToReveal")
+    static let shakeOnReveal = Preference(name: "Shake on reveal", id: "shakeOnReveal")
 }
