@@ -86,9 +86,6 @@
 		E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsEngine.swift; sourceTree = "<group>"; };
 		E215EDB323A564140077FFE7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E23288952274493E00A94F15 /* fabric.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fabric.sh; sourceTree = "<group>"; };
-		E2328899227449DF00A94F15 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = secrets.xcconfig; path = Secrets/secrets.xcconfig; sourceTree = SOURCE_ROOT; };
-		E232889A227449DF00A94F15 /* fabric.apikey */ = {isa = PBXFileReference; lastKnownFileType = text; name = fabric.apikey; path = Secrets/fabric.apikey; sourceTree = SOURCE_ROOT; };
-		E232889B227449DF00A94F15 /* fabric.buildsecret */ = {isa = PBXFileReference; lastKnownFileType = text; name = fabric.buildsecret; path = Secrets/fabric.buildsecret; sourceTree = SOURCE_ROOT; };
 		E23288A022744D5300A94F15 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		E23288A422744D7B00A94F15 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		E23288A922744E3300A94F15 /* DeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModel.swift; sourceTree = "<group>"; };
@@ -206,16 +203,6 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
-		E2328898227449C100A94F15 /* Secrets */ = {
-			isa = PBXGroup;
-			children = (
-				E232889A227449DF00A94F15 /* fabric.apikey */,
-				E232889B227449DF00A94F15 /* fabric.buildsecret */,
-				E2328899227449DF00A94F15 /* secrets.xcconfig */,
-			);
-			name = Secrets;
-			sourceTree = "<group>";
-		};
 		E232889C22744CEE00A94F15 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,7 +298,6 @@
 				E2A9DB1923A2960F00E1AD4C /* Services */,
 				E232889C22744CEE00A94F15 /* Scenes */,
 				E2328897227449B400A94F15 /* Support */,
-				E2328898227449C100A94F15 /* Secrets */,
 				E215EDB323A564140077FFE7 /* Settings.bundle */,
 				E242E07022743EBD00C28204 /* Assets.xcassets */,
 			);
@@ -793,7 +779,6 @@
 /* Begin XCBuildConfiguration section */
 		E242E08C22743EBE00C28204 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2328899227449DF00A94F15 /* secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -855,7 +840,6 @@
 		};
 		E242E08D22743EBE00C28204 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2328899227449DF00A94F15 /* secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
