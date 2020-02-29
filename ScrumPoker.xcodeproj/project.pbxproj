@@ -14,11 +14,9 @@
 		E215EDB423A564140077FFE7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E215EDB323A564140077FFE7 /* Settings.bundle */; };
 		E23288A122744D5300A94F15 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A022744D5300A94F15 /* MainCoordinator.swift */; };
 		E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A422744D7B00A94F15 /* UIStoryboard.swift */; };
-		E23288A822744DD400A94F15 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A722744DD400A94F15 /* StoryboardIdentifiable.swift */; };
 		E23288AA22744E3300A94F15 /* DeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A922744E3300A94F15 /* DeckViewModel.swift */; };
 		E23288AD2274507700A94F15 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23288AC2274507700A94F15 /* CardCell.xib */; };
 		E23288AF2274508900A94F15 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288AE2274508900A94F15 /* CardCell.swift */; };
-		E23288B1227455B000A94F15 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B0227455B000A94F15 /* ReusableView.swift */; };
 		E23288B32274560000A94F15 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B22274560000A94F15 /* NibLoadableView.swift */; };
 		E23288B8227460F900A94F15 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B7227460F900A94F15 /* Card.swift */; };
 		E23288BA22748FAA00A94F15 /* DeckLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288B922748FAA00A94F15 /* DeckLayout.swift */; };
@@ -94,11 +92,9 @@
 		E232889B227449DF00A94F15 /* fabric.buildsecret */ = {isa = PBXFileReference; lastKnownFileType = text; name = fabric.buildsecret; path = Secrets/fabric.buildsecret; sourceTree = SOURCE_ROOT; };
 		E23288A022744D5300A94F15 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		E23288A422744D7B00A94F15 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
-		E23288A722744DD400A94F15 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		E23288A922744E3300A94F15 /* DeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModel.swift; sourceTree = "<group>"; };
 		E23288AC2274507700A94F15 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		E23288AE2274508900A94F15 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
-		E23288B0227455B000A94F15 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		E23288B22274560000A94F15 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		E23288B7227460F900A94F15 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E23288B922748FAA00A94F15 /* DeckLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckLayout.swift; sourceTree = "<group>"; };
@@ -263,8 +259,6 @@
 		E23288A622744DC800A94F15 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				E23288A722744DD400A94F15 /* StoryboardIdentifiable.swift */,
-				E23288B0227455B000A94F15 /* ReusableView.swift */,
 				E23288B22274560000A94F15 /* NibLoadableView.swift */,
 				E2CDBE132275FEAC0054957B /* TableRowViewModel.swift */,
 				E26C738423A50F770034B6D6 /* CardDesign.swift */,
@@ -744,14 +738,12 @@
 				E242E06C22743EBC00C28204 /* DeckViewController.swift in Sources */,
 				E23288B32274560000A94F15 /* NibLoadableView.swift in Sources */,
 				E2CDBE0F2274ADF10054957B /* MenuViewController.swift in Sources */,
-				E23288B1227455B000A94F15 /* ReusableView.swift in Sources */,
 				E26BFEE1239AA73D00264688 /* DeckRowViewModel.swift in Sources */,
 				E23288A122744D5300A94F15 /* MainCoordinator.swift in Sources */,
 				E29BD3C9239EA780006355F2 /* CardBackDesignView.swift in Sources */,
 				E2A9DB1B23A2962D00E1AD4C /* FeedbackSender.swift in Sources */,
 				E2CDBE142275FEAC0054957B /* TableRowViewModel.swift in Sources */,
 				E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */,
-				E23288A822744DD400A94F15 /* StoryboardIdentifiable.swift in Sources */,
 				E2CDBE072274AD660054957B /* MenuCoordinator.swift in Sources */,
 				E28E88D5227767F100DFF021 /* Preference.swift in Sources */,
 				E26C738523A50F770034B6D6 /* CardDesign.swift in Sources */,
