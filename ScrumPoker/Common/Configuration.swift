@@ -6,8 +6,6 @@
 //  Copyright © 2019 rgkobashi. All rights reserved.
 //
 
-import Fabric
-import Crashlytics
 import SideMenu
 import Firebase
 
@@ -29,10 +27,6 @@ class Configuration {
         self.sideMenuManager = sideMenuManager
         self.userDefaults = userDefaults
         self.firebaseApp = firebaseApp   
-    }
-    
-    func setupFabric() {
-        Fabric.with([Crashlytics.self])
     }
     
     func setupFirebase() {

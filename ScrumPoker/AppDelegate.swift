@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var mainCoordinator: MainCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        configuration.setupFabric()
         configuration.setupFirebase()
         configuration.loadPreferences()
         
