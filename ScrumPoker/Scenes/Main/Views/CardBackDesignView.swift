@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Reusable
 
-class CardBackDesignView: UIView {
+class CardBackDesignView: UIView, NibOwnerLoadable {
     @IBOutlet weak var helperView: UIView!
     
     override init(frame: CGRect) {
@@ -22,11 +23,10 @@ class CardBackDesignView: UIView {
     }
     
     private func commonInit() {
-        setupFromNib()
+        self.loadNibContent()
         setupBorder()
         helperView.layer.cornerRadius = 5
     }
 }
 
-extension CardBackDesignView: NibLoadableView {}
 extension CardBackDesignView: CardDesign {}

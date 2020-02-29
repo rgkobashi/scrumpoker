@@ -19,5 +19,3 @@ class CardCell: UICollectionViewCell, NibReusable {
         }
     }
 }
-
-extension CardCell: NibLoadableView {}

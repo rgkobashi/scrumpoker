@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Reusable
 
-class CardFrontDesignView: UIView {
+class CardFrontDesignView: UIView, NibOwnerLoadable {
     
     @IBOutlet weak var textLabel: UILabel!
     
     init(text: String, frame: CGRect) {
         super.init(frame: frame)
-        setupFromNib()
+        self.loadNibContent()
         setupBorder()
         setupLabel(with: text)
     }
@@ -35,5 +36,4 @@ class CardFrontDesignView: UIView {
     }
 }
 
-extension CardFrontDesignView: NibLoadableView {}
 extension CardFrontDesignView: CardDesign {}

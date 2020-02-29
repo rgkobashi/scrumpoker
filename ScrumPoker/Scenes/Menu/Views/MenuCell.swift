@@ -58,5 +58,3 @@ class MenuCell: UITableViewCell, NibReusable {
         }
     }
 }
-
-extension MenuCell: NibLoadableView {}
