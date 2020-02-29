@@ -19,9 +19,9 @@ class MenuCoordinator {
     weak var delegate: MenuCoordinatorDelegate?
     
     private let sideMenuManager: SideMenuManager
-    private lazy var sideMenuNavigationController: UISideMenuNavigationController = {
-        let nc = UISideMenuNavigationController(rootViewController: menuVC)
-        sideMenuManager.menuRightNavigationController = nc
+    private lazy var sideMenuNavigationController: SideMenuNavigationController = {
+        let nc = SideMenuNavigationController(rootViewController: menuVC)
+        sideMenuManager.rightMenuNavigationController = nc
         return nc
     }()
     private let menuVC: MenuViewController
