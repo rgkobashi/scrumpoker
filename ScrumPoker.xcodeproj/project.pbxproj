@@ -448,7 +448,6 @@
 				E242E06222743EBC00C28204 /* Sources */,
 				E242E06322743EBC00C28204 /* Frameworks */,
 				E242E06422743EBC00C28204 /* Resources */,
-				E23288962274495600A94F15 /* Fabric Script */,
 				6917455A6DDA20081811D52D /* [CP] Embed Pods Frameworks */,
 				E215EDB623A565E40077FFE7 /* LicensePlist Script */,
 			);
@@ -695,25 +694,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n    ${PODS_ROOT}/LicensePlist/license-plist --output-path $PRODUCT_NAME/Settings.bundle\nfi\n";
-		};
-		E23288962274495600A94F15 /* Fabric Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
-			);
-			name = "Fabric Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/$PROJECT_NAME/fabric.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
