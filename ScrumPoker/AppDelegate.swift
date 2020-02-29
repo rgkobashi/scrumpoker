@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainCoordinator = MainCoordinator(window: window!, configuration: configuration)
         mainCoordinator.start()
         
-        configuration.setupSideMenu(from: window!)
         configuration.setupGlobalAppearance(from: window!)
         return true
     }

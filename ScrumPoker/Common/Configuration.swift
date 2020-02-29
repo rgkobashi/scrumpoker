@@ -14,6 +14,9 @@ private enum UserDefaultsKey: String {
 }
 
 class Configuration {
+    var statusBarAlpha: CGFloat {
+        return 0.0
+    }
     var menuWidth: CGFloat {
         return screenSize.width * 0.60
     }
@@ -45,11 +48,6 @@ class Configuration {
     
     func loadPreferences() {
         application.isIdleTimerDisabled = getValue(for: .disableAutoLock)
-    }
-    
-    func setupSideMenu(from window: UIWindow) {
-        sideMenuManager.menuFadeStatusBar = false
-        sideMenuManager.menuWidth = window.screen.bounds.size.width * 0.60
     }
     
     func setupGlobalAppearance(from window: UIWindow) {

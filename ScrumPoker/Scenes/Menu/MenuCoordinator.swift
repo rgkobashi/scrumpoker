@@ -21,6 +21,8 @@ class MenuCoordinator {
     private let sideMenuManager: SideMenuManager
     private lazy var sideMenuNavigationController: SideMenuNavigationController = {
         let nc = SideMenuNavigationController(rootViewController: menuVC)
+        nc.statusBarEndAlpha = configuration.statusBarAlpha
+        nc.menuWidth = configuration.menuWidth
         sideMenuManager.rightMenuNavigationController = nc
         return nc
     }()
