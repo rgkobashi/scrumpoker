@@ -25,7 +25,7 @@ class DeckViewController: UIViewController, StoryboardSceneBased {
         cv.backgroundColor = .clear
         cv.dataSource = self
         cv.delegate = self
-        cv.register(CardCell.self)
+        cv.register(cellType: CardCell.self)
         return cv
     }()
     

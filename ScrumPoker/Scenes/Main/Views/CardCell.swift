@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Reusable
 
-class CardCell: UICollectionViewCell {
+class CardCell: UICollectionViewCell, NibReusable {
     
     @IBOutlet weak var cardView: CardView!
     
