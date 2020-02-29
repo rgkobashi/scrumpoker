@@ -39,13 +39,13 @@ class Configuration {
         firebaseApp.configure()
     }
     
+    func loadPreferences() {
+        application.isIdleTimerDisabled = self.getValue(for: .disableAutoLock)
+    }
+    
     func setupSideMenu(from window: UIWindow) {
         sideMenuManager.menuFadeStatusBar = false
         sideMenuManager.menuWidth = window.screen.bounds.size.width * 0.60
-    }
-    
-    func disableAutoLock() {
-        application.isIdleTimerDisabled = true
     }
     
     func setupGlobalAppearance(from window: UIWindow) {
