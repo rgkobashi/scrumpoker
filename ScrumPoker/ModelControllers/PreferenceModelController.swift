@@ -16,20 +16,10 @@ struct PreferenceModelController<T> {
 extension PreferenceModelController where T == Bool {
     var isEnable: Bool {
         set {
-            switch preference.type {
-            case .shakeToReveal, .shakeOnReveal:
-                break // TODO update value on configuration
-            case .autoLock:
-                break // TODO update value on configuration
-            }
+            configuration.setValue(newValue, for: preference)
         }
         get {
-            switch preference.type {
-            case .shakeToReveal, .shakeOnReveal:
-                return true // TODO get value from configuration
-            case .autoLock:
-                return true // TODO get value from configuration
-            }
+            return configuration.getValue(for: preference)
         }
     }
 }
