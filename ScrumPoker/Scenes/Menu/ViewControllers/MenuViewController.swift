@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Reusable
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, StoryboardSceneBased {
+    static let sceneStoryboard = UIStoryboard(name: "Menu")
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {

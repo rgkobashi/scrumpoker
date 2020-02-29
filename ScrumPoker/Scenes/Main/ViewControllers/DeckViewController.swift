@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Reusable
 
-class DeckViewController: UIViewController {
+class DeckViewController: UIViewController, StoryboardSceneBased {
+    static let sceneStoryboard = UIStoryboard(name: "Main")
     
     @IBOutlet weak var holderView: UIView!
     

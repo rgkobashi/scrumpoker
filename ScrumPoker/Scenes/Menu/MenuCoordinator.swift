@@ -24,13 +24,12 @@ class MenuCoordinator {
         sideMenuManager.menuRightNavigationController = nc
         return nc
     }()
-    private let storyboard = UIStoryboard(name: "Menu")
     private let menuVC: MenuViewController
     private let menuVM: MenuViewModel
     
     init(sideMenuManager: SideMenuManager = SideMenuManager.default, configuration: Configuration) {
         self.sideMenuManager = sideMenuManager
-        menuVC = storyboard.instantiateViewController()
+        menuVC = MenuViewController.instantiate()
         menuVM = MenuViewModel(appInformation: AppInformation(),
                                feedbackSender: FeedbackSender(),
                                configuration: configuration,

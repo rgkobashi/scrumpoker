@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Reusable
 
-class CardViewController: UIViewController {
+class CardViewController: UIViewController, StoryboardSceneBased {
+    static let sceneStoryboard = UIStoryboard(name: "Main")
     
     @IBOutlet weak var closeButton: UIButton! {
         didSet {

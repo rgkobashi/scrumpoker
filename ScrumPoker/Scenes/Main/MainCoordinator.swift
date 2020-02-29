@@ -26,14 +26,13 @@ class MainCoordinator {
         let nc = UINavigationController(rootViewController: deckVC)
         return nc
     }()
-    private let storyboard = UIStoryboard(name: "Main")
     private let deckVC: DeckViewController
     private let deckVM: DeckViewModel
     
     init(window: UIWindow, configuration: Configuration) {
         self.window = window
         self.configuration = configuration
-        deckVC = storyboard.instantiateViewController()
+        deckVC = DeckViewController.instantiate()
         deckVM = DeckViewModel(deck: configuration.selectedDeck, layout: .default)
         deckVM.delegate = self
         deckVC.viewModel = deckVM
@@ -53,7 +52,7 @@ extension MainCoordinator {
     }
     
     private func showCardScreen(_ card: Card, from viewController: UIViewController) {
-        let vc: CardViewController = storyboard.instantiateViewController()
+        let vc = CardViewController.instantiate()
         let vm = CardViewModel(card: card,
                                configuration: configuration,
                                hapticFeedbackGenerator: HapticFeedbackGenerator())

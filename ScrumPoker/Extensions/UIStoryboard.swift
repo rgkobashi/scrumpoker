@@ -12,11 +12,4 @@ extension UIStoryboard {
     convenience init(name: String) {
         self.init(name: name, bundle: nil)
     }
-    
-    func instantiateViewController<T: UIViewController>() -> T {
-        guard let viewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
-            fatalError("Could not instantiate view controller with identifier \(T.storyboardIdentifier) ")
-        }
-        return viewController
-    }
 }
