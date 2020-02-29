@@ -1,64 +1,56 @@
-name: Crashlytics, nameSpecified: 
-body: Fabric: Copyright 20…
-version: 3.12.0
-
-name: Fabric, nameSpecified: 
-body: Fabric: Copyright 20…
-version: 1.9.0
-
 name: Firebase, nameSpecified: 
 body: 
                    …
-version: 6.13.0
+version: 6.18.0
 
 name: FirebaseAnalytics, nameSpecified: 
-body: Copyright 2019 Googl…
-version: 6.1.6
+body: Copyright 2020 Googl…
+version: 6.3.0
 
 name: FirebaseCore, nameSpecified: 
 body: 
                    …
-version: 6.4.0
+version: 6.6.3
 
 name: FirebaseCoreDiagnostics, nameSpecified: 
 body: 
                    …
-version: 1.1.2
+version: 1.2.1
 
 name: FirebaseCoreDiagnosticsInterop, nameSpecified: 
 body: 
                    …
-version: 1.1.0
+version: 1.2.0
 
-name: FirebaseInstanceID, nameSpecified: 
+name: FirebaseInstallations, nameSpecified: 
 body: 
                    …
-version: 4.2.7
+version: 1.1.0
 
 name: GoogleAppMeasurement, nameSpecified: 
-body: Copyright 2019 Googl…
-version: 6.1.6
+body: Copyright 2020 Googl…
+version: 6.3.0
 
 name: GoogleDataTransport, nameSpecified: 
 body: 
                    …
-version: 3.2.0
+version: 4.0.1
 
 name: GoogleDataTransportCCTSupport, nameSpecified: 
 body: 
                    …
-version: 1.2.2
+version: 1.4.1
 
 name: GoogleUtilities, nameSpecified: 
 body: 
                    …
-version: 6.3.2
+version: 6.5.1
 
 name: LicensePlist, nameSpecified: 
 body: MIT License
 
 Copyrig…
-version: 2.5.0
+version: 2.13.0
 
 name: nanopb, nameSpecified: 
 body: Copyright (c) 2011 P…
@@ -67,12 +59,17 @@ version: 0.3.9011
 name: Nimble, nameSpecified: 
 body: Apache License
      …
-version: 8.0.1
+version: 8.0.5
+
+name: PromisesObjC, nameSpecified: 
+body: 
+                   …
+version: 1.2.8
 
 name: Quick, nameSpecified: 
 body: Apache License
      …
-version: 2.1.0
+version: 2.2.0
 
 name: Reusable, nameSpecified: 
 body: The MIT License (MIT…
@@ -80,8 +77,8 @@ version: 4.1.0
 
 name: SideMenu, nameSpecified: 
 body: Copyright (c) 2015 J…
-version: 5.0.3
+version: 6.4.7
 
 add-version-numbers: false
 
-LicensePlist Version: 1.8.3
+LicensePlist Version: 2.13.0
