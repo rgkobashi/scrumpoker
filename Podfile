@@ -1,8 +1,6 @@
 target 'ScrumPoker' do
   use_frameworks!
 
-  pod 'Fabric'
-  pod 'Crashlytics'
   pod 'Firebase/Analytics'
   pod 'LicensePlist'
   pod 'SideMenu'
