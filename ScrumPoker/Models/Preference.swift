@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Preference<T> {
+struct Preference<T>: Equatable {
     let name: String
     let id: String
 }
