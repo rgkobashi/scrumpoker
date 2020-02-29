@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Reusable
 
-class MenuCell: UITableViewCell {
+class MenuCell: UITableViewCell, NibReusable {
     
     var viewModel: TableRowViewModel! {
         didSet {

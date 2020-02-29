@@ -18,7 +18,7 @@ class MenuViewController: UIViewController, StoryboardSceneBased {
             tableView.delegate = self
             tableView.allowsMultipleSelection = true
             tableView.tableFooterView = versionLabel
-            tableView.register(MenuCell.self)
+            tableView.register(cellType: MenuCell.self)
         }
     }
     

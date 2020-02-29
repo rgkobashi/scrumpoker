@@ -58,7 +58,6 @@
 		E2CDBE142275FEAC0054957B /* TableRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE132275FEAC0054957B /* TableRowViewModel.swift */; };
 		E2CDBE1722760BFD0054957B /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CDBE1622760BFD0054957B /* MenuCell.xib */; };
 		E2CDBE1922760C0A0054957B /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE1822760C0A0054957B /* MenuCell.swift */; };
-		E2CDBE1B22760CAC0054957B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CDBE1A22760CAB0054957B /* UITableView.swift */; };
 		E2D2BA5923A4C5360039A960 /* HapticFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */; };
 		E2D2BA5C23A4C9440039A960 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */; };
 		E2D2BA5E23A4E73F0039A960 /* ViewControllerSharable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2BA5D23A4E73F0039A960 /* ViewControllerSharable.swift */; };
@@ -147,7 +146,6 @@
 		E2CDBE132275FEAC0054957B /* TableRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowViewModel.swift; sourceTree = "<group>"; };
 		E2CDBE1622760BFD0054957B /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		E2CDBE1822760C0A0054957B /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
-		E2CDBE1A22760CAB0054957B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackGenerator.swift; sourceTree = "<group>"; };
 		E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		E2D2BA5D23A4E73F0039A960 /* ViewControllerSharable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSharable.swift; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				E23288A422744D7B00A94F15 /* UIStoryboard.swift */,
-				E2CDBE1A22760CAB0054957B /* UITableView.swift */,
 				E23288B4227457F300A94F15 /* UICollectionView.swift */,
 			);
 			path = Extensions;
@@ -770,7 +767,6 @@
 				E2D2BA5923A4C5360039A960 /* HapticFeedbackGenerator.swift in Sources */,
 				E265D99C239BD1EA005F02A1 /* TableRowType.swift in Sources */,
 				E265D9A0239BDF73005F02A1 /* CardViewModel.swift in Sources */,
-				E2CDBE1B22760CAC0054957B /* UITableView.swift in Sources */,
 				E2D2BA5E23A4E73F0039A960 /* ViewControllerSharable.swift in Sources */,
 				E23288B8227460F900A94F15 /* Card.swift in Sources */,
 				E26BFEE7239AAA0100264688 /* ActionRowViewModel.swift in Sources */,
