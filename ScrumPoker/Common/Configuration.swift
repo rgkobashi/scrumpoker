@@ -40,7 +40,7 @@ class Configuration {
     }
     
     func loadPreferences() {
-        application.isIdleTimerDisabled = self.getValue(for: .disableAutoLock)
+        application.isIdleTimerDisabled = getValue(for: .disableAutoLock)
     }
     
     func setupSideMenu(from window: UIWindow) {
