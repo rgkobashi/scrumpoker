@@ -24,21 +24,6 @@ class MenuViewModel {
     private let analyticsManager: AnalyticsManager
     private let application: UIApplication
     private lazy var menuItems: [MenuSectionViewModel] = {
-        let shareImage: UIImage?
-        let feedbackImage: UIImage?
-        let writeReviewImage: UIImage?
-        let contributeImage: UIImage?
-        if #available(iOS 13.0, *) {
-            shareImage = UIImage(systemName: "square.and.arrow.up")
-            feedbackImage = UIImage(systemName: "envelope")
-            writeReviewImage = UIImage(systemName: "star")
-            contributeImage = UIImage(systemName: "chevron.left.slash.chevron.right")
-        } else {
-            shareImage = #imageLiteral(resourceName: "shareIcon")
-            feedbackImage = #imageLiteral(resourceName: "feedbackIcon")
-            writeReviewImage = #imageLiteral(resourceName: "writeReviewIcon")
-            contributeImage = #imageLiteral(resourceName: "contributeIcon")
-        }
         return [MenuSectionViewModel(title: "Decks",
                                      selectionType: .single,
                                      rows: [
@@ -55,20 +40,20 @@ class MenuViewModel {
                 MenuSectionViewModel(title: nil,
                                      selectionType: .single,
                                      rows: [
-                                        ActionRowViewModel<MenuViewController>(text: "Share", image: shareImage, action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Share", image: nil, action: { [weak self] vc in
                                             self?.share()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Feedback", image: feedbackImage, action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Feedback", image: nil, action: { [weak self] vc in
                                             self?.sendFeedback(from: vc)
                                         })
                 ]),
                 MenuSectionViewModel(title: nil,
                                      selectionType: .single,
                                      rows: [
-                                        ActionRowViewModel<MenuViewController>(text: "Write a review", image: writeReviewImage, action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Write a review", image: #imageLiteral(resourceName: "link-external"), action: { [weak self] vc in
                                             self?.writeReview()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Contribute", image: contributeImage, action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Contribute", image: #imageLiteral(resourceName: "link-external"), action: { [weak self] vc in
                                             self?.contribute()
                                         })
                 ])
