@@ -61,9 +61,6 @@ class MenuViewModel {
                                         ActionRowViewModel<MenuViewController>(text: "Share", image: shareImage, action: { [weak self] vc in
                                             self?.share()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Write a review", image: writeReviewImage, action: { [weak self] vc in
-                                            self?.writeReview()
-                                        }),
                                         ActionRowViewModel<MenuViewController>(text: "Feedback", image: feedbackImage, action: { [weak self] vc in
                                             self?.sendFeedback(from: vc)
                                         })
@@ -71,6 +68,9 @@ class MenuViewModel {
                 MenuSectionViewModel(title: nil,
                                      selectionType: .single,
                                      rows: [
+                                        ActionRowViewModel<MenuViewController>(text: "Write a review", image: writeReviewImage, action: { [weak self] vc in
+                                            self?.writeReview()
+                                        }),
                                         ActionRowViewModel<MenuViewController>(text: "Contribute", image: contributeImage, action: { [weak self] vc in
                                             self?.contribute()
                                         }),
