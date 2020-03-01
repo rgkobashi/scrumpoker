@@ -28,19 +28,16 @@ class MenuViewModel {
         let feedbackImage: UIImage?
         let writeReviewImage: UIImage?
         let contributeImage: UIImage?
-        let donateImage: UIImage?
         if #available(iOS 13.0, *) {
             shareImage = UIImage(systemName: "square.and.arrow.up")
             feedbackImage = UIImage(systemName: "envelope")
             writeReviewImage = UIImage(systemName: "star")
             contributeImage = UIImage(systemName: "chevron.left.slash.chevron.right")
-            donateImage = UIImage(systemName: "dollarsign.circle")
         } else {
             shareImage = #imageLiteral(resourceName: "shareIcon")
             feedbackImage = #imageLiteral(resourceName: "feedbackIcon")
             writeReviewImage = #imageLiteral(resourceName: "writeReviewIcon")
             contributeImage = #imageLiteral(resourceName: "contributeIcon")
-            donateImage = #imageLiteral(resourceName: "donateIcon")
         }
         return [MenuSectionViewModel(title: "Decks",
                                      selectionType: .single,
@@ -73,10 +70,7 @@ class MenuViewModel {
                                         }),
                                         ActionRowViewModel<MenuViewController>(text: "Contribute", image: contributeImage, action: { [weak self] vc in
                                             self?.contribute()
-                                        }),
-                                        ActionRowViewModel<MenuViewController>(text: "Donate", image: donateImage, action: { [weak self] vc in
-                                            self?.donate()
-                                        }),
+                                        })
                 ])
         ]
     }()
@@ -132,11 +126,6 @@ class MenuViewModel {
     private func writeReview() {
         analyticsManager.log(.writeReview)
         application.open(appInformation.writeReviewURL, options: [:])
-    }
-    
-    private func donate() {
-        analyticsManager.log(.donate)
-        application.open(appInformation.donateURL, options: [:])
     }
     
     private func share() {

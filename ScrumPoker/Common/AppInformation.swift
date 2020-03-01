@@ -29,9 +29,6 @@ class AppInformation {
     var appURL: URL {
         return URL(string: "https://apps.apple.com/app/id\(appAppleId)")!
     }
-    var donateURL: URL {
-        return URL(string: "https://www.paypal.me/rgkobashi")!
-    }
     var contributeURL: URL {
         return URL(string: "https://github.com/rgkobashi/scrumpoker")!
     }
