@@ -925,6 +925,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.rgkobashi.scrumpoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "io.rgkobashi.scrumpoker - Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
