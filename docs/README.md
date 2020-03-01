@@ -6,3 +6,4 @@
 - Localize
 - Write unit and UI tests
 - Add linter
+- Add support for Dark Mode
