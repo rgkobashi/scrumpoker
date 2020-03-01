@@ -50,10 +50,10 @@ class MenuViewModel {
                 MenuSectionViewModel(title: nil,
                                      selectionType: .single,
                                      rows: [
-                                        ActionRowViewModel<MenuViewController>(text: "Write a review", image: #imageLiteral(resourceName: "link-external"), action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Write a review", image: #imageLiteral(resourceName: "open-external"), action: { [weak self] vc in
                                             self?.writeReview()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Contribute", image: #imageLiteral(resourceName: "link-external"), action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "Contribute", image: #imageLiteral(resourceName: "open-external"), action: { [weak self] vc in
                                             self?.contribute()
                                         })
                 ])
