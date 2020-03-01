@@ -15,7 +15,6 @@ enum AnalyticsEvent {
     case writeReview
     case feedback
     case contribute
-    case donate
     
     var name: String {
         switch self {
@@ -31,8 +30,6 @@ enum AnalyticsEvent {
             return "feedback"
         case .contribute:
             return "contribute:"
-        case .donate:
-            return "donate"
         }
     }
 }

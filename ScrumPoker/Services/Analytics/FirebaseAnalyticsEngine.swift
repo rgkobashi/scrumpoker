@@ -27,7 +27,7 @@ class FirebaseAnalyticsEngine: AnalyticsEngine {
                 "id": p.id,
                 "value" : value
             ])
-        case .shareApp, .writeReview, .feedback, .contribute, .donate:
+        case .shareApp, .writeReview, .feedback, .contribute:
             analytics.logEvent(event.name, parameters: nil)
         }
     }
