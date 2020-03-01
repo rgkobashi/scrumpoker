@@ -960,7 +960,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.rgkobashi.ScrumPokerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.rgkobashi.scrumpokerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -980,7 +980,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.rgkobashi.ScrumPokerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.rgkobashi.scrumpokerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -999,7 +999,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.rgkobashi.ScrumPokerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.rgkobashi.scrumpokerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1018,7 +1018,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.rgkobashi.ScrumPokerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.rgkobashi.scrumpokerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
