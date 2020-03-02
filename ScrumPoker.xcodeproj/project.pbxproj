@@ -250,16 +250,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		E23288B6227460EB00A94F15 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E23288B922748FAA00A94F15 /* DeckLayout.swift */,
-				E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */,
-				E265D99B239BD1EA005F02A1 /* TableRowType.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		E242E05D22743EBC00C28204 = {
 			isa = PBXGroup;
 			children = (
@@ -286,8 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				E25B06D5240D45410035F94F /* Entities */,
+				E25B06D6240D45CB0035F94F /* UseCases */,
 				E242E06922743EBC00C28204 /* AppDelegate.swift */,
-				E23288B6227460EB00A94F15 /* Models */,
 				E23288A622744DC800A94F15 /* Protocols */,
 				E23288A322744D7100A94F15 /* Extensions */,
 				E2CDBE102275ED510054957B /* Common */,
@@ -326,6 +316,19 @@
 				E28E88D4227767F100DFF021 /* Preference.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		E25B06D6240D45CB0035F94F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E23288B922748FAA00A94F15 /* DeckLayout.swift */,
+				E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */,
+				E265D99B239BD1EA005F02A1 /* TableRowType.swift */,
+				E2A9DB1A23A2962D00E1AD4C /* FeedbackSender.swift */,
+				E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */,
+				E2C5AF7A23A3ED6800BF686C /* AppInformation.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		E265D9A1239BDFA2005F02A1 /* ViewControllers */ = {
@@ -371,8 +374,6 @@
 		E2A9DB1923A2960F00E1AD4C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E2A9DB1A23A2962D00E1AD4C /* FeedbackSender.swift */,
-				E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */,
 				E2D2BA5A23A4C9300039A960 /* Analytics */,
 			);
 			path = Services;
@@ -394,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				E2CDBE112275ED6E0054957B /* Configuration.swift */,
-				E2C5AF7A23A3ED6800BF686C /* AppInformation.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
