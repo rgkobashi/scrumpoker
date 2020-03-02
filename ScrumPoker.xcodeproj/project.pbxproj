@@ -199,8 +199,8 @@
 		E2328897227449B400A94F15 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				E26C738823A54E160034B6D6 /* GoogleService-Info.plist */,
 				E242E07522743EBD00C28204 /* Info.plist */,
+				E26C738823A54E160034B6D6 /* GoogleService-Info.plist */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -261,9 +261,8 @@
 				E25B06D5240D45410035F94F /* Entities */,
 				E25B06D6240D45CB0035F94F /* UseCases */,
 				E25B06DE240D4B780035F94F /* InterfaceAdapters */,
+				E25B06E2240D4CC90035F94F /* Resources */,
 				E2328897227449B400A94F15 /* Support */,
-				E215EDB323A564140077FFE7 /* Settings.bundle */,
-				E242E07022743EBD00C28204 /* Assets.xcassets */,
 			);
 			path = ScrumPoker;
 			sourceTree = "<group>";
@@ -360,6 +359,15 @@
 				E2CDBE052274AD520054957B /* Menu */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E25B06E2240D4CC90035F94F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E215EDB323A564140077FFE7 /* Settings.bundle */,
+				E242E07022743EBD00C28204 /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		E265D9A1239BDFA2005F02A1 /* ViewControllers */ = {
