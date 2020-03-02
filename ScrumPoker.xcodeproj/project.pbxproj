@@ -243,8 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				E26C738423A50F770034B6D6 /* CardDesign.swift */,
-				E26C738623A53F5D0034B6D6 /* ViewControllerAlertable.swift */,
-				E2D2BA5D23A4E73F0039A960 /* ViewControllerSharable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -324,6 +322,7 @@
 				E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */,
 				E2C5AF7A23A3ED6800BF686C /* AppInformation.swift */,
 				E25B06D8240D490A0035F94F /* Table */,
+				E25B06D9240D49F60035F94F /* Protocols */,
 				E23288A322744D7100A94F15 /* Extensions */,
 			);
 			path = UseCases;
@@ -337,6 +336,15 @@
 				E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */,
 			);
 			path = Table;
+			sourceTree = "<group>";
+		};
+		E25B06D9240D49F60035F94F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E26C738623A53F5D0034B6D6 /* ViewControllerAlertable.swift */,
+				E2D2BA5D23A4E73F0039A960 /* ViewControllerSharable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		E265D9A1239BDFA2005F02A1 /* ViewControllers */ = {
