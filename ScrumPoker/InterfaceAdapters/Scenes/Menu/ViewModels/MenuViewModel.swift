@@ -23,23 +23,23 @@ class MenuViewModel {
     private let configuration: Configuration
     private let analyticsManager: AnalyticsManager
     private let application: UIApplication
-    private lazy var menuItems: [MenuSectionViewModel] = {
-        return [MenuSectionViewModel(title: "Decks",
-                                     selectionType: .single,
-                                     rows: [
+    private lazy var menuItems: [TableSectionViewModel] = {
+        return [TableSectionViewModel(title: "Decks",
+                                      selectionType: .single,
+                                      rows: [
                                         DeckRowViewModel(deck: .fibonacci, configuration: configuration),
                                         DeckRowViewModel(deck: .standar, configuration: configuration)
                 ]),
-                MenuSectionViewModel(title: "Preferences",
-                                     selectionType: .multiple,
-                                     rows: [
+                TableSectionViewModel(title: "Preferences",
+                                      selectionType: .multiple,
+                                      rows: [
                                         PreferenceBoolRowViewModel(preference: .shakeToReveal, configuration: configuration),
                                         PreferenceBoolRowViewModel(preference: .shakeOnReveal, configuration: configuration),
                                         PreferenceBoolRowViewModel(preference: .disableAutoLock, configuration: configuration)
                 ]),
-                MenuSectionViewModel(title: nil,
-                                     selectionType: .single,
-                                     rows: [
+                TableSectionViewModel(title: nil,
+                                      selectionType: .single,
+                                      rows: [
                                         ActionRowViewModel<MenuViewController>(text: "Share", image: nil, action: { [weak self] vc in
                                             self?.share()
                                         }),
@@ -47,9 +47,9 @@ class MenuViewModel {
                                             self?.sendFeedback(from: vc)
                                         })
                 ]),
-                MenuSectionViewModel(title: nil,
-                                     selectionType: .single,
-                                     rows: [
+                TableSectionViewModel(title: nil,
+                                      selectionType: .single,
+                                      rows: [
                                         ActionRowViewModel<MenuViewController>(text: "Write a review", image: nil, action: { [weak self] vc in
                                             self?.writeReview()
                                         }),

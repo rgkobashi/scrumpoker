@@ -35,7 +35,7 @@
 		E26BFEDF239AA6CF00264688 /* TableSectionSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */; };
 		E26BFEE1239AA73D00264688 /* DeckRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */; };
 		E26BFEE3239AA83300264688 /* PreferenceBoolRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE2239AA83300264688 /* PreferenceBoolRowViewModel.swift */; };
-		E26BFEE5239AA9BD00264688 /* MenuSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE4239AA9BD00264688 /* MenuSectionViewModel.swift */; };
+		E26BFEE5239AA9BD00264688 /* TableSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE4239AA9BD00264688 /* TableSectionViewModel.swift */; };
 		E26BFEE7239AAA0100264688 /* ActionRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BFEE6239AAA0100264688 /* ActionRowViewModel.swift */; };
 		E26C738523A50F770034B6D6 /* CardDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C738423A50F770034B6D6 /* CardDesign.swift */; };
 		E26C738723A53F5D0034B6D6 /* ViewControllerAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C738623A53F5D0034B6D6 /* ViewControllerAlertable.swift */; };
@@ -117,7 +117,7 @@
 		E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionSelectionType.swift; sourceTree = "<group>"; };
 		E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckRowViewModel.swift; sourceTree = "<group>"; };
 		E26BFEE2239AA83300264688 /* PreferenceBoolRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceBoolRowViewModel.swift; sourceTree = "<group>"; };
-		E26BFEE4239AA9BD00264688 /* MenuSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSectionViewModel.swift; sourceTree = "<group>"; };
+		E26BFEE4239AA9BD00264688 /* TableSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionViewModel.swift; sourceTree = "<group>"; };
 		E26BFEE6239AAA0100264688 /* ActionRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRowViewModel.swift; sourceTree = "<group>"; };
 		E26C738423A50F770034B6D6 /* CardDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDesign.swift; sourceTree = "<group>"; };
 		E26C738623A53F5D0034B6D6 /* ViewControllerAlertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAlertable.swift; sourceTree = "<group>"; };
@@ -316,8 +316,9 @@
 		E25B06D8240D490A0035F94F /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				E265D99B239BD1EA005F02A1 /* TableRowType.swift */,
 				E2CDBE132275FEAC0054957B /* TableRowViewModel.swift */,
+				E265D99B239BD1EA005F02A1 /* TableRowType.swift */,
+				E26BFEE4239AA9BD00264688 /* TableSectionViewModel.swift */,
 				E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */,
 			);
 			path = Table;
@@ -435,7 +436,6 @@
 			isa = PBXGroup;
 			children = (
 				E2CDBE0A2274ADD10054957B /* MenuViewModel.swift */,
-				E26BFEE4239AA9BD00264688 /* MenuSectionViewModel.swift */,
 				E26BFEE0239AA73D00264688 /* DeckRowViewModel.swift */,
 				E26BFEE2239AA83300264688 /* PreferenceBoolRowViewModel.swift */,
 				E26BFEE6239AAA0100264688 /* ActionRowViewModel.swift */,
@@ -737,7 +737,7 @@
 				E23288AF2274508900A94F15 /* CardCell.swift in Sources */,
 				E2CDBE122275ED6E0054957B /* Configuration.swift in Sources */,
 				E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */,
-				E26BFEE5239AA9BD00264688 /* MenuSectionViewModel.swift in Sources */,
+				E26BFEE5239AA9BD00264688 /* TableSectionViewModel.swift in Sources */,
 				E25B06DB240D4AB80035F94F /* AnalyticsEvent.swift in Sources */,
 				E265D99E239BDF07005F02A1 /* CardViewController.swift in Sources */,
 				E242E06C22743EBC00C28204 /* DeckViewController.swift in Sources */,
