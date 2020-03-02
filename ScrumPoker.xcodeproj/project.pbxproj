@@ -270,7 +270,6 @@
 				E25B06D5240D45410035F94F /* Entities */,
 				E25B06D6240D45CB0035F94F /* UseCases */,
 				E25B06DE240D4B780035F94F /* InterfaceAdapters */,
-				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E2CDBE102275ED510054957B /* Common */,
 				E232889C22744CEE00A94F15 /* Scenes */,
 				E2328897227449B400A94F15 /* Support */,
@@ -365,6 +364,7 @@
 		E25B06E0240D4BAE0035F94F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E232889E22744CFC00A94F15 /* Splash */,
 			);
 			path = Scenes;
