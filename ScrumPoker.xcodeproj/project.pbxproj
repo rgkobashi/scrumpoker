@@ -279,7 +279,6 @@
 				E25B06D6240D45CB0035F94F /* UseCases */,
 				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E23288A622744DC800A94F15 /* Protocols */,
-				E23288A322744D7100A94F15 /* Extensions */,
 				E2CDBE102275ED510054957B /* Common */,
 				E2A9DB1923A2960F00E1AD4C /* Services */,
 				E232889C22744CEE00A94F15 /* Scenes */,
@@ -327,6 +326,7 @@
 				E2A9DB1A23A2962D00E1AD4C /* FeedbackSender.swift */,
 				E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */,
 				E2C5AF7A23A3ED6800BF686C /* AppInformation.swift */,
+				E23288A322744D7100A94F15 /* Extensions */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
