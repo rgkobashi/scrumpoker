@@ -253,10 +253,7 @@
 		E23288B6227460EB00A94F15 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E23288B7227460F900A94F15 /* Card.swift */,
-				E266CE9C2276CDF2003451F6 /* Deck.swift */,
 				E23288B922748FAA00A94F15 /* DeckLayout.swift */,
-				E28E88D4227767F100DFF021 /* Preference.swift */,
 				E26BFEDE239AA6CF00264688 /* TableSectionSelectionType.swift */,
 				E265D99B239BD1EA005F02A1 /* TableRowType.swift */,
 			);
@@ -288,6 +285,7 @@
 		E242E06822743EBC00C28204 /* ScrumPoker */ = {
 			isa = PBXGroup;
 			children = (
+				E25B06D5240D45410035F94F /* Entities */,
 				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E23288B6227460EB00A94F15 /* Models */,
 				E23288A622744DC800A94F15 /* Protocols */,
@@ -318,6 +316,16 @@
 				E242E08B22743EBE00C28204 /* Info.plist */,
 			);
 			path = ScrumPokerUITests;
+			sourceTree = "<group>";
+		};
+		E25B06D5240D45410035F94F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E23288B7227460F900A94F15 /* Card.swift */,
+				E266CE9C2276CDF2003451F6 /* Deck.swift */,
+				E28E88D4227767F100DFF021 /* Preference.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		E265D9A1239BDFA2005F02A1 /* ViewControllers */ = {
