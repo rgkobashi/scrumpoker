@@ -319,6 +319,7 @@
 				E2C5AF7A23A3ED6800BF686C /* AppInformation.swift */,
 				E2A9DB1A23A2962D00E1AD4C /* FeedbackSender.swift */,
 				E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */,
+				E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */,
 				E25B06D8240D490A0035F94F /* Table */,
 				E25B06D9240D49F60035F94F /* Protocols */,
 				E23288A322744D7100A94F15 /* Extensions */,
@@ -416,7 +417,6 @@
 		E2D2BA5A23A4C9300039A960 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */,
 				E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */,
 			);
 			path = Analytics;
