@@ -208,7 +208,6 @@
 		E232889C22744CEE00A94F15 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				E232889F22744D0000A94F15 /* Main */,
 				E2CDBE052274AD520054957B /* Menu */,
 			);
 			path = Scenes;
@@ -366,6 +365,7 @@
 			children = (
 				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E232889E22744CFC00A94F15 /* Splash */,
+				E232889F22744D0000A94F15 /* Main */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
