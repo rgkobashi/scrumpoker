@@ -26,6 +26,7 @@
 		E242E07422743EBD00C28204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E07222743EBD00C28204 /* LaunchScreen.storyboard */; };
 		E242E07F22743EBE00C28204 /* ScrumPokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E07E22743EBE00C28204 /* ScrumPokerTests.swift */; };
 		E242E08A22743EBE00C28204 /* ScrumPokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */; };
+		E25B06DB240D4AB80035F94F /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */; };
 		E265D99C239BD1EA005F02A1 /* TableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265D99B239BD1EA005F02A1 /* TableRowType.swift */; };
 		E265D99E239BDF07005F02A1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265D99D239BDF07005F02A1 /* CardViewController.swift */; };
 		E265D9A0239BDF73005F02A1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265D99F239BDF73005F02A1 /* CardViewModel.swift */; };
@@ -106,6 +107,7 @@
 		E242E08522743EBE00C28204 /* ScrumPokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrumPokerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumPokerUITests.swift; sourceTree = "<group>"; };
 		E242E08B22743EBE00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 		E265D99B239BD1EA005F02A1 /* TableRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowType.swift; sourceTree = "<group>"; };
 		E265D99D239BDF07005F02A1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		E265D99F239BDF73005F02A1 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				E23288B7227460F900A94F15 /* Card.swift */,
 				E266CE9C2276CDF2003451F6 /* Deck.swift */,
 				E28E88D4227767F100DFF021 /* Preference.swift */,
+				E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				E2CDBE122275ED6E0054957B /* Configuration.swift in Sources */,
 				E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */,
 				E26BFEE5239AA9BD00264688 /* MenuSectionViewModel.swift in Sources */,
+				E25B06DB240D4AB80035F94F /* AnalyticsEvent.swift in Sources */,
 				E265D99E239BDF07005F02A1 /* CardViewController.swift in Sources */,
 				E242E06C22743EBC00C28204 /* DeckViewController.swift in Sources */,
 				E2CDBE0F2274ADF10054957B /* MenuViewController.swift in Sources */,

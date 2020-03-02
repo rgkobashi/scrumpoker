@@ -8,32 +8,6 @@
 
 import Foundation
 
-enum AnalyticsEvent {
-    case selectedDeck(Deck)
-    case preferenceBool(Preference<Bool>, Bool)
-    case shareApp
-    case writeReview
-    case feedback
-    case contribute
-    
-    var name: String {
-        switch self {
-        case .selectedDeck:
-            return "selected_deck"
-        case .preferenceBool:
-            return "preference_bool"
-        case .shareApp:
-            return "share_app"
-        case .writeReview:
-            return "write_review"
-        case .feedback:
-            return "feedback"
-        case .contribute:
-            return "contribute:"
-        }
-    }
-}
-
 protocol AnalyticsEngine {
     func sendAnalyticsEvent(_ event: AnalyticsEvent)
 }
