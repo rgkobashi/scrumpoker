@@ -270,9 +270,9 @@
 			children = (
 				E25B06D5240D45410035F94F /* Entities */,
 				E25B06D6240D45CB0035F94F /* UseCases */,
+				E25B06DE240D4B780035F94F /* InterfaceAdapters */,
 				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E2CDBE102275ED510054957B /* Common */,
-				E2A9DB1923A2960F00E1AD4C /* Services */,
 				E232889C22744CEE00A94F15 /* Scenes */,
 				E2328897227449B400A94F15 /* Support */,
 				E215EDB323A564140077FFE7 /* Settings.bundle */,
@@ -346,6 +346,22 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		E25B06DE240D4B780035F94F /* InterfaceAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				E25B06DF240D4B850035F94F /* Services */,
+			);
+			path = InterfaceAdapters;
+			sourceTree = "<group>";
+		};
+		E25B06DF240D4B850035F94F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		E265D9A1239BDFA2005F02A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,14 +402,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		E2A9DB1923A2960F00E1AD4C /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				E2D2BA5A23A4C9300039A960 /* Analytics */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		E2CDBE052274AD520054957B /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,14 +420,6 @@
 				E2CDBE112275ED6E0054957B /* Configuration.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		E2D2BA5A23A4C9300039A960 /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */,
-			);
-			path = Analytics;
 			sourceTree = "<group>";
 		};
 		E2D2FB25239B96D5006DA9C0 /* Views */ = {
