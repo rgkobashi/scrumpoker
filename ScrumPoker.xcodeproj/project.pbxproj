@@ -11,7 +11,6 @@
 		17367E1EDA1D59A34E5FFF82 /* Pods_ScrumPokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */; };
 		65982F83EE22C95E29C64909 /* Pods_ScrumPoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */; };
 		E215EDAB23A552790077FFE7 /* FirebaseAnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */; };
-		E215EDB423A564140077FFE7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E215EDB323A564140077FFE7 /* Settings.bundle */; };
 		E23288A122744D5300A94F15 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A022744D5300A94F15 /* MainCoordinator.swift */; };
 		E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A422744D7B00A94F15 /* UIStoryboard.swift */; };
 		E23288AA22744E3300A94F15 /* DeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A922744E3300A94F15 /* DeckViewModel.swift */; };
@@ -86,7 +85,6 @@
 		B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsEngine.swift; sourceTree = "<group>"; };
-		E215EDB323A564140077FFE7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E23288A022744D5300A94F15 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		E23288A422744D7B00A94F15 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		E23288A922744E3300A94F15 /* DeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModel.swift; sourceTree = "<group>"; };
@@ -365,7 +363,6 @@
 		E25B06E2240D4CC90035F94F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E215EDB323A564140077FFE7 /* Settings.bundle */,
 				E242E07022743EBD00C28204 /* Assets.xcassets */,
 			);
 			name = Resources;
@@ -556,7 +553,6 @@
 			files = (
 				E2CDBE1722760BFD0054957B /* MenuCell.xib in Resources */,
 				E242E07422743EBD00C28204 /* LaunchScreen.storyboard in Resources */,
-				E215EDB423A564140077FFE7 /* Settings.bundle in Resources */,
 				E26C738923A54E160034B6D6 /* GoogleService-Info.plist in Resources */,
 				E242E07122743EBD00C28204 /* Assets.xcassets in Resources */,
 				E242E06F22743EBC00C28204 /* Main.storyboard in Resources */,
