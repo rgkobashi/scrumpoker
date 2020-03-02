@@ -261,7 +261,6 @@
 				E25B06D5240D45410035F94F /* Entities */,
 				E25B06D6240D45CB0035F94F /* UseCases */,
 				E25B06DE240D4B780035F94F /* InterfaceAdapters */,
-				E2CDBE102275ED510054957B /* Common */,
 				E2328897227449B400A94F15 /* Support */,
 				E215EDB323A564140077FFE7 /* Settings.bundle */,
 				E242E07022743EBD00C28204 /* Assets.xcassets */,
@@ -337,6 +336,7 @@
 		E25B06DE240D4B780035F94F /* InterfaceAdapters */ = {
 			isa = PBXGroup;
 			children = (
+				E2CDBE112275ED6E0054957B /* Configuration.swift */,
 				E25B06DF240D4B850035F94F /* Services */,
 				E25B06E0240D4BAE0035F94F /* Scenes */,
 			);
@@ -412,14 +412,6 @@
 				E2D2FB25239B96D5006DA9C0 /* Views */,
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		E2CDBE102275ED510054957B /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				E2CDBE112275ED6E0054957B /* Configuration.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		E2D2FB25239B96D5006DA9C0 /* Views */ = {
