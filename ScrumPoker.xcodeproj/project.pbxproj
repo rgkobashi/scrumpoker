@@ -27,6 +27,7 @@
 		E242E08A22743EBE00C28204 /* ScrumPokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */; };
 		E25B06DB240D4AB80035F94F /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */; };
 		E25B06DD240D4B150035F94F /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */; };
+		E25B06EA240D5C1C0035F94F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E25B06E9240D5C1C0035F94F /* Settings.bundle */; };
 		E265D99C239BD1EA005F02A1 /* TableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265D99B239BD1EA005F02A1 /* TableRowType.swift */; };
 		E265D99E239BDF07005F02A1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265D99D239BDF07005F02A1 /* CardViewController.swift */; };
 		E265D9A0239BDF73005F02A1 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E265D99F239BDF73005F02A1 /* CardViewModel.swift */; };
@@ -108,6 +109,7 @@
 		E242E08B22743EBE00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 		E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
+		E25B06E9240D5C1C0035F94F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E265D99B239BD1EA005F02A1 /* TableRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowType.swift; sourceTree = "<group>"; };
 		E265D99D239BDF07005F02A1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		E265D99F239BDF73005F02A1 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 		E25B06E2240D4CC90035F94F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E25B06E9240D5C1C0035F94F /* Settings.bundle */,
 				E242E07022743EBD00C28204 /* Assets.xcassets */,
 			);
 			name = Resources;
@@ -553,6 +556,7 @@
 			files = (
 				E2CDBE1722760BFD0054957B /* MenuCell.xib in Resources */,
 				E242E07422743EBD00C28204 /* LaunchScreen.storyboard in Resources */,
+				E25B06EA240D5C1C0035F94F /* Settings.bundle in Resources */,
 				E26C738923A54E160034B6D6 /* GoogleService-Info.plist in Resources */,
 				E242E07122743EBD00C28204 /* Assets.xcassets in Resources */,
 				E242E06F22743EBC00C28204 /* Main.storyboard in Resources */,
