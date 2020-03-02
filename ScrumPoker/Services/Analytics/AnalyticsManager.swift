@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol AnalyticsEngine {
-    func sendAnalyticsEvent(_ event: AnalyticsEvent)
-}
-
 class AnalyticsManager {
     
     private let engine: AnalyticsEngine
