@@ -205,14 +205,6 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
-		E232889C22744CEE00A94F15 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				E2CDBE052274AD520054957B /* Menu */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		E232889E22744CFC00A94F15 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,7 +262,6 @@
 				E25B06D6240D45CB0035F94F /* UseCases */,
 				E25B06DE240D4B780035F94F /* InterfaceAdapters */,
 				E2CDBE102275ED510054957B /* Common */,
-				E232889C22744CEE00A94F15 /* Scenes */,
 				E2328897227449B400A94F15 /* Support */,
 				E215EDB323A564140077FFE7 /* Settings.bundle */,
 				E242E07022743EBD00C28204 /* Assets.xcassets */,
@@ -366,6 +357,7 @@
 				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E232889E22744CFC00A94F15 /* Splash */,
 				E232889F22744D0000A94F15 /* Main */,
+				E2CDBE052274AD520054957B /* Menu */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
