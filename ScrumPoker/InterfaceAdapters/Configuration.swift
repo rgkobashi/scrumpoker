@@ -14,13 +14,6 @@ private enum UserDefaultsKey: String {
 }
 
 class Configuration {
-    var statusBarAlpha: CGFloat {
-        return 0.0
-    }
-    var menuWidth: CGFloat {
-        return screenSize.width * 0.60
-    }
-    
     private let application: UIApplication
     private let userDefaults: UserDefaults
     private let firebaseApp: FirebaseApp.Type
@@ -33,6 +26,13 @@ class Configuration {
     }
     private var defaultDeck: Deck {
         return Deck.fibonacci
+    }
+    
+    var statusBarAlpha: CGFloat {
+        return 0.0
+    }
+    var menuWidth: CGFloat {
+        return screenSize.width * 0.60
     }
     
     init(application: UIApplication = .shared, userDefaults: UserDefaults = .standard, firebaseApp: FirebaseApp.Type = FirebaseApp.self, sideMenuManager: SideMenuManager = .default) {
