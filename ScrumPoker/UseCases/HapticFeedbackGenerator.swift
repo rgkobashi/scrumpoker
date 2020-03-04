@@ -14,6 +14,12 @@ enum HapticFeedbackGeneratorType {
 
 class HapticFeedbackGenerator {
     
+    private let generator: UINotificationFeedbackGenerator
+    
+    init(generator: UINotificationFeedbackGenerator = .init()) {
+        self.generator = generator
+    }
+    
     func generate(_ type: HapticFeedbackGeneratorType) {
         switch type {
         case .success:
@@ -22,8 +28,7 @@ class HapticFeedbackGenerator {
     }
     
     private func processNotificationType(_ type: UINotificationFeedbackGenerator.FeedbackType) {
-        let g = UINotificationFeedbackGenerator()
-        g.prepare()
-        g.notificationOccurred(type)
+        generator.prepare()
+        generator.notificationOccurred(type)
     }
 }
