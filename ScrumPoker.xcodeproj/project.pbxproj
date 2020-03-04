@@ -307,7 +307,7 @@
 				E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */,
 				E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */,
 				E25B06D8240D490A0035F94F /* Table */,
-				E25B06D9240D49F60035F94F /* Protocols */,
+				E25B06D9240D49F60035F94F /* ViewController */,
 				E23288A322744D7100A94F15 /* Extensions */,
 			);
 			path = UseCases;
@@ -324,13 +324,13 @@
 			path = Table;
 			sourceTree = "<group>";
 		};
-		E25B06D9240D49F60035F94F /* Protocols */ = {
+		E25B06D9240D49F60035F94F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				E26C738623A53F5D0034B6D6 /* ViewControllerAlertable.swift */,
 				E2D2BA5D23A4E73F0039A960 /* ViewControllerSharable.swift */,
 			);
-			path = Protocols;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		E25B06DE240D4B780035F94F /* InterfaceAdapters */ = {
