@@ -23,8 +23,8 @@
 		E242E06F22743EBC00C28204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E06D22743EBC00C28204 /* Main.storyboard */; };
 		E242E07122743EBD00C28204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E242E07022743EBD00C28204 /* Assets.xcassets */; };
 		E242E07422743EBD00C28204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E242E07222743EBD00C28204 /* LaunchScreen.storyboard */; };
-		E242E07F22743EBE00C28204 /* ScrumPokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E07E22743EBE00C28204 /* ScrumPokerTests.swift */; };
 		E242E08A22743EBE00C28204 /* ScrumPokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */; };
+		E2467E3F240FF7890079BDAA /* FeedbackSenderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E3E240FF7890079BDAA /* FeedbackSenderSpec.swift */; };
 		E25B06DB240D4AB80035F94F /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */; };
 		E25B06DD240D4B150035F94F /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */; };
 		E25B06EA240D5C1C0035F94F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E25B06E9240D5C1C0035F94F /* Settings.bundle */; };
@@ -102,11 +102,11 @@
 		E242E07322743EBD00C28204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E242E07522743EBD00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E242E07A22743EBE00C28204 /* ScrumPokerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrumPokerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E242E07E22743EBE00C28204 /* ScrumPokerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumPokerTests.swift; sourceTree = "<group>"; };
 		E242E08022743EBE00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E242E08522743EBE00C28204 /* ScrumPokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrumPokerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumPokerUITests.swift; sourceTree = "<group>"; };
 		E242E08B22743EBE00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2467E3E240FF7890079BDAA /* FeedbackSenderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackSenderSpec.swift; sourceTree = "<group>"; };
 		E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 		E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
 		E25B06E9240D5C1C0035F94F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -270,8 +270,8 @@
 		E242E07D22743EBE00C28204 /* ScrumPokerTests */ = {
 			isa = PBXGroup;
 			children = (
-				E242E07E22743EBE00C28204 /* ScrumPokerTests.swift */,
-				E242E08022743EBE00C28204 /* Info.plist */,
+				E2467E40240FF7920079BDAA /* UseCases */,
+				E2467E42240FF7A70079BDAA /* Support */,
 			);
 			path = ScrumPokerTests;
 			sourceTree = "<group>";
@@ -292,6 +292,22 @@
 				E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */,
 			);
 			path = Analytics;
+			sourceTree = "<group>";
+		};
+		E2467E40240FF7920079BDAA /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E2467E3E240FF7890079BDAA /* FeedbackSenderSpec.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		E2467E42240FF7A70079BDAA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E242E08022743EBE00C28204 /* Info.plist */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 		E25B06D5240D45410035F94F /* Entities */ = {
@@ -782,7 +798,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E242E07F22743EBE00C28204 /* ScrumPokerTests.swift in Sources */,
+				E2467E3F240FF7890079BDAA /* FeedbackSenderSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
