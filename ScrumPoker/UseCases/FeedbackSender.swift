@@ -22,6 +22,12 @@ class FeedbackSender {
     
     typealias CompletionType = (_ succeed: Bool) -> Void
     
+    let mailComposeViewControllerType: MFMailComposeViewController.Type
+    
+    init(mailComposeViewControllerType: MFMailComposeViewController.Type = MFMailComposeViewController.self) {
+        self.mailComposeViewControllerType = mailComposeViewControllerType
+    }
+    
     func sendFeedback(_ type: FeedbackType, completion: CompletionType? = nil) throws {
         switch type {
         case let .mail(recipients, subject, message, vc):
@@ -32,7 +38,7 @@ class FeedbackSender {
     // MARK: Private
     
     private func openMailComposer(recipients: [String], subject: String, message: String, from viewController: UIViewController, completion: CompletionType?) throws {
-        guard MFMailComposeViewController.canSendMail() else {
+        guard mailComposeViewControllerType.canSendMail() else {
             throw Error.mailClientNotConfigured
         }
         let mcvc = CustomMailComposeViewController(completion: completion)
