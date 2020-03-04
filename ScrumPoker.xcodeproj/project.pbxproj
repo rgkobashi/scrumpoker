@@ -29,6 +29,7 @@
 		E2467E46240FFFDF0079BDAA /* AnalyticsManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E45240FFFDF0079BDAA /* AnalyticsManagerSpec.swift */; };
 		E2467E49241001D30079BDAA /* ConfigurationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E48241001D30079BDAA /* ConfigurationSpec.swift */; };
 		E2467E4B241008C20079BDAA /* ApplicationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E4A241008C20079BDAA /* ApplicationType.swift */; };
+		E2467E4E24100B840079BDAA /* DeckLayoutSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E4D24100B840079BDAA /* DeckLayoutSpec.swift */; };
 		E25B06DB240D4AB80035F94F /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */; };
 		E25B06DD240D4B150035F94F /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */; };
 		E25B06EA240D5C1C0035F94F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E25B06E9240D5C1C0035F94F /* Settings.bundle */; };
@@ -115,6 +116,7 @@
 		E2467E45240FFFDF0079BDAA /* AnalyticsManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManagerSpec.swift; sourceTree = "<group>"; };
 		E2467E48241001D30079BDAA /* ConfigurationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationSpec.swift; sourceTree = "<group>"; };
 		E2467E4A241008C20079BDAA /* ApplicationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationType.swift; sourceTree = "<group>"; };
+		E2467E4D24100B840079BDAA /* DeckLayoutSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckLayoutSpec.swift; sourceTree = "<group>"; };
 		E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 		E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
 		E25B06E9240D5C1C0035F94F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 		E2467E40240FF7920079BDAA /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				E2467E4D24100B840079BDAA /* DeckLayoutSpec.swift */,
 				E2467E3E240FF7890079BDAA /* FeedbackSenderSpec.swift */,
 				E2467E43240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift */,
 				E2467E45240FFFDF0079BDAA /* AnalyticsManagerSpec.swift */,
@@ -828,6 +831,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2467E44240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift in Sources */,
+				E2467E4E24100B840079BDAA /* DeckLayoutSpec.swift in Sources */,
 				E2467E49241001D30079BDAA /* ConfigurationSpec.swift in Sources */,
 				E2467E3F240FF7890079BDAA /* FeedbackSenderSpec.swift in Sources */,
 				E2467E46240FFFDF0079BDAA /* AnalyticsManagerSpec.swift in Sources */,
