@@ -285,14 +285,22 @@
 			path = ScrumPokerUITests;
 			sourceTree = "<group>";
 		};
+		E2467E3D240FEA4B0079BDAA /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */,
+				E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		E25B06D5240D45410035F94F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				E23288B7227460F900A94F15 /* Card.swift */,
 				E266CE9C2276CDF2003451F6 /* Deck.swift */,
 				E28E88D4227767F100DFF021 /* Preference.swift */,
-				E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */,
-				E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */,
+				E2467E3D240FEA4B0079BDAA /* Analytics */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
