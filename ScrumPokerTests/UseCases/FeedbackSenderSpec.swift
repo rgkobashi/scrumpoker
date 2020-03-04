@@ -25,7 +25,7 @@ class FeedbackSenderSpec: QuickSpec {
                     it("shows mail compose screen") {
                         let vc = MockVC()
                         try? sut.sendFeedback(.mail(recipients: [""], subject: "", message: "", from: vc))
-                        expect(vc.presentViewControllerCalled) == true
+                        expect(vc.isPresentViewControllerCalled) == true
                     }
                 }
                 context("if Mail is not configured") {
@@ -54,9 +54,9 @@ private class StubMailComposeVC: MFMailComposeViewController {
 }
 
 private class MockVC: UIViewController {
-    var presentViewControllerCalled = false
+    var isPresentViewControllerCalled = false
     
     override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {
-        presentViewControllerCalled = true
+        isPresentViewControllerCalled = true
     }
 }
