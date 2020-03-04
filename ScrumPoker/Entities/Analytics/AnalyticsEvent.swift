@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum AnalyticsEvent {
+enum AnalyticsEvent: Equatable {
     case selectedDeck(Deck)
     case preferenceBool(Preference<Bool>, Bool)
     case shareApp
