@@ -26,6 +26,7 @@
 		E242E08A22743EBE00C28204 /* ScrumPokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242E08922743EBE00C28204 /* ScrumPokerUITests.swift */; };
 		E2467E3F240FF7890079BDAA /* FeedbackSenderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E3E240FF7890079BDAA /* FeedbackSenderSpec.swift */; };
 		E2467E44240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E43240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift */; };
+		E2467E46240FFFDF0079BDAA /* AnalyticsManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E45240FFFDF0079BDAA /* AnalyticsManagerSpec.swift */; };
 		E25B06DB240D4AB80035F94F /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */; };
 		E25B06DD240D4B150035F94F /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */; };
 		E25B06EA240D5C1C0035F94F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E25B06E9240D5C1C0035F94F /* Settings.bundle */; };
@@ -109,6 +110,7 @@
 		E242E08B22743EBE00C28204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2467E3E240FF7890079BDAA /* FeedbackSenderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackSenderSpec.swift; sourceTree = "<group>"; };
 		E2467E43240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackGeneratorSpec.swift; sourceTree = "<group>"; };
+		E2467E45240FFFDF0079BDAA /* AnalyticsManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManagerSpec.swift; sourceTree = "<group>"; };
 		E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 		E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
 		E25B06E9240D5C1C0035F94F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			children = (
 				E2467E3E240FF7890079BDAA /* FeedbackSenderSpec.swift */,
 				E2467E43240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift */,
+				E2467E45240FFFDF0079BDAA /* AnalyticsManagerSpec.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -803,6 +806,7 @@
 			files = (
 				E2467E44240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift in Sources */,
 				E2467E3F240FF7890079BDAA /* FeedbackSenderSpec.swift in Sources */,
+				E2467E46240FFFDF0079BDAA /* AnalyticsManagerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
