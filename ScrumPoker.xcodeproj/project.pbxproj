@@ -345,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				E2CDBE112275ED6E0054957B /* Configuration.swift */,
+				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E25B06DF240D4B850035F94F /* Services */,
 				E25B06E0240D4BAE0035F94F /* Scenes */,
 			);
@@ -362,7 +363,6 @@
 		E25B06E0240D4BAE0035F94F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E232889E22744CFC00A94F15 /* Splash */,
 				E232889F22744D0000A94F15 /* Main */,
 				E2CDBE052274AD520054957B /* Menu */,
