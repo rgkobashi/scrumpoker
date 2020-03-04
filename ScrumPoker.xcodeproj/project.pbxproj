@@ -225,12 +225,12 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		E23288A322744D7100A94F15 /* Extensions */ = {
+		E23288A322744D7100A94F15 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				E23288A422744D7B00A94F15 /* UIStoryboard.swift */,
 			);
-			path = Extensions;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		E242E05D22743EBC00C28204 = {
@@ -308,7 +308,7 @@
 				E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */,
 				E25B06D8240D490A0035F94F /* Table */,
 				E25B06D9240D49F60035F94F /* ViewController */,
-				E23288A322744D7100A94F15 /* Extensions */,
+				E23288A322744D7100A94F15 /* Storyboard */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
