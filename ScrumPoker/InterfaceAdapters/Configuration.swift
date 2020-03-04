@@ -14,7 +14,7 @@ private enum UserDefaultsKey: String {
 }
 
 class Configuration {
-    private let application: UIApplication
+    private let application: ApplicationType
     private let userDefaults: UserDefaults
     private let firebaseApp: FirebaseApp.Type
     private let sideMenuManager: SideMenuManager
@@ -35,7 +35,7 @@ class Configuration {
         return screenSize.width * 0.60
     }
     
-    init(application: UIApplication = .shared, userDefaults: UserDefaults = .standard, firebaseApp: FirebaseApp.Type = FirebaseApp.self, sideMenuManager: SideMenuManager = .default) {
+    init(application: ApplicationType = UIApplication.shared, userDefaults: UserDefaults = .standard, firebaseApp: FirebaseApp.Type = FirebaseApp.self, sideMenuManager: SideMenuManager = .default) {
         self.application = application
         self.sideMenuManager = sideMenuManager
         self.userDefaults = userDefaults
@@ -92,3 +92,7 @@ extension Configuration {
         }
     }
 }
+
+// MARK:
+
+extension UIApplication: ApplicationType {}
