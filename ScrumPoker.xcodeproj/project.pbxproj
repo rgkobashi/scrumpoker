@@ -28,6 +28,7 @@
 		E2467E44240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E43240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift */; };
 		E2467E46240FFFDF0079BDAA /* AnalyticsManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E45240FFFDF0079BDAA /* AnalyticsManagerSpec.swift */; };
 		E2467E49241001D30079BDAA /* ConfigurationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E48241001D30079BDAA /* ConfigurationSpec.swift */; };
+		E2467E4B241008C20079BDAA /* ApplicationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2467E4A241008C20079BDAA /* ApplicationType.swift */; };
 		E25B06DB240D4AB80035F94F /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */; };
 		E25B06DD240D4B150035F94F /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */; };
 		E25B06EA240D5C1C0035F94F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E25B06E9240D5C1C0035F94F /* Settings.bundle */; };
@@ -113,6 +114,7 @@
 		E2467E43240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackGeneratorSpec.swift; sourceTree = "<group>"; };
 		E2467E45240FFFDF0079BDAA /* AnalyticsManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManagerSpec.swift; sourceTree = "<group>"; };
 		E2467E48241001D30079BDAA /* ConfigurationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationSpec.swift; sourceTree = "<group>"; };
+		E2467E4A241008C20079BDAA /* ApplicationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationType.swift; sourceTree = "<group>"; };
 		E25B06DA240D4AB80035F94F /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 		E25B06DC240D4B150035F94F /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
 		E25B06E9240D5C1C0035F94F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -327,6 +329,15 @@
 			path = InterfaceAdapters;
 			sourceTree = "<group>";
 		};
+		E2467E4C241008C80079BDAA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E2C5AF7A23A3ED6800BF686C /* AppInformation.swift */,
+				E2467E4A241008C20079BDAA /* ApplicationType.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		E25B06D5240D45410035F94F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,10 +354,10 @@
 			children = (
 				E26C738423A50F770034B6D6 /* CardDesign.swift */,
 				E23288B922748FAA00A94F15 /* DeckLayout.swift */,
-				E2C5AF7A23A3ED6800BF686C /* AppInformation.swift */,
 				E2A9DB1A23A2962D00E1AD4C /* FeedbackSender.swift */,
 				E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */,
 				E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */,
+				E2467E4C241008C80079BDAA /* Application */,
 				E25B06D8240D490A0035F94F /* Table */,
 				E25B06D9240D49F60035F94F /* ViewController */,
 				E23288A322744D7100A94F15 /* Storyboard */,
@@ -789,6 +800,7 @@
 				E29BD3C9239EA780006355F2 /* CardBackDesignView.swift in Sources */,
 				E2A9DB1B23A2962D00E1AD4C /* FeedbackSender.swift in Sources */,
 				E25B06DD240D4B150035F94F /* AnalyticsEngine.swift in Sources */,
+				E2467E4B241008C20079BDAA /* ApplicationType.swift in Sources */,
 				E2CDBE142275FEAC0054957B /* TableRowViewModel.swift in Sources */,
 				E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */,
 				E2CDBE072274AD660054957B /* MenuCoordinator.swift in Sources */,
