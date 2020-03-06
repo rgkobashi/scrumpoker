@@ -33,15 +33,19 @@ class CardViewModelSpec: QuickSpec {
                 expect(viewDelegate.isFlipCardCalled) == true
             }
             context("when shake on reveal is enabled") {
-                it("generates haptic feedback") {
+                beforeEach {
                     configuration.valueToReturnForShakeOnReveal = true
+                }
+                it("generates haptic feedback") {
                     sut.flipCard()
                     expect(generator.isGenerateCalled) == true
                 }
             }
             context("when shake on reveal is disable") {
-                it("does not generate haptic feedback") {
+                beforeEach {
                     configuration.valueToReturnForShakeOnReveal = false
+                }
+                it("does not generate haptic feedback") {
                     sut.flipCard()
                     expect(generator.isGenerateCalled) == false
                 }
@@ -63,7 +67,6 @@ class CardViewModelSpec: QuickSpec {
                 configuration.valueToReturnForShakeOnReveal = false
                 configuration.valueToReturnForShakeToReveal = false
             }
-            
             context("when shake to reveal is enabled") {
                 beforeEach {
                     configuration.valueToReturnForShakeToReveal = true
