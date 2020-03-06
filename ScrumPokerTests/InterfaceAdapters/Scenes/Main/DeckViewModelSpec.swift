@@ -13,19 +13,19 @@ import Nimble
 class DeckViewModelSpec: QuickSpec {
     override func spec() {
         var initialDeck: Deck!
-        var layout: DeckLayout!
-        var viewDelegate: ViewDelegate!
+        var initiaLayout: DeckLayout!
+        var viewDelegate: DoubleViewDelegate!
         var sut: DeckViewModel!
         
         beforeEach {
             initialDeck = Deck(id: "1", name: "testing", cards: [])
-            layout = DeckLayout(cardWidth: 0, cardHeight: 0, horizontalCardSpacing: 0, verticalCardSpacing: 0, horizontalDeckPadding: 0, verticalDeckPadding: 0)
-            viewDelegate = ViewDelegate()
+            initiaLayout = DeckLayout(cardWidth: 0, cardHeight: 0, horizontalCardSpacing: 0, verticalCardSpacing: 0, horizontalDeckPadding: 0, verticalDeckPadding: 0)
+            viewDelegate = DoubleViewDelegate()
         }
         
         describe("updateDeck") {
             it("notifies view") {
-                sut = DeckViewModel(deck: initialDeck, layout: layout)
+                sut = DeckViewModel(deck: initialDeck, layout: initiaLayout)
                 sut.viewDelegate = viewDelegate
                 
                 sut.updateDeck(Deck(id: "2", name: "testing", cards: []))
@@ -37,7 +37,7 @@ class DeckViewModelSpec: QuickSpec {
             it("returns deck name") {
                 let name = "another deck"
                 let newDeck = Deck(id: "2", name: name, cards: [])
-                sut = DeckViewModel(deck: newDeck, layout: layout)
+                sut = DeckViewModel(deck: newDeck, layout: initiaLayout)
                 
                 expect(sut.deckName) == name
             }
@@ -47,7 +47,7 @@ class DeckViewModelSpec: QuickSpec {
                 let n = 5
                 let cards = (0..<n).map { Card(text: String($0)) }
                 let newDeck = Deck(id: "2", name: "name", cards: cards)
-                sut = DeckViewModel(deck: newDeck, layout: layout)
+                sut = DeckViewModel(deck: newDeck, layout: initiaLayout)
                 
                 expect(sut.deckSize) == n
             }
@@ -56,7 +56,7 @@ class DeckViewModelSpec: QuickSpec {
             it("returns corresponing card") {
                 let cards = (0..<5).map { Card(text: String($0)) }
                 let newDeck = Deck(id: "2", name: "name", cards: cards)
-                sut = DeckViewModel(deck: newDeck, layout: layout)
+                sut = DeckViewModel(deck: newDeck, layout: initiaLayout)
                 
                 cards.enumerated().forEach { (index, card) in
                     expect(sut.card(at: index)) == card
@@ -92,7 +92,7 @@ class DeckViewModelSpec: QuickSpec {
 
 // MARK: - Test doubles
 
-private class ViewDelegate: DeckViewModelViewDelegate {
+private class DoubleViewDelegate: DeckViewModelViewDelegate {
     var isDidUpdateDeckCalled = false
     func didUpdateDeck() {
         isDidUpdateDeckCalled = true
