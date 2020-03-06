@@ -113,5 +113,23 @@ class MenuViewModelSpec: QuickSpec {
                 } == true
             }
         }
+        
+        describe("didDeselectRow") {
+            it("throws assertion for deck items") {
+                decksIndexPaths.forEach { (ip) in
+                    expect {
+                        sut.didDeselectRow(at: decksIndexPaths.first!, from: MenuViewController())
+                    }.to(throwAssertion())
+                }
+            }
+            it("does not throw assertion for preference items") {}
+            it("throws assertion for actions items") {
+                actionsIndexPaths.forEach { (ip) in
+                    expect {
+                        sut.didDeselectRow(at: actionsIndexPaths.first!, from: MenuViewController())
+                    }.to(throwAssertion())
+                }
+            }
+        }
     }
 }
