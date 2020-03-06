@@ -13,6 +13,7 @@
 		E215EDAB23A552790077FFE7 /* FirebaseAnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */; };
 		E22F2EA224128DC20002DB29 /* CardViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F2EA124128DC20002DB29 /* CardViewModelSpec.swift */; };
 		E22F2EA42412A3390002DB29 /* DeckViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F2EA32412A3390002DB29 /* DeckViewModelSpec.swift */; };
+		E22F2EA72412AD6E0002DB29 /* MenuViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F2EA62412AD6E0002DB29 /* MenuViewModelSpec.swift */; };
 		E23288A122744D5300A94F15 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A022744D5300A94F15 /* MainCoordinator.swift */; };
 		E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A422744D7B00A94F15 /* UIStoryboard.swift */; };
 		E23288AA22744E3300A94F15 /* DeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A922744E3300A94F15 /* DeckViewModel.swift */; };
@@ -95,6 +96,7 @@
 		E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsEngine.swift; sourceTree = "<group>"; };
 		E22F2EA124128DC20002DB29 /* CardViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelSpec.swift; sourceTree = "<group>"; };
 		E22F2EA32412A3390002DB29 /* DeckViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModelSpec.swift; sourceTree = "<group>"; };
+		E22F2EA62412AD6E0002DB29 /* MenuViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelSpec.swift; sourceTree = "<group>"; };
 		E23288A022744D5300A94F15 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		E23288A422744D7B00A94F15 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		E23288A922744E3300A94F15 /* DeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModel.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				E22F2EA024128DA10002DB29 /* Main */,
+				E22F2EA52412AD5F0002DB29 /* Menu */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -225,6 +228,14 @@
 				E22F2EA32412A3390002DB29 /* DeckViewModelSpec.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		E22F2EA52412AD5F0002DB29 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				E22F2EA62412AD6E0002DB29 /* MenuViewModelSpec.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		E2328897227449B400A94F15 /* Support */ = {
@@ -858,6 +869,7 @@
 				E2467E49241001D30079BDAA /* ConfigurationSpec.swift in Sources */,
 				E2467E3F240FF7890079BDAA /* FeedbackSenderSpec.swift in Sources */,
 				E2467E46240FFFDF0079BDAA /* AnalyticsManagerSpec.swift in Sources */,
+				E22F2EA72412AD6E0002DB29 /* MenuViewModelSpec.swift in Sources */,
 				E22F2EA224128DC20002DB29 /* CardViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
