@@ -10,12 +10,12 @@
 import Quick
 import Nimble
 
-
 class CardViewModelSpec: QuickSpec {
     override func spec() {
         var configuration: DoubleConfiguration!
         var generator: DoubleGenerator!
         var viewDelegate: DoubleViewDelegate!
+        var delegate: DoubleDelegate!
         var sut: CardViewModel!
         
         describe("flipCard") {
@@ -110,6 +110,20 @@ class CardViewModelSpec: QuickSpec {
                 }
             }
         }
+        
+        describe("close") {
+            beforeEach {
+                configuration = DoubleConfiguration()
+                generator = DoubleGenerator()
+                delegate = DoubleDelegate()
+                sut = CardViewModel(card: Card(text: ""), configuration: configuration, hapticFeedbackGenerator: generator)
+                sut.delegate = delegate
+            }
+            it("notifies delegate") {
+                sut.close(from: CardViewController())
+                expect(delegate.isDidTapCloseCalled) == true
+            }
+        }
     }
 }
 
@@ -142,5 +156,12 @@ private class DoubleViewDelegate: CardViewModelViewDelegate {
     func flipCard(completion: @escaping () -> Void) {
         isFlipCardCalled = true
         completion()
+    }
+}
+
+private class DoubleDelegate: CardViewModelDelegate {
+    var isDidTapCloseCalled = false
+    func didTapClose(from viewController: CardViewController) {
+        isDidTapCloseCalled = true
     }
 }
