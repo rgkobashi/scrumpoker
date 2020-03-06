@@ -51,6 +51,41 @@ class CardViewModelSpec: QuickSpec {
                 expect(sut.isCardFlipped) == true
             }
         }
+        
+        describe("flipCardWhenShakingIfNeeded") {
+            beforeEach {
+                configuration = DoubleConfiguration()
+                generator = DoubleGenerator()
+                viewDelegate = DoubleViewDelegate()
+                sut = CardViewModel(card: Card(text: ""), configuration: configuration, hapticFeedbackGenerator: generator)
+                sut.viewDelegate = viewDelegate
+                
+                configuration.valueToReturnForShakeOnReveal = false
+                configuration.valueToReturnForShakeToReveal = false
+            }
+            
+            context("when shake to reveal is enabled") {
+                beforeEach {
+                    configuration.valueToReturnForShakeToReveal = true
+                }
+                context("and card is not flipped") {
+                    it("flips the card") {
+                        sut.flipCardWhenShakingIfNeeded()
+                        expect(viewDelegate.isFlipCardCalled) == true
+                    }
+                }
+                context("and card is already flipped") {
+                    beforeEach {
+                        sut.flipCard() // this will set isFlipCardCalled to true
+                        viewDelegate.isFlipCardCalled = false // setting to false so it can be evaluated again
+                    }
+                    it("does not flip the card") {
+                        sut.flipCardWhenShakingIfNeeded()
+                        expect(viewDelegate.isFlipCardCalled) == false
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -58,10 +93,13 @@ class CardViewModelSpec: QuickSpec {
 
 private class DoubleConfiguration: ScrumPoker.Configuration {
     var valueToReturnForShakeOnReveal: Bool!
+    var valueToReturnForShakeToReveal: Bool!
     override func getValue(for preference: Preference<Bool>) -> Bool {
         switch preference {
         case .shakeOnReveal:
             return valueToReturnForShakeOnReveal
+        case .shakeToReveal:
+            return valueToReturnForShakeToReveal
         default:
             fatalError("preference not handled")
         }
