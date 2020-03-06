@@ -18,6 +18,39 @@ class CardViewModelSpec: QuickSpec {
         var viewDelegate: DoubleViewDelegate!
         var sut: CardViewModel!
         
+        describe("flipCard") {
+            beforeEach {
+                configuration = DoubleConfiguration()
+                generator = DoubleGenerator()
+                viewDelegate = DoubleViewDelegate()
+                sut = CardViewModel(card: Card(text: ""), configuration: configuration, hapticFeedbackGenerator: generator)
+                sut.viewDelegate = viewDelegate
+                
+                configuration.valueToReturnForShakeOnReveal = false
+            }
+            it("notifies view") {
+                sut.flipCard()
+                expect(viewDelegate.isFlipCardCalled) == true
+            }
+            context("when shake on reveal is enabled") {
+                it("generates haptic feedback") {
+                    configuration.valueToReturnForShakeOnReveal = true
+                    sut.flipCard()
+                    expect(generator.isGenerateCalled) == true
+                }
+            }
+            context("when shake on reveal is disable") {
+                it("does not generate haptic feedback") {
+                    configuration.valueToReturnForShakeOnReveal = false
+                    sut.flipCard()
+                    expect(generator.isGenerateCalled) == false
+                }
+            }
+            it("flips the card") {
+                sut.flipCard()
+                expect(sut.isCardFlipped) == true
+            }
+        }
     }
 }
 
