@@ -44,13 +44,6 @@ class CardViewModel {
         }
     }
     
-    func vibrateIfNeeded() {
-        guard isShakeOnRevealEnabled else {
-            return
-        }
-        hapticFeedbackGenerator.generate(.success)
-    }
-    
     func flipCardWhenShakingIfNeeded() {
         guard isShakeToRevealEnabled, !isCardFlipped else {
             return
@@ -60,5 +53,12 @@ class CardViewModel {
     
     func close(from viewController: CardViewController) {
         delegate?.didTapClose(from: viewController)
+    }
+    
+    private func vibrateIfNeeded() {
+        guard isShakeOnRevealEnabled else {
+            return
+        }
+        hapticFeedbackGenerator.generate(.success)
     }
 }
