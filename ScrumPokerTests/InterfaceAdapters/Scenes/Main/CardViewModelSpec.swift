@@ -65,7 +65,6 @@ class CardViewModelSpec: QuickSpec {
                 sut.viewDelegate = viewDelegate
                 
                 configuration.valueToReturnForShakeOnReveal = false
-                configuration.valueToReturnForShakeToReveal = false
             }
             context("when shake to reveal is enabled") {
                 beforeEach {
