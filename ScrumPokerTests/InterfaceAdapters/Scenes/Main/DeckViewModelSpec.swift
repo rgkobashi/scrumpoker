@@ -63,6 +63,30 @@ class DeckViewModelSpec: QuickSpec {
                 }
             }
         }
+        
+        describe("deckWidthMultiplier") {
+            it("returns the complement of horizontalDeckPadding") {
+                let horizontalDeckPadding: CGFloat = 0.5
+                let expected: CGFloat = 1 - horizontalDeckPadding
+                let newLayout = DeckLayout(cardWidth: 0, cardHeight: 0, horizontalCardSpacing: 0, verticalCardSpacing: 0, horizontalDeckPadding: horizontalDeckPadding, verticalDeckPadding: 0)
+                sut = DeckViewModel(deck: initialDeck, layout: newLayout)
+                
+                expect(sut.deckWidthMultiplier) == expected
+            }
+        }
+        describe("deckHeightMultiplier") {
+            it("returns the complement of verticalDeckPadding") {
+                let verticalDeckPadding: CGFloat = 0.5
+                let expected: CGFloat = 1 - verticalDeckPadding
+                let newLayout = DeckLayout(cardWidth: 0, cardHeight: 0, horizontalCardSpacing: 0, verticalCardSpacing: 0, horizontalDeckPadding: 0, verticalDeckPadding: verticalDeckPadding)
+                sut = DeckViewModel(deck: initialDeck, layout: newLayout)
+                
+                expect(sut.deckHeightMultiplier) == expected
+            }
+        }
+        describe("cardSize") {}
+        describe("horizontalCardSpacing") {}
+        describe("verticalCardSpacing") {}
     }
 }
 
