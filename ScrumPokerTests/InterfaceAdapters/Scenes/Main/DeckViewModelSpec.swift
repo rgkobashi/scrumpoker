@@ -32,6 +32,37 @@ class DeckViewModelSpec: QuickSpec {
                 expect(viewDelegate.isDidUpdateDeckCalled) == true
             }
         }
+        
+        describe("deckName") {
+            it("returns deck name") {
+                let name = "another deck"
+                let newDeck = Deck(id: "2", name: name, cards: [])
+                sut = DeckViewModel(deck: newDeck, layout: layout)
+                
+                expect(sut.deckName) == name
+            }
+        }
+        describe("deckSize") {
+            it("returns deck size") {
+                let n = 5
+                let cards = (0..<n).map { Card(text: String($0)) }
+                let newDeck = Deck(id: "2", name: "name", cards: cards)
+                sut = DeckViewModel(deck: newDeck, layout: layout)
+                
+                expect(sut.deckSize) == n
+            }
+        }
+        describe("card(at:)") {
+            it("returns corresponing card") {
+                let cards = (0..<5).map { Card(text: String($0)) }
+                let newDeck = Deck(id: "2", name: "name", cards: cards)
+                sut = DeckViewModel(deck: newDeck, layout: layout)
+                
+                cards.enumerated().forEach { (index, card) in
+                    expect(sut.card(at: index)) == card
+                }
+            }
+        }
     }
 }
 
