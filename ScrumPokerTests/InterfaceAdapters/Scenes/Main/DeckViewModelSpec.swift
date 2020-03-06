@@ -15,6 +15,7 @@ class DeckViewModelSpec: QuickSpec {
         var initialDeck: Deck!
         var initiaLayout: DeckLayout!
         var viewDelegate: DoubleViewDelegate!
+        var delegate: DoubleDelegate!
         var sut: DeckViewModel!
         
         beforeEach {
@@ -87,6 +88,27 @@ class DeckViewModelSpec: QuickSpec {
         describe("cardSize") {}
         describe("horizontalCardSpacing") {}
         describe("verticalCardSpacing") {}
+        
+        describe("showMenu") {
+            it("notifies delegate") {
+                delegate = DoubleDelegate()
+                sut = DeckViewModel(deck: initialDeck, layout: initiaLayout)
+                sut.delegate = delegate
+                
+                sut.showMenu(from: DeckViewController())
+                expect(delegate.isDidTapShowMenuCalled) == true
+            }
+        }
+        describe("showCard") {
+            it("notifies delegate") {
+                delegate = DoubleDelegate()
+                sut = DeckViewModel(deck: initialDeck, layout: initiaLayout)
+                sut.delegate = delegate
+                
+                sut.showCard(Card(text: ""), from: DeckViewController())
+                expect(delegate.isDidTapShowCardCalled) == true
+            }
+        }
     }
 }
 
@@ -96,5 +118,17 @@ private class DoubleViewDelegate: DeckViewModelViewDelegate {
     var isDidUpdateDeckCalled = false
     func didUpdateDeck() {
         isDidUpdateDeckCalled = true
+    }
+}
+
+private class DoubleDelegate: DeckViewModelDelegate {
+    var isDidTapShowMenuCalled = false
+    var isDidTapShowCardCalled = false
+    func didTapShowMenu(from viewController: DeckViewController) {
+        isDidTapShowMenuCalled = true
+    }
+    
+    func didTapShowCard(_ card: Card, from viewController: DeckViewController) {
+        isDidTapShowCardCalled = true
     }
 }
