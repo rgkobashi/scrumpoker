@@ -88,6 +88,27 @@ class CardViewModelSpec: QuickSpec {
                     }
                 }
             }
+            context("when shake to reveal is disabled") {
+                beforeEach {
+                    configuration.valueToReturnForShakeToReveal = false
+                }
+                context("and card is not flipped") {
+                    it("does not flip the card") {
+                        sut.flipCardWhenShakingIfNeeded()
+                        expect(viewDelegate.isFlipCardCalled) == false
+                    }
+                }
+                context("and card is already flipped") {
+                    beforeEach {
+                        sut.flipCard() // this will set isFlipCardCalled to true
+                        viewDelegate.isFlipCardCalled = false // setting to false so it can be evaluated again
+                    }
+                    it("does not flip the card") {
+                        sut.flipCardWhenShakingIfNeeded()
+                        expect(viewDelegate.isFlipCardCalled) == false
+                    }
+                }
+            }
         }
     }
 }
