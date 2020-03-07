@@ -19,55 +19,41 @@ class DeckViewModelSpec: QuickSpec {
         var sut: DeckViewModel!
         
         beforeEach {
-            initialDeck = Deck(id: "1", name: "testing", cards: [])
+            let initialCards = (0..<5).map { Card(text: String($0)) }
+            initialDeck = Deck(id: "initialDeck", name: "initial deck", cards: initialCards)
             initiaLayout = DeckLayout(cardWidth: 0, cardHeight: 0, horizontalCardSpacing: 0, verticalCardSpacing: 0, horizontalDeckPadding: 0, verticalDeckPadding: 0)
             viewDelegate = DoubleViewDelegate()
+            delegate = DoubleDelegate()
         }
         
         describe("updateDeck") {
-            it("notifies view") {
+            beforeEach {
                 sut = DeckViewModel(deck: initialDeck, layout: initiaLayout)
+            }
+            it("updates deck") {
+                let newCards = (10..<15).map { Card(text: String($0)) }
+                let newDeck = Deck(id: "newDeck", name: "new deck", cards: newCards)
+                sut.updateDeck(newDeck)
+                
+                expect(sut.deckName) == newDeck.name
+                expect(sut.deckSize) == newDeck.cards.count
+                expect {
+                    newDeck.cards.enumerated().allSatisfy { (i, card) -> Bool in
+                        sut.card(at: i) == card
+                    }
+                } == true
+            }
+            it("notifies view") {
                 sut.viewDelegate = viewDelegate
+                sut.updateDeck(Deck(id: "newDeck", name: "new deck", cards: []))
                 
-                sut.updateDeck(Deck(id: "2", name: "testing", cards: []))
                 expect(viewDelegate.isDidUpdateDeckCalled) == true
-            }
-        }
-        
-        describe("deckName") {
-            it("returns deck name") {
-                let name = "another deck"
-                let newDeck = Deck(id: "2", name: name, cards: [])
-                sut = DeckViewModel(deck: newDeck, layout: initiaLayout)
-                
-                expect(sut.deckName) == name
-            }
-        }
-        describe("deckSize") {
-            it("returns deck size") {
-                let n = 5
-                let cards = (0..<n).map { Card(text: String($0)) }
-                let newDeck = Deck(id: "2", name: "name", cards: cards)
-                sut = DeckViewModel(deck: newDeck, layout: initiaLayout)
-                
-                expect(sut.deckSize) == n
-            }
-        }
-        describe("card(at:)") {
-            it("returns corresponing card") {
-                let cards = (0..<5).map { Card(text: String($0)) }
-                let newDeck = Deck(id: "2", name: "name", cards: cards)
-                sut = DeckViewModel(deck: newDeck, layout: initiaLayout)
-                
-                cards.enumerated().forEach { (index, card) in
-                    expect(sut.card(at: index)) == card
-                }
             }
         }
         
         describe("deckWidthMultiplier") {
             it("returns the complement of horizontalDeckPadding") {
-                let horizontalDeckPadding: CGFloat = 0.5
+                let horizontalDeckPadding: CGFloat = 0.003
                 let expected: CGFloat = 1 - horizontalDeckPadding
                 let newLayout = DeckLayout(cardWidth: 0, cardHeight: 0, horizontalCardSpacing: 0, verticalCardSpacing: 0, horizontalDeckPadding: horizontalDeckPadding, verticalDeckPadding: 0)
                 sut = DeckViewModel(deck: initialDeck, layout: newLayout)
@@ -77,7 +63,7 @@ class DeckViewModelSpec: QuickSpec {
         }
         describe("deckHeightMultiplier") {
             it("returns the complement of verticalDeckPadding") {
-                let verticalDeckPadding: CGFloat = 0.5
+                let verticalDeckPadding: CGFloat = 0.555
                 let expected: CGFloat = 1 - verticalDeckPadding
                 let newLayout = DeckLayout(cardWidth: 0, cardHeight: 0, horizontalCardSpacing: 0, verticalCardSpacing: 0, horizontalDeckPadding: 0, verticalDeckPadding: verticalDeckPadding)
                 sut = DeckViewModel(deck: initialDeck, layout: newLayout)
@@ -91,7 +77,6 @@ class DeckViewModelSpec: QuickSpec {
         
         describe("showMenu") {
             it("notifies delegate") {
-                delegate = DoubleDelegate()
                 sut = DeckViewModel(deck: initialDeck, layout: initiaLayout)
                 sut.delegate = delegate
                 
@@ -101,7 +86,6 @@ class DeckViewModelSpec: QuickSpec {
         }
         describe("showCard") {
             it("notifies delegate") {
-                delegate = DoubleDelegate()
                 sut = DeckViewModel(deck: initialDeck, layout: initiaLayout)
                 sut.delegate = delegate
                 
