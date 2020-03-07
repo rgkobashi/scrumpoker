@@ -335,6 +335,37 @@ class MenuViewModelSpec: QuickSpec {
                 }
             }
         }
+        describe("didDeselectRow"){
+            context("for decks section") {
+                it("throws assertion") {
+                    decksIndexPaths.forEach { ip in
+                        expect {
+                            sut.didDeselectRow(at: ip, from: MenuViewController())
+                        }.to(throwAssertion())
+                    }
+                }
+            }
+            context("for preferences section") {
+                beforeEach {
+                    sut.didDeselectRow(at: preferencesIndexPaths.first!, from: MenuViewController())
+                }
+                it("sends analytics event") {
+                    expect(analyticsEngine.isSendAnalyticsEventCalled) == true
+                }
+                it("stores value in configuration") {
+                    expect(configuration.isSetValueCalled) == true
+                }
+            }
+            context("for actions sections") {
+                it("throws assertion") {
+                    actionsIndexPaths.forEach { ip in
+                        expect {
+                            sut.didDeselectRow(at: decksIndexPaths.first!, from: MenuViewController())
+                        }.to(throwAssertion())
+                    }
+                }
+            }
+        }
     }
 }
 
