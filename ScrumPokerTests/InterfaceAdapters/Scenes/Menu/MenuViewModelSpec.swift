@@ -26,6 +26,11 @@ class MenuViewModelSpec: QuickSpec {
         ]
         
         var configuration: DoubleConfiguration!
+        var feedbackSender: DoubleFeedbackSender!
+        var analyticsEngine: DoubleAnalyticsEngine!
+        var application: DoubleApplication!
+        var delegate: DoubleDelegate!
+        var viewDelegate: DoubleViewDelegate!
         var sut: MenuViewModel!
         
         beforeEach {
@@ -257,25 +262,61 @@ class MenuViewModelSpec: QuickSpec {
 // MARK: - Test doubles
 
 private class DoubleFeedbackSender: FeedbackSender {
-    override func sendFeedback(_ type: FeedbackType, completion: FeedbackSender.CompletionType? = nil) throws {}
+    var isSendFeedbackCalled = false
+    var shouldThrowWhenSendFeedback = false
+    override func sendFeedback(_ type: FeedbackType, completion: FeedbackSender.CompletionType? = nil) throws {
+        if shouldThrowWhenSendFeedback {
+            throw FeedbackSender.Error.mailClientNotConfigured
+        }
+        isSendFeedbackCalled = true
+    }
 }
 
 private class DoubleConfiguration: ScrumPoker.Configuration {
     var selectedDeckToReturn: Deck!
+    var selectedDeckSet: Deck?
+    var isSetValueCalled = false
     override var selectedDeck: Deck {
-        set {}
+        set { selectedDeckSet = newValue }
         get { return selectedDeckToReturn }
     }
     
-    override func setValue(_ value: Bool, for preference: Preference<Bool>) {}
+    override func setValue(_ value: Bool, for preference: Preference<Bool>) {
+        isSetValueCalled = true
+    }
 }
 
 private class DoubleAnalyticsEngine: AnalyticsEngine {
-    func sendAnalyticsEvent(_ event: AnalyticsEvent) {}
+    var isSendAnalyticsEventCalled = false
+    func sendAnalyticsEvent(_ event: AnalyticsEvent) {
+        isSendAnalyticsEventCalled = true
+    }
 }
 
 private class DoubleApplication: ApplicationType {
+    var isOpenCalled = false
     var keyWindow: UIWindow?
     var isIdleTimerDisabled: Bool = false
-    func open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey : Any], completionHandler completion: ((Bool) -> Void)?) {}
+    func open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey : Any], completionHandler completion: ((Bool) -> Void)?) {
+        isOpenCalled = true
+    }
+}
+
+private class DoubleDelegate: MenuViewModelDelegate {
+    var isDidUpdateDeckCalled = false
+    func didUpdateDeck(_ deck: Deck, from viewController: MenuViewController) {
+        isDidUpdateDeckCalled = true
+    }
+}
+
+private class DoubleViewDelegate: MenuViewModelViewDelegate {
+    var isShowAlertCalled = false
+    var isShareAppCalled = false
+    func showAlert(title: String?, message: String, action: (() -> Void)?) {
+        isShowAlertCalled = true
+    }
+    
+    func shareApp(_ url: URL) {
+        isShareAppCalled = true
+    }
 }
