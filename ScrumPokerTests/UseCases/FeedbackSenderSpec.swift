@@ -19,19 +19,19 @@ class FeedbackSenderSpec: QuickSpec {
             context("mail type") {
                 context("if Mail is configured") {
                     beforeEach {
-                        StubMailComposeVC.canSendMailToReturn = true
-                        sut = FeedbackSender(mailComposeViewControllerType: StubMailComposeVC.self)
+                        DoubleMailComposeVC.canSendMailToReturn = true
+                        sut = FeedbackSender(mailComposeViewControllerType: DoubleMailComposeVC.self)
                     }
                     it("shows mail compose screen") {
-                        let vc = MockVC()
+                        let vc = DoubleVC()
                         try? sut.sendFeedback(.mail(recipients: [""], subject: "", message: "", from: vc))
                         expect(vc.isPresentViewControllerCalled) == true
                     }
                 }
                 context("if Mail is not configured") {
                     beforeEach {
-                        StubMailComposeVC.canSendMailToReturn = false
-                        sut = FeedbackSender(mailComposeViewControllerType: StubMailComposeVC.self)
+                        DoubleMailComposeVC.canSendMailToReturn = false
+                        sut = FeedbackSender(mailComposeViewControllerType: DoubleMailComposeVC.self)
                     }
                     it("throws Error.mailClientNotConfigured") {
                         expect {
@@ -45,7 +45,7 @@ class FeedbackSenderSpec: QuickSpec {
     }
 }
 
-private class StubMailComposeVC: MFMailComposeViewController {
+private class DoubleMailComposeVC: MFMailComposeViewController {
     static var canSendMailToReturn: Bool!
     
     override class func canSendMail() -> Bool {
@@ -53,7 +53,7 @@ private class StubMailComposeVC: MFMailComposeViewController {
     }
 }
 
-private class MockVC: UIViewController {
+private class DoubleVC: UIViewController {
     var isPresentViewControllerCalled = false
     
     override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil) {

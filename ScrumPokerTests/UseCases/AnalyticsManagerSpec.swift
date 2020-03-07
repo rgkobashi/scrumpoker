@@ -12,12 +12,12 @@ import Nimble
 
 class AnalyticsManagerSpec: QuickSpec {
     override func spec() {
-        var engine: MockEngine!
+        var engine: DoubleEngine!
         var sut: AnalyticsManager!
         
         describe("log") {
             beforeEach {
-                engine = MockEngine()
+                engine = DoubleEngine()
                 sut = AnalyticsManager(engine: engine)
             }
             it("sends right event to the engine") {
@@ -29,7 +29,7 @@ class AnalyticsManagerSpec: QuickSpec {
     }
 }
 
-private class MockEngine: AnalyticsEngine {
+private class DoubleEngine: AnalyticsEngine {
     var analyticsEventSent: AnalyticsEvent!
     
     func sendAnalyticsEvent(_ event: AnalyticsEvent) {

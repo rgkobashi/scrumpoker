@@ -17,7 +17,7 @@ class ConfigurationSpec: QuickSpec {
         var sut: ScrumPoker.Configuration!
         
         beforeEach {
-            app = StubApplication(keyWindow: nil, isIdleTimerDisabled: false)
+            app = DoubleApplication(keyWindow: nil, isIdleTimerDisabled: false)
             userDefaults = DoubleUserDefaults()
             sut = ScrumPoker.Configuration(application: app, userDefaults: userDefaults)
         }
@@ -65,7 +65,7 @@ class ConfigurationSpec: QuickSpec {
     }
 }
 
-private class StubApplication: ApplicationType {
+private class DoubleApplication: ApplicationType {
     var keyWindow: UIWindow?
     var isIdleTimerDisabled: Bool
     

@@ -12,13 +12,13 @@ import Nimble
 
 class HapticFeedbackGeneratorSpec: QuickSpec {
     override func spec() {
-        var generator: MockGenerator!
+        var generator: DoubleGenerator!
         var sut: HapticFeedbackGenerator!
         
         describe("generate") {
             context("success type") {
                 beforeEach {
-                    generator = MockGenerator()
+                    generator = DoubleGenerator()
                     sut = HapticFeedbackGenerator(generator: generator)
                 }
                 it("calls prepare") {
@@ -34,7 +34,7 @@ class HapticFeedbackGeneratorSpec: QuickSpec {
     }
 }
 
-private class MockGenerator: UINotificationFeedbackGenerator {
+private class DoubleGenerator: UINotificationFeedbackGenerator {
     var isPrepareCalled = false
     var notificationTypeOccurred: UINotificationFeedbackGenerator.FeedbackType?
     
