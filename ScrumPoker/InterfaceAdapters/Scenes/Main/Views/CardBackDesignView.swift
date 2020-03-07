@@ -26,6 +26,7 @@ class CardBackDesignView: UIView, NibOwnerLoadable {
         self.loadNibContent()
         setupBorder()
         helperView.layer.cornerRadius = 5
+        self.accessibilityIdentifier = "CardBackView"
     }
 }
 

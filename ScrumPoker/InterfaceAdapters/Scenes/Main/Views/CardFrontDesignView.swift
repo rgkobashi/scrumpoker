@@ -18,6 +18,7 @@ class CardFrontDesignView: UIView, NibOwnerLoadable {
         self.loadNibContent()
         setupBorder()
         setupLabel(with: text)
+        self.accessibilityIdentifier = "CardFrontView-\(text)"
     }
     
     override init(frame: CGRect) {
