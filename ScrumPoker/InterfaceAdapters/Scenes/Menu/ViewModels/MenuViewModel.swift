@@ -22,7 +22,7 @@ class MenuViewModel {
     private let feedbackSender: FeedbackSender
     private let configuration: Configuration
     private let analyticsManager: AnalyticsManager
-    private let application: UIApplication
+    private let application: ApplicationType
     private lazy var menuItems: [TableSectionViewModel] = {
         return [TableSectionViewModel(title: "Decks",
                                       selectionType: .single,
@@ -66,7 +66,7 @@ class MenuViewModel {
         return "Version \(appInformation.version)"
     }
     
-    init(appInformation: AppInformation, feedbackSender: FeedbackSender, configuration: Configuration, analyticsManager: AnalyticsManager, application: UIApplication = .shared) {
+    init(appInformation: AppInformation, feedbackSender: FeedbackSender, configuration: Configuration, analyticsManager: AnalyticsManager, application: ApplicationType = UIApplication.shared) {
         self.appInformation = appInformation
         self.feedbackSender = feedbackSender
         self.configuration = configuration
@@ -105,12 +105,12 @@ class MenuViewModel {
     
     private func contribute() {
         analyticsManager.log(.contribute)
-        application.open(appInformation.contributeURL, options: [:])
+        application.open(appInformation.contributeURL, options: [:], completionHandler: nil)
     }
     
     private func writeReview() {
         analyticsManager.log(.writeReview)
-        application.open(appInformation.writeReviewURL, options: [:])
+        application.open(appInformation.writeReviewURL, options: [:], completionHandler: nil)
     }
     
     private func share() {
