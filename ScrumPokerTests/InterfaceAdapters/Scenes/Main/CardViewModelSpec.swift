@@ -18,11 +18,15 @@ class CardViewModelSpec: QuickSpec {
         var delegate: DoubleDelegate!
         var sut: CardViewModel!
         
+        beforeEach {
+            configuration = DoubleConfiguration()
+            generator = DoubleGenerator()
+            viewDelegate = DoubleViewDelegate()
+            delegate = DoubleDelegate()
+        }
+        
         describe("flipCard") {
             beforeEach {
-                configuration = DoubleConfiguration()
-                generator = DoubleGenerator()
-                viewDelegate = DoubleViewDelegate()
                 sut = CardViewModel(card: Card(text: ""), configuration: configuration, hapticFeedbackGenerator: generator)
                 sut.viewDelegate = viewDelegate
                 
@@ -58,9 +62,6 @@ class CardViewModelSpec: QuickSpec {
         
         describe("flipCardWhenShakingIfNeeded") {
             beforeEach {
-                configuration = DoubleConfiguration()
-                generator = DoubleGenerator()
-                viewDelegate = DoubleViewDelegate()
                 sut = CardViewModel(card: Card(text: ""), configuration: configuration, hapticFeedbackGenerator: generator)
                 sut.viewDelegate = viewDelegate
                 
@@ -112,9 +113,6 @@ class CardViewModelSpec: QuickSpec {
         
         describe("close") {
             beforeEach {
-                configuration = DoubleConfiguration()
-                generator = DoubleGenerator()
-                delegate = DoubleDelegate()
                 sut = CardViewModel(card: Card(text: ""), configuration: configuration, hapticFeedbackGenerator: generator)
                 sut.delegate = delegate
             }
