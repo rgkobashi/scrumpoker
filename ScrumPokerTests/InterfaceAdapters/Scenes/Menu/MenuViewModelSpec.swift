@@ -205,24 +205,32 @@ class MenuViewModelSpec: QuickSpec {
             }
         }
         describe("shouldDeselectItselfAfterSelectingRow") {
-            it("returns true for actions items") {
-                expect {
-                    actionsIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldDeselectItselfAfterSelectingRow(at: ip) == true
-                    }
-                } == true
+            context("for decks section") {
+                it("returns false") {
+                    expect {
+                        decksIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldDeselectItselfAfterSelectingRow(at: ip) == false
+                        }
+                    } == true
+                }
             }
-            it("returns false for the rest") {
-                expect {
-                    decksIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldDeselectItselfAfterSelectingRow(at: ip) == false
-                    }
-                } == true
-                expect {
-                    preferencesIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldDeselectItselfAfterSelectingRow(at: ip) == false
-                    }
-                } == true
+            context("for preferences section") {
+                it("returns false") {
+                    expect {
+                        preferencesIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldDeselectItselfAfterSelectingRow(at: ip) == false
+                        }
+                    } == true
+                }
+            }
+            context("for actions sections") {
+                it("returns true") {
+                    expect {
+                        actionsIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldDeselectItselfAfterSelectingRow(at: ip) == true
+                        }
+                    } == true
+                }
             }
         }
         
