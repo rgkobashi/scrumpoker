@@ -83,6 +83,36 @@ class MenuViewModelSpec: QuickSpec {
                 }
             }
         }
+        describe("rowViewModel") {
+            context("for decks section") {
+                it("returns DeckRowViewModel") {
+                    expect{
+                        decksIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.rowViewModel(for: ip) is DeckRowViewModel
+                        }
+                    } == true
+                }
+            }
+            context("for preferences section") {
+                it("returns PreferenceBoolRowViewModel") {
+                    expect{
+                        preferencesIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.rowViewModel(for: ip) is PreferenceBoolRowViewModel
+                        }
+                    } == true
+                }
+            }
+            context("for actions sections") {
+                it("returns ActionRowViewModel") {
+                    expect{
+                        actionsIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.rowViewModel(for: ip) is ActionRowViewModel<MenuViewController>
+                        }
+                    } == true
+                }
+            }
+        }
+        
         
         describe("shouldEnableRegularRowSelection") {
             it("returns XXX for decks items") {}
