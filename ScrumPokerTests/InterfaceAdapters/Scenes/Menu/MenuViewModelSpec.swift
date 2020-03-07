@@ -61,6 +61,29 @@ class MenuViewModelSpec: QuickSpec {
                 }
             }
         }
+        describe("headerTitle") {
+            context("for decks section") {
+                it("returns value") {
+                    expect(sut.headerTitle(in: 0)).toNot(beNil())
+                }
+            }
+            context("for preferences section") {
+                it("returns value") {
+                    expect(sut.headerTitle(in: 1)).toNot(beNil())
+                }
+            }
+            context("for first actions section") {
+                it("returns nil") {
+                    expect(sut.headerTitle(in: 2)).to(beNil())
+                }
+            }
+            context("for second actions section") {
+                it("returns nil") {
+                    expect(sut.headerTitle(in: 3)).to(beNil())
+                }
+            }
+        }
+        
         describe("shouldEnableRegularRowSelection") {
             it("returns XXX for decks items") {}
             it("returns false for preferences items") {
