@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D8497ECAC64B22DDDC05A24 /* Pods_ScrumPokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */; };
 		17367E1EDA1D59A34E5FFF82 /* Pods_ScrumPokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */; };
+		33AD556A048A2FFBCBB1FE80 /* Pods_ScrumPokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDE09BD9D893190DD4DEC65 /* Pods_ScrumPokerUITests.framework */; };
 		65982F83EE22C95E29C64909 /* Pods_ScrumPoker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */; };
 		E215EDAB23A552790077FFE7 /* FirebaseAnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */; };
 		E22F2EA224128DC20002DB29 /* CardViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F2EA124128DC20002DB29 /* CardViewModelSpec.swift */; };
@@ -91,11 +91,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16D47BE7D021CC7EAAE167CC /* Pods-ScrumPokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		229C509B6A68785E5E2DC75C /* Pods-ScrumPokerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30346FFCE57F983C633DF77C /* Pods-ScrumPoker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPoker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPoker/Pods-ScrumPoker.release.xcconfig"; sourceTree = "<group>"; };
 		3B9F67A6EB5355FCE8FE13D3 /* Pods-ScrumPoker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPoker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPoker/Pods-ScrumPoker.debug.xcconfig"; sourceTree = "<group>"; };
-		80E89707AECA3BF1647A5934 /* Pods-ScrumPokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CDE09BD9D893190DD4DEC65 /* Pods_ScrumPokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A377F584764DD9768BAB35C /* Pods-ScrumPokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrumPokerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E215EDAA23A552790077FFE7 /* FirebaseAnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsEngine.swift; sourceTree = "<group>"; };
 		E22F2EA124128DC20002DB29 /* CardViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelSpec.swift; sourceTree = "<group>"; };
@@ -165,7 +166,6 @@
 		E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackGenerator.swift; sourceTree = "<group>"; };
 		E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		E2D2BA5D23A4E73F0039A960 /* ViewControllerSharable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSharable.swift; sourceTree = "<group>"; };
-		ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerUITests/Pods-ScrumPokerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D8497ECAC64B22DDDC05A24 /* Pods_ScrumPokerUITests.framework in Frameworks */,
+				33AD556A048A2FFBCBB1FE80 /* Pods_ScrumPokerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +202,7 @@
 			children = (
 				E23AF0C7CDB0F1D10A83B457 /* Pods_ScrumPoker.framework */,
 				D60D7BE0EEBAC84ABCB9A443 /* Pods_ScrumPokerTests.framework */,
-				B154F40C6896866DEB3C9F20 /* Pods_ScrumPokerUITests.framework */,
+				3CDE09BD9D893190DD4DEC65 /* Pods_ScrumPokerUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,8 +214,8 @@
 				30346FFCE57F983C633DF77C /* Pods-ScrumPoker.release.xcconfig */,
 				229C509B6A68785E5E2DC75C /* Pods-ScrumPokerTests.debug.xcconfig */,
 				FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */,
-				80E89707AECA3BF1647A5934 /* Pods-ScrumPokerUITests.debug.xcconfig */,
-				ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */,
+				8A377F584764DD9768BAB35C /* Pods-ScrumPokerUITests.debug.xcconfig */,
+				16D47BE7D021CC7EAAE167CC /* Pods-ScrumPokerUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -591,7 +591,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E242E09422743EBE00C28204 /* Build configuration list for PBXNativeTarget "ScrumPokerUITests" */;
 			buildPhases = (
-				A3B8F5B3778C22D301B23627 /* [CP] Check Pods Manifest.lock */,
+				801FD134F45F900C8B12FEE3 /* [CP] Check Pods Manifest.lock */,
 				E242E08122743EBE00C28204 /* Sources */,
 				E242E08222743EBE00C28204 /* Frameworks */,
 				E242E08322743EBE00C28204 /* Resources */,
@@ -762,7 +762,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScrumPoker/Pods-ScrumPoker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A3B8F5B3778C22D301B23627 /* [CP] Check Pods Manifest.lock */ = {
+		801FD134F45F900C8B12FEE3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1128,7 +1128,7 @@
 		};
 		E242E09522743EBE00C28204 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80E89707AECA3BF1647A5934 /* Pods-ScrumPokerUITests.debug.xcconfig */;
+			baseConfigurationReference = 8A377F584764DD9768BAB35C /* Pods-ScrumPokerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ScrumPokerUITests/Info.plist;
@@ -1147,7 +1147,7 @@
 		};
 		E242E09622743EBE00C28204 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECF1E10B6583DB307DFA4D9B /* Pods-ScrumPokerUITests.release.xcconfig */;
+			baseConfigurationReference = 16D47BE7D021CC7EAAE167CC /* Pods-ScrumPokerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ScrumPokerUITests/Info.plist;

@@ -17,7 +17,7 @@ target 'ScrumPoker' do
   end
 
   target 'ScrumPokerUITests' do
-    inherit! :search_paths
+    inherit! :none
   end
 
 end
