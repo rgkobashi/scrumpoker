@@ -37,6 +37,11 @@ class MenuViewController: UIViewController, StoryboardSceneBased {
         return l
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.accessibilityIdentifier = "MenuViewController.view"
+    }
+    
     private func deselectRestOfSection(for indexPath: IndexPath) {
         tableView
             .indexPathsForSelectedRows?.compactMap { $0 }

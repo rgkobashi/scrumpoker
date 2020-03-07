@@ -37,6 +37,7 @@ class CardViewController: UIViewController, StoryboardSceneBased {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.cardView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tapCardView)))
+        self.view.accessibilityIdentifier = "CardViewController.view"
     }
     
     @objc private func tapCardView() {
