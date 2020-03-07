@@ -53,11 +53,9 @@ class Configuration {
     func setupGlobalAppearance(from window: UIWindow) {
         window.tintColor = .black
     }
-}
-
-// MARK: - Settings
-
-extension Configuration {
+    
+    // MARK: Settings
+    
     var selectedDeck: Deck { // TODO avoid reading userDefaults everytime selectedDeck is called
         set {
             userDefaults.set(newValue.name, forKey: UserDefaultsKey.selectedDeckName.rawValue)
