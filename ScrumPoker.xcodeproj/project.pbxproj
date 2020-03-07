@@ -14,6 +14,7 @@
 		E22F2EA224128DC20002DB29 /* CardViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F2EA124128DC20002DB29 /* CardViewModelSpec.swift */; };
 		E22F2EA42412A3390002DB29 /* DeckViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F2EA32412A3390002DB29 /* DeckViewModelSpec.swift */; };
 		E22F2EA72412AD6E0002DB29 /* MenuViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F2EA62412AD6E0002DB29 /* MenuViewModelSpec.swift */; };
+		E22F2EA92413D1300002DB29 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22F2EA82413D1300002DB29 /* Application.swift */; };
 		E23288A122744D5300A94F15 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A022744D5300A94F15 /* MainCoordinator.swift */; };
 		E23288A522744D7B00A94F15 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A422744D7B00A94F15 /* UIStoryboard.swift */; };
 		E23288AA22744E3300A94F15 /* DeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23288A922744E3300A94F15 /* DeckViewModel.swift */; };
@@ -97,6 +98,7 @@
 		E22F2EA124128DC20002DB29 /* CardViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelSpec.swift; sourceTree = "<group>"; };
 		E22F2EA32412A3390002DB29 /* DeckViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModelSpec.swift; sourceTree = "<group>"; };
 		E22F2EA62412AD6E0002DB29 /* MenuViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelSpec.swift; sourceTree = "<group>"; };
+		E22F2EA82413D1300002DB29 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		E23288A022744D5300A94F15 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		E23288A422744D7B00A94F15 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		E23288A922744E3300A94F15 /* DeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckViewModel.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 		E25B06DE240D4B780035F94F /* InterfaceAdapters */ = {
 			isa = PBXGroup;
 			children = (
+				E22F2EA82413D1300002DB29 /* Application.swift */,
 				E2CDBE112275ED6E0054957B /* Configuration.swift */,
 				E242E06922743EBC00C28204 /* AppDelegate.swift */,
 				E25B06DF240D4B850035F94F /* Services */,
@@ -842,6 +845,7 @@
 				E2CDBE072274AD660054957B /* MenuCoordinator.swift in Sources */,
 				E28E88D5227767F100DFF021 /* Preference.swift in Sources */,
 				E26C738523A50F770034B6D6 /* CardDesign.swift in Sources */,
+				E22F2EA92413D1300002DB29 /* Application.swift in Sources */,
 				E2C5AF7B23A3ED6800BF686C /* AppInformation.swift in Sources */,
 				E23288AA22744E3300A94F15 /* DeckViewModel.swift in Sources */,
 				E26BFEE3239AA83300264688 /* PreferenceBoolRowViewModel.swift in Sources */,

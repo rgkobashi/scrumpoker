@@ -92,7 +92,3 @@ extension Configuration {
         }
     }
 }
-
-// MARK:
-
-extension UIApplication: ApplicationType {}

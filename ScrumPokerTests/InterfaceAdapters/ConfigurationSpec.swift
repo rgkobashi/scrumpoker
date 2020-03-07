@@ -73,6 +73,8 @@ private class StubApplication: ApplicationType {
         self.keyWindow = keyWindow
         self.isIdleTimerDisabled = isIdleTimerDisabled
     }
+    
+    func open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey : Any], completionHandler completion: ((Bool) -> Void)?) {}
 }
 
 private class DoubleUserDefaults: UserDefaults {
