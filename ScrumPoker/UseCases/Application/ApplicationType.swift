@@ -11,4 +11,6 @@ import UIKit
 protocol ApplicationType: class {
     var keyWindow: UIWindow? { get }
     var isIdleTimerDisabled: Bool { get set }
+    
+    func open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any], completionHandler completion: ((Bool) -> Void)?)
 }
