@@ -102,7 +102,18 @@ class DeckViewModelSpec: QuickSpec {
             }
         }
         describe("verticalCardSpacing") {
-            
+            it("returns percentage height to be used as vertical card spacing based on the view sent and deckLayout") {
+                let viewHeight: CGFloat = 200
+                let view = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: viewHeight))
+                
+                let verticalCardSpacing: CGFloat = 0.123
+                let newLayout = DeckLayout(cardWidth: 0, cardHeight: 0, horizontalCardSpacing: 0, verticalCardSpacing: verticalCardSpacing, horizontalDeckPadding: 0, verticalDeckPadding: 0)
+                sut = DeckViewModel(deck: initialDeck, layout: newLayout)
+                
+                let expected = viewHeight * verticalCardSpacing
+                
+                expect(sut.verticalCardSpacing(for: view)) == expected
+            }
         }
         
         describe("showMenu") {
