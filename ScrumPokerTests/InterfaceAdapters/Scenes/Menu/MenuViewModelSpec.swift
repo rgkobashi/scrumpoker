@@ -28,9 +28,10 @@ class MenuViewModelSpec: QuickSpec {
         
         beforeEach {
             sut = MenuViewModel(appInformation: AppInformation(),
-                                feedbackSender: FeedbackSender(),
-                                configuration: Configuration(),
-                                analyticsManager: AnalyticsManager(engine: FirebaseAnalyticsEngine()))
+                                feedbackSender: DoubleFeedbackSender(),
+                                configuration: DoubleConfiguration(),
+                                analyticsManager: AnalyticsManager(engine: DoubleAnalyticsEngine()),
+                                application: DoubleApplication())
         }
         
         describe("shouldEnableRegularRowSelection") {
@@ -132,4 +133,30 @@ class MenuViewModelSpec: QuickSpec {
             }
         }
     }
+}
+
+// MARK: - Test doubles
+
+private class DoubleFeedbackSender: FeedbackSender {
+    override func sendFeedback(_ type: FeedbackType, completion: FeedbackSender.CompletionType? = nil) throws {}
+}
+
+private class DoubleConfiguration: ScrumPoker.Configuration {
+    var selectedDeckToReturn: Deck!
+    override var selectedDeck: Deck {
+        set {}
+        get { return selectedDeckToReturn }
+    }
+    
+    override func setValue(_ value: Bool, for preference: Preference<Bool>) {}
+}
+
+private class DoubleAnalyticsEngine: AnalyticsEngine {
+    func sendAnalyticsEvent(_ event: AnalyticsEvent) {}
+}
+
+private class DoubleApplication: ApplicationType {
+    var keyWindow: UIWindow?
+    var isIdleTimerDisabled: Bool = false
+    func open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey : Any], completionHandler completion: ((Bool) -> Void)?) {}
 }
