@@ -35,11 +35,18 @@ class MenuViewModelSpec: QuickSpec {
         
         beforeEach {
             configuration = DoubleConfiguration()
+            feedbackSender = DoubleFeedbackSender()
+            analyticsEngine = DoubleAnalyticsEngine()
+            application = DoubleApplication()
+            delegate = DoubleDelegate()
+            viewDelegate = DoubleViewDelegate()
             sut = MenuViewModel(appInformation: AppInformation(),
-                                feedbackSender: DoubleFeedbackSender(),
+                                feedbackSender: feedbackSender,
                                 configuration: configuration,
-                                analyticsManager: AnalyticsManager(engine: DoubleAnalyticsEngine()),
-                                application: DoubleApplication())
+                                analyticsManager: AnalyticsManager(engine: analyticsEngine),
+                                application: application)
+            sut.delegate = delegate
+            sut.viewDelegate = viewDelegate
         }
         
         describe("numberOfSections") {
@@ -239,20 +246,92 @@ class MenuViewModelSpec: QuickSpec {
             }
         }
         
-        describe("didDeselectRow") {
-            it("throws assertion for deck items") {
-                decksIndexPaths.forEach { (ip) in
-                    expect {
-                        sut.didDeselectRow(at: decksIndexPaths.first!, from: MenuViewController())
-                    }.to(throwAssertion())
+        describe("didSelectRow") {
+            context("for decks section") {
+                beforeEach {
+                    sut.didSelectRow(at: decksIndexPaths.first!, from: MenuViewController())
+                }
+                it("updates deck") {
+                    expect(configuration.selectedDeckSet).toNot(beNil())
+                }
+                it("sends analytics event") {
+                    expect(analyticsEngine.isSendAnalyticsEventCalled) == true
+                }
+                it("notify delegate") {
+                    expect(delegate.isDidUpdateDeckCalled) == true
                 }
             }
-            it("does not throw assertion for preference items") {}
-            it("throws assertion for actions items") {
-                actionsIndexPaths.forEach { (ip) in
-                    expect {
-                        sut.didDeselectRow(at: actionsIndexPaths.first!, from: MenuViewController())
-                    }.to(throwAssertion())
+            context("for preferences section") {
+                beforeEach {
+                    sut.didSelectRow(at: preferencesIndexPaths.first!, from: MenuViewController())
+                }
+                it("sends analytics event") {
+                    expect(analyticsEngine.isSendAnalyticsEventCalled) == true
+                }
+                it("stores value in configuration") {
+                    expect(configuration.isSetValueCalled) == true
+                }
+            }
+            context("for actions sections") {
+                context("share row") {
+                    beforeEach {
+                        sut.didSelectRow(at: actionsIndexPaths[0], from: MenuViewController())
+                    }
+                    it("sends analytics event") {
+                        expect(analyticsEngine.isSendAnalyticsEventCalled) == true
+                    }
+                    it("notifies view") {
+                        expect(viewDelegate.isShareAppCalled) == true
+                    }
+                }
+                context("feedback row") {
+                    it("sends analytics event") {
+                        sut.didSelectRow(at: actionsIndexPaths[1], from: MenuViewController())
+                        expect(analyticsEngine.isSendAnalyticsEventCalled) == true
+                    }
+                    context("if mail client configured") {
+                        beforeEach {
+                            feedbackSender.shouldThrowWhenSendFeedback = false
+                            sut.didSelectRow(at: actionsIndexPaths[1], from: MenuViewController())
+                        }
+                        it("opens mail client") {
+                            expect(feedbackSender.isSendFeedbackCalled) == true
+                        }
+                        it("does not notifies view") {
+                            expect(viewDelegate.isShowAlertCalled) == false
+                        }
+                    }
+                    context("if mail client not configured") {
+                        beforeEach {
+                            feedbackSender.shouldThrowWhenSendFeedback = true
+                            sut.didSelectRow(at: actionsIndexPaths[1], from: MenuViewController())
+                        }
+                        it("notifies view") {
+                            expect(viewDelegate.isShowAlertCalled) == true
+                        }
+                    }
+                }
+                context("write a review row") {
+                    beforeEach {
+                        sut.didSelectRow(at: actionsIndexPaths[2], from: MenuViewController())
+                    }
+                    it("sends analytics event") {
+                        expect(analyticsEngine.isSendAnalyticsEventCalled) == true
+                    }
+                    it("opens url") {
+                        expect(application.isOpenCalled) == true
+                    }
+                }
+                context("contribute row") {
+                    beforeEach {
+                        sut.didSelectRow(at: actionsIndexPaths[3], from: MenuViewController())
+                    }
+                    it("sends analytics event") {
+                        expect(analyticsEngine.isSendAnalyticsEventCalled) == true
+                    }
+                    it("opens url") {
+                        expect(application.isOpenCalled) == true
+                    }
                 }
             }
         }
