@@ -1090,7 +1090,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 229C509B6A68785E5E2DC75C /* Pods-ScrumPokerTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ScrumPokerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1110,7 +1109,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ScrumPokerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
