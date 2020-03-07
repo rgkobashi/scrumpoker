@@ -24,12 +24,15 @@ class MenuViewModelSpec: QuickSpec {
                                  IndexPath(row: 0, section: 3),
                                  IndexPath(row: 1, section: 3)
         ]
+        
+        var configuration: DoubleConfiguration!
         var sut: MenuViewModel!
         
         beforeEach {
+            configuration = DoubleConfiguration()
             sut = MenuViewModel(appInformation: AppInformation(),
                                 feedbackSender: DoubleFeedbackSender(),
-                                configuration: DoubleConfiguration(),
+                                configuration: configuration,
                                 analyticsManager: AnalyticsManager(engine: DoubleAnalyticsEngine()),
                                 application: DoubleApplication())
         }
@@ -113,22 +116,34 @@ class MenuViewModelSpec: QuickSpec {
             }
         }
         
-        
         describe("shouldEnableRegularRowSelection") {
-            it("returns XXX for decks items") {}
-            it("returns false for preferences items") {
-                expect {
-                    preferencesIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldEnableRegularRowSelection(at: ip) == false
-                    }
-                } == true
+            context("for decks section") {
+                it("returns false when the deck is already selected") {
+                    configuration.selectedDeckToReturn = .fibonacci
+                    expect(sut.shouldEnableRegularRowSelection(at: decksIndexPaths[0])) == false
+                }
+                it("returns true when the deck is not selected yet") {
+                    configuration.selectedDeckToReturn = .fibonacci
+                    expect(sut.shouldEnableRegularRowSelection(at: decksIndexPaths[1])) == true
+                }
             }
-            it("returns true for actions items") {
-                expect {
-                    actionsIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldEnableRegularRowSelection(at: ip) == true
-                    }
-                } == true
+            context("for preferences section") {
+                it("returns false") {
+                    expect {
+                        preferencesIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldEnableRegularRowSelection(at: ip) == false
+                        }
+                    } == true
+                }
+            }
+            context("for actions sections") {
+                it("returns true") {
+                    expect {
+                        actionsIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldEnableRegularRowSelection(at: ip) == true
+                        }
+                    } == true
+                }
             }
         }
         describe("shouldDeselectAfterSelectingRow") {
