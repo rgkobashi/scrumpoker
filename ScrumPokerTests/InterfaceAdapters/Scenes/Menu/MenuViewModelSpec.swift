@@ -176,24 +176,32 @@ class MenuViewModelSpec: QuickSpec {
             }
         }
         describe("shouldDeselectRestOfSectionAfterSelectingRow") {
-            it("returns true for decks items") {
-                expect {
-                    decksIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldDeselectRestOfSectionAfterSelectingRow(at: ip) == true
-                    }
-                } == true
+            context("for decks section") {
+                it("returns true") {
+                    expect {
+                        decksIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldDeselectRestOfSectionAfterSelectingRow(at: ip) == true
+                        }
+                    } == true
+                }
             }
-            it("returns false for the rest") {
-                expect {
-                    preferencesIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldDeselectRestOfSectionAfterSelectingRow(at: ip) == false
-                    }
-                } == true
-                expect {
-                    actionsIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldDeselectRestOfSectionAfterSelectingRow(at: ip) == false
-                    }
-                } == true
+            context("for preferences section") {
+                it("returns false") {
+                    expect {
+                        preferencesIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldDeselectRestOfSectionAfterSelectingRow(at: ip) == false
+                        }
+                    } == true
+                }
+            }
+            context("for actions sections") {
+                it("returns false") {
+                    expect {
+                        actionsIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldDeselectRestOfSectionAfterSelectingRow(at: ip) == false
+                        }
+                    } == true
+                }
             }
         }
         describe("shouldDeselectItselfAfterSelectingRow") {
