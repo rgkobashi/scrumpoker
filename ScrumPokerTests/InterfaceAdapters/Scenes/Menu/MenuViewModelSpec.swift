@@ -34,6 +34,33 @@ class MenuViewModelSpec: QuickSpec {
                                 application: DoubleApplication())
         }
         
+        describe("numberOfSections") {
+            it("returns 4") {
+                expect(sut.numberOfSections) == 4
+            }
+        }
+        describe("numberOfRows") {
+            context("for decks section") {
+                it("returns 2") {
+                    expect(sut.numberOfRows(in: 0)) == 2
+                }
+            }
+            context("for preferences section") {
+                it("returns 3") {
+                    expect(sut.numberOfRows(in: 1)) == 3
+                }
+            }
+            context("for first actions section") {
+                it("returns 2") {
+                    expect(sut.numberOfRows(in: 2)) == 2
+                }
+            }
+            context("for second actions section") {
+                it("returns 2") {
+                    expect(sut.numberOfRows(in: 3)) == 2
+                }
+            }
+        }
         describe("shouldEnableRegularRowSelection") {
             it("returns XXX for decks items") {}
             it("returns false for preferences items") {
