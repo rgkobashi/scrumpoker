@@ -147,24 +147,32 @@ class MenuViewModelSpec: QuickSpec {
             }
         }
         describe("shouldDeselectAfterSelectingRow") {
-            it("returns false for preferences items") {
-                expect {
-                    preferencesIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldDeselectAfterSelectingRow(at: ip) == false
-                    }
-                } == true
+            context("for decks section") {
+                it("returns true") {
+                    expect {
+                        decksIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldDeselectAfterSelectingRow(at: ip) == true
+                        }
+                    } == true
+                }
             }
-            it("returns true for the rest") {
-                expect {
-                    decksIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldDeselectAfterSelectingRow(at: ip) == true
-                    }
-                } == true
-                expect {
-                    actionsIndexPaths.allSatisfy { ip -> Bool in
-                        return sut.shouldDeselectAfterSelectingRow(at: ip) == true
-                    }
-                } == true
+            context("for preferences section") {
+                it("returns false") {
+                    expect {
+                        preferencesIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldDeselectAfterSelectingRow(at: ip) == false
+                        }
+                    } == true
+                }
+            }
+            context("for actions sections") {
+                it("returns true") {
+                    expect {
+                        actionsIndexPaths.allSatisfy { ip -> Bool in
+                            return sut.shouldDeselectAfterSelectingRow(at: ip) == true
+                        }
+                    } == true
+                }
             }
         }
         describe("shouldDeselectRestOfSectionAfterSelectingRow") {
