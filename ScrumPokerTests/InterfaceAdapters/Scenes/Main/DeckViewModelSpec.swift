@@ -71,7 +71,22 @@ class DeckViewModelSpec: QuickSpec {
                 expect(sut.deckHeightMultiplier) == expected
             }
         }
-        describe("cardSize") {}
+        describe("cardSize") {
+            it("returns percentage size to be used for the card based on the view sent and deckLayout") {
+                let viewWidth: CGFloat = 100
+                let viewHeight: CGFloat = 100
+                let view = UIView(frame: CGRect(x: 0, y: 0, width: viewWidth, height: viewHeight))
+                
+                let cardWidth: CGFloat = 0.8
+                let cardHeight: CGFloat = 0.3
+                let newLayout = DeckLayout(cardWidth: cardWidth, cardHeight: cardHeight, horizontalCardSpacing: 0, verticalCardSpacing: 0, horizontalDeckPadding: 0, verticalDeckPadding: 0)
+                sut = DeckViewModel(deck: initialDeck, layout: newLayout)
+                
+                let expected = CGSize(width: viewWidth * cardWidth, height: viewHeight * cardHeight)
+                
+                expect(sut.cardSize(for: view)) == expected
+            }
+        }
         describe("horizontalCardSpacing") {}
         describe("verticalCardSpacing") {}
         
