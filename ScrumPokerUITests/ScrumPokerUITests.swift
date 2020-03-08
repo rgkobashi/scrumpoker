@@ -11,6 +11,16 @@ import XCTest
 class ScrumPokerUITests: XCTestCase {
     
     private var app: XCUIApplication!
+    private var timeoutToWaitForExistence: TimeInterval = 5
+    private var menuScreen: XCUIElement {
+        return app.otherElements["MenuViewController.view"]
+    }
+    private var deckScreen: XCUIElement {
+        return app.otherElements["DeckViewController.view"]
+    }
+    private var cardScreen: XCUIElement {
+        return app.otherElements["CardViewController.view"]
+    }
 
     override func setUp() {
         continueAfterFailure = false
@@ -21,11 +31,10 @@ class ScrumPokerUITests: XCTestCase {
 
     override func tearDown() {}
 
-    func testMenuScreenIsShown() {
+    func test_menuScreen_is_shown() {
         let menuButton = app.navigationBars.firstMatch.buttons["ellipsis"]
         menuButton.tap()
-        let menuVC = app.otherElements["MenuViewController.view"]
-        XCTAssertTrue(menuVC.waitForExistence(timeout: 5))
+        XCTAssertTrue(menuScreen.waitForExistence(timeout: timeoutToWaitForExistence))
     }
     
     func testCardScreenIsShown() {
