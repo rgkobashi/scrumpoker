@@ -51,6 +51,16 @@ class ScrumPokerUITests: XCTestCase {
         XCTAssertTrue(deckScreen.waitForExistence(timeout: timeoutToWaitForExistence))
     }
     
+    func test_tapping_on_cardBack_flips_it() {
+        let text = "0"
+        showCardScreen(for: text)
+        
+        let backView = cardScreen.otherElements["CardBackView"]
+        backView.tap()
+
+        let frontView = cardScreen.otherElements["CardFrontView-\(text)"]
+        XCTAssertTrue(frontView.waitForExistence(timeout: timeoutToWaitForExistence))
+    }
     
     // MARK: Reusable navigation
     
