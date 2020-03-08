@@ -42,6 +42,15 @@ class ScrumPokerUITests: XCTestCase {
         XCTAssertTrue(cardScreen.waitForExistence(timeout: timeoutToWaitForExistence))
     }
     
+    func test_closing_cardScreen_shows_deckScreen() {
+        showCardScreen(for: "0")
+        
+        let closeButton = cardScreen.buttons["Close"]
+        closeButton.tap()
+        
+        XCTAssertTrue(deckScreen.waitForExistence(timeout: timeoutToWaitForExistence))
+    }
+    
     
     // MARK: Reusable navigation
     
