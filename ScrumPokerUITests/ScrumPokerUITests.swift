@@ -36,7 +36,11 @@ class ScrumPokerUITests: XCTestCase {
         XCTAssertTrue(menuScreen.waitForExistence(timeout: timeoutToWaitForExistence))
     }
     
-    func testCardScreenIsShown() {
+    func test_cardScreen_is_shown() {
+        showCardScreen(for: "0")
+        
+        XCTAssertTrue(cardScreen.waitForExistence(timeout: timeoutToWaitForExistence))
+    }
     
     
     // MARK: Reusable navigation
