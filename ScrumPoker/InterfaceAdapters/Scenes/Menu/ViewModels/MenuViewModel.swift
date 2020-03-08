@@ -34,7 +34,7 @@ class MenuViewModel {
                                       selectionType: .multiple,
                                       rows: [
                                         PreferenceBoolRowViewModel(preference: .shakeToReveal, configuration: configuration),
-                                        PreferenceBoolRowViewModel(preference: .shakeOnReveal, configuration: configuration),
+                                        PreferenceBoolRowViewModel(preference: .vibrateOnReveal, configuration: configuration),
                                         PreferenceBoolRowViewModel(preference: .disableAutoLock, configuration: configuration)
                 ]),
                 TableSectionViewModel(title: nil,

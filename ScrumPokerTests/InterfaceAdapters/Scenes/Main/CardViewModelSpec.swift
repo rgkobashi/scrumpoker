@@ -30,24 +30,24 @@ class CardViewModelSpec: QuickSpec {
                 sut = CardViewModel(card: Card(text: ""), configuration: configuration, hapticFeedbackGenerator: generator)
                 sut.viewDelegate = viewDelegate
                 
-                configuration.valueToReturnForShakeOnReveal = false
+                configuration.valueToReturnForVibrateOnReveal = false
             }
             it("notifies view") {
                 sut.flipCard()
                 expect(viewDelegate.isFlipCardCalled) == true
             }
-            context("when shake on reveal is enabled") {
+            context("when vibrate on reveal is enabled") {
                 beforeEach {
-                    configuration.valueToReturnForShakeOnReveal = true
+                    configuration.valueToReturnForVibrateOnReveal = true
                 }
                 it("generates haptic feedback") {
                     sut.flipCard()
                     expect(generator.isGenerateCalled) == true
                 }
             }
-            context("when shake on reveal is disable") {
+            context("when vibrate on reveal is disable") {
                 beforeEach {
-                    configuration.valueToReturnForShakeOnReveal = false
+                    configuration.valueToReturnForVibrateOnReveal = false
                 }
                 it("does not generate haptic feedback") {
                     sut.flipCard()
@@ -65,7 +65,7 @@ class CardViewModelSpec: QuickSpec {
                 sut = CardViewModel(card: Card(text: ""), configuration: configuration, hapticFeedbackGenerator: generator)
                 sut.viewDelegate = viewDelegate
                 
-                configuration.valueToReturnForShakeOnReveal = false
+                configuration.valueToReturnForVibrateOnReveal = false
             }
             context("when shake to reveal is enabled") {
                 beforeEach {
@@ -127,14 +127,14 @@ class CardViewModelSpec: QuickSpec {
 // MARK: - Test doubles
 
 private class DoubleConfiguration: ScrumPoker.Configuration {
-    var valueToReturnForShakeOnReveal: Bool!
     var valueToReturnForShakeToReveal: Bool!
+    var valueToReturnForVibrateOnReveal: Bool!
     override func getValue(for preference: Preference<Bool>) -> Bool {
         switch preference {
-        case .shakeOnReveal:
-            return valueToReturnForShakeOnReveal
         case .shakeToReveal:
             return valueToReturnForShakeToReveal
+        case .vibrateOnReveal:
+            return valueToReturnForVibrateOnReveal
         default:
             fatalError("preference not handled")
         }

@@ -22,8 +22,8 @@ class CardViewModel {
     private var isShakeToRevealEnabled: Bool {
         configuration.getValue(for: .shakeToReveal)
     }
-    private var isShakeOnRevealEnabled: Bool {
-        configuration.getValue(for: .shakeOnReveal)
+    private var isVibrateOnRevealEnabled: Bool {
+        configuration.getValue(for: .vibrateOnReveal)
     }
     private(set) var isCardFlipped = false
     
@@ -56,7 +56,7 @@ class CardViewModel {
     }
     
     private func vibrateIfNeeded() {
-        guard isShakeOnRevealEnabled else {
+        guard isVibrateOnRevealEnabled else {
             return
         }
         hapticFeedbackGenerator.generate(.success)
