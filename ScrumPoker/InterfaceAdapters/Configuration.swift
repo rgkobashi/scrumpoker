@@ -67,8 +67,8 @@ class Configuration {
                 return defaultDeck
             case Deck.fibonacci.name:
                 return .fibonacci
-            case Deck.standar.name:
-                return .standar
+            case Deck.standard.name:
+                return .standard
             default:
                 fatalError("Saved deck does not exists")
             }

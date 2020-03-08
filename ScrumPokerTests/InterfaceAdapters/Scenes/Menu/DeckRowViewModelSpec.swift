@@ -42,7 +42,7 @@ class DeckRowViewModelSpec: QuickSpec {
             }
             context("when holding deck is not selected") {
                 it("returns checkmark with false") {
-                    configuration.selectedDeckToReturn = .standar
+                    configuration.selectedDeckToReturn = .standard
                     expect {
                         switch sut.type {
                         case .checkmark(let value):

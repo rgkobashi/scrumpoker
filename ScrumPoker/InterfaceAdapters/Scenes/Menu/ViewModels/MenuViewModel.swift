@@ -28,7 +28,7 @@ class MenuViewModel {
                                       selectionType: .single,
                                       rows: [
                                         DeckRowViewModel(deck: .fibonacci, configuration: configuration),
-                                        DeckRowViewModel(deck: .standar, configuration: configuration)
+                                        DeckRowViewModel(deck: .standard, configuration: configuration)
                 ]),
                 TableSectionViewModel(title: "Preferences",
                                       selectionType: .multiple,
