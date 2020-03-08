@@ -29,18 +29,21 @@ class ScrumPokerUITests: XCTestCase {
         app.launch()
     }
 
-    override func tearDown() {}
-
     func test_menuScreen_is_shown() {
         let menuButton = app.navigationBars.firstMatch.buttons["ellipsis"]
         menuButton.tap()
+        
         XCTAssertTrue(menuScreen.waitForExistence(timeout: timeoutToWaitForExistence))
     }
     
     func testCardScreenIsShown() {
+    
+    
+    // MARK: Reusable navigation
+    
+    private func showCardScreen(for text: String) {
         let collectionView = app.collectionViews.firstMatch
-        collectionView.cells.staticTexts["0"].tap()
-        let cardVC = app.otherElements["CardViewController.view"]
-        XCTAssertTrue(cardVC.waitForExistence(timeout: 5))
+        let cell = collectionView.cells.staticTexts[text]
+        cell.tap()
     }
 }
