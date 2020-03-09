@@ -1,6 +1,6 @@
 # Scrum Poker
 
-[![](store.png)](https://apps.apple.com/app/id1461657631)
+[![](download.png)](https://apps.apple.com/app/id1461657631)
 
 Supported decks:
 - Fibonacci
