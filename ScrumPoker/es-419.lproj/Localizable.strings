@@ -15,7 +15,7 @@
 
 "preference.shakeToReveal" = "Agitar para revelar";
 "preference.vibrateOnReveal" = "Vibrar al revelar";
-"preference.disableAutoLock" = "Deshabilitar bloqueo automatico";
+"preference.disableAutoLock" = "Deshabilitar auto bloqueo";
 
 "action.share" = "Compartir";
 "action.feedback" = "Comentarios";
