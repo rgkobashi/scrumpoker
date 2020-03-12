@@ -31,7 +31,7 @@ extension ViewControllerAlertable {
     
     private func showInformableAlert(title: String?, message: String, action: ViewControllerAlertableAction?) {
         let alertC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertA =  UIAlertAction(title: "OK", style: .default) { _ in
+        let alertA =  UIAlertAction(title: "common.ok".localized(), style: .default) { _ in
             action?()
         }
         alertC.addAction(alertA)

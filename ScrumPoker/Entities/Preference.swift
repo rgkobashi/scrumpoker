@@ -14,7 +14,7 @@ struct Preference<T>: Equatable {
 }
 
 extension Preference where T == Bool {
-    static let shakeToReveal = Preference(name: "Shake to reveal", id: "shakeToReveal")
-    static let vibrateOnReveal = Preference(name: "Vibrate on reveal", id: "vibrateOnReveal")
-    static let disableAutoLock = Preference(name: "Disable auto-lock", id: "disableAutoLock")
+    static let shakeToReveal = Preference(name: "preference.shakeToReveal".localized(), id: "shakeToReveal")
+    static let vibrateOnReveal = Preference(name: "preference.vibrateOnReveal".localized(), id: "vibrateOnReveal")
+    static let disableAutoLock = Preference(name: "preference.disableAutoLock".localized(), id: "disableAutoLock")
 }

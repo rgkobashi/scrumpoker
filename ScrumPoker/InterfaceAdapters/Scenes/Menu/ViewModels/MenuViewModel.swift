@@ -24,13 +24,13 @@ class MenuViewModel {
     private let analyticsManager: AnalyticsManager
     private let application: ApplicationType
     private lazy var menuItems: [TableSectionViewModel] = {
-        return [TableSectionViewModel(title: "Decks",
+        return [TableSectionViewModel(title: "common.decks".localized(),
                                       selectionType: .single,
                                       rows: [
                                         DeckRowViewModel(deck: .fibonacci, configuration: configuration),
                                         DeckRowViewModel(deck: .standard, configuration: configuration)
                 ]),
-                TableSectionViewModel(title: "Preferences",
+                TableSectionViewModel(title: "common.preferences".localized(),
                                       selectionType: .multiple,
                                       rows: [
                                         PreferenceBoolRowViewModel(preference: .shakeToReveal, configuration: configuration),
@@ -40,20 +40,20 @@ class MenuViewModel {
                 TableSectionViewModel(title: nil,
                                       selectionType: .single,
                                       rows: [
-                                        ActionRowViewModel<MenuViewController>(text: "Share", image: nil, action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "action.share".localized(), image: nil, action: { [weak self] vc in
                                             self?.share()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Feedback", image: nil, action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "action.feedback".localized(), image: nil, action: { [weak self] vc in
                                             self?.sendFeedback(from: vc)
                                         })
                 ]),
                 TableSectionViewModel(title: nil,
                                       selectionType: .single,
                                       rows: [
-                                        ActionRowViewModel<MenuViewController>(text: "Write a review", image: nil, action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "action.writeReview".localized(), image: nil, action: { [weak self] vc in
                                             self?.writeReview()
                                         }),
-                                        ActionRowViewModel<MenuViewController>(text: "Contribute", image: nil, action: { [weak self] vc in
+                                        ActionRowViewModel<MenuViewController>(text: "action.contribute".localized(), image: nil, action: { [weak self] vc in
                                             self?.contribute()
                                         })
                 ])
@@ -98,7 +98,7 @@ class MenuViewModel {
                                                   message: "",
                                                   from: viewController))
         } catch {
-            let message = "Please send an email to \(appInformation.feedbackEmail)"
+            let message = "feedback.sendEmail".localizedFormat(appInformation.feedbackEmail)
             viewDelegate?.showAlert(title: nil, message: message, action: nil)
         }
     }
