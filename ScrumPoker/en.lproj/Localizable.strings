@@ -5,3 +5,21 @@
   Created by Rogelio Kobashi on 2020/03/12.
   Copyright © 2020 rgkobashi. All rights reserved.
 */
+
+"common.ok" = "OK";
+"common.decks" = "Decks";
+"common.preferences" = "Preferences";
+
+"deck.fibonacci" = "Fibonacci";
+"deck.standard" = "Standard";
+
+"preference.shakeToReveal" = "Shake to reveal";
+"preference.vibrateOnReveal" = "Vibrate on reveal";
+"preference.disableAutoLock" = "Disable auto-lock";
+
+"action.share" = "Share";
+"action.feedback" = "Feedback";
+"action.writeReview" = "Write a review";
+"action.contribute" = "Contribute";
+
+"feedback.sendEmail" = "Please send an email to %@";
