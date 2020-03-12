@@ -58,16 +58,16 @@ class Configuration {
     
     var selectedDeck: Deck { // TODO avoid reading userDefaults everytime selectedDeck is called
         set {
-            userDefaults.set(newValue.name, forKey: UserDefaultsKey.selectedDeckName.rawValue)
+            userDefaults.set(newValue.id, forKey: UserDefaultsKey.selectedDeckName.rawValue)
         }
         get {
             let savedDeckName = userDefaults.string(forKey: UserDefaultsKey.selectedDeckName.rawValue)
-            switch savedDeckName {
+            switch savedDeckName?.lowercased() {
             case nil:
                 return defaultDeck
-            case Deck.fibonacci.name:
+            case Deck.fibonacci.id:
                 return .fibonacci
-            case Deck.standard.name:
+            case Deck.standard.id:
                 return .standard
             default:
                 fatalError("Saved deck does not exists")
