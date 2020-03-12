@@ -72,6 +72,7 @@
 		E2D3DFE5241A737B00AD6738 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D3DFE4241A737B00AD6738 /* LaunchScreen.storyboard */; };
 		E2D3DFE7241A738300AD6738 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D3DFE6241A738300AD6738 /* Main.storyboard */; };
 		E2D3DFE8241A73A200AD6738 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2D3DFEA241A73A200AD6738 /* Localizable.strings */; };
+		E2D3DFEE241A764400AD6738 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D3DFED241A764400AD6738 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,7 @@
 		E2D3DFE6241A738300AD6738 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E2D3DFE9241A73A200AD6738 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E2D3DFEB241A73C500AD6738 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E2D3DFED241A764400AD6738 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -412,6 +414,7 @@
 				E25B06D8240D490A0035F94F /* Table */,
 				E25B06D9240D49F60035F94F /* ViewController */,
 				E23288A322744D7100A94F15 /* Storyboard */,
+				E2D3DFEC241A763800AD6738 /* String */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -545,6 +548,14 @@
 				E26BFEE6239AAA0100264688 /* ActionRowViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E2D3DFEC241A763800AD6738 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				E2D3DFED241A764400AD6738 /* String.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -858,6 +869,7 @@
 				E2CDBE142275FEAC0054957B /* TableRowViewModel.swift in Sources */,
 				E242E06A22743EBC00C28204 /* AppDelegate.swift in Sources */,
 				E2CDBE072274AD660054957B /* MenuCoordinator.swift in Sources */,
+				E2D3DFEE241A764400AD6738 /* String.swift in Sources */,
 				E28E88D5227767F100DFF021 /* Preference.swift in Sources */,
 				E26C738523A50F770034B6D6 /* CardDesign.swift in Sources */,
 				E22F2EA92413D1300002DB29 /* Application.swift in Sources */,
