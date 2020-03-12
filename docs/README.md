@@ -14,6 +14,8 @@ Supported decks:
 
 - [ ] Support for custom decks
 - [ ] Able to set a baseline and share it 
-- [ ] Localization
+- Localization
+    - [x] English
+    - [x] Spanish
 - [ ] Add support for Dark Mode
 - [ ] Migrate to Swift UI
