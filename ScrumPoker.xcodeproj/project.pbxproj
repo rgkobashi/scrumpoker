@@ -71,6 +71,7 @@
 		E2D2BA5923A4C5360039A960 /* HapticFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */; };
 		E2D2BA5C23A4C9440039A960 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */; };
 		E2D2BA5E23A4E73F0039A960 /* ViewControllerSharable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2BA5D23A4E73F0039A960 /* ViewControllerSharable.swift */; };
+		E2D3DFDE241A728600AD6738 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2D3DFDD241A728600AD6738 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackGenerator.swift; sourceTree = "<group>"; };
 		E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		E2D2BA5D23A4E73F0039A960 /* ViewControllerSharable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSharable.swift; sourceTree = "<group>"; };
+		E2D3DFDD241A728600AD6738 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FD7A2E68FE585A19D4B94530 /* Pods-ScrumPokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrumPokerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrumPokerTests/Pods-ScrumPokerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +256,7 @@
 			children = (
 				E242E07522743EBD00C28204 /* Info.plist */,
 				E26C738823A54E160034B6D6 /* GoogleService-Info.plist */,
+				E2D3DFDD241A728600AD6738 /* Localizable.strings */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 			files = (
 				E2CDBE1722760BFD0054957B /* MenuCell.xib in Resources */,
 				E242E07422743EBD00C28204 /* LaunchScreen.storyboard in Resources */,
+				E2D3DFDE241A728600AD6738 /* Localizable.strings in Resources */,
 				E25B06EA240D5C1C0035F94F /* Settings.bundle in Resources */,
 				E26C738923A54E160034B6D6 /* GoogleService-Info.plist in Resources */,
 				E242E07122743EBD00C28204 /* Assets.xcassets in Resources */,
