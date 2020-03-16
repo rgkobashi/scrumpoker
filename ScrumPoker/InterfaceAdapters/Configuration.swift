@@ -61,8 +61,8 @@ class Configuration {
             userDefaults.set(newValue.id, forKey: UserDefaultsKey.selectedDeckId.rawValue)
         }
         get {
-            let savedDeckName = userDefaults.string(forKey: UserDefaultsKey.selectedDeckId.rawValue)
-            switch savedDeckName?.lowercased() {
+            let savedDeckId = userDefaults.string(forKey: UserDefaultsKey.selectedDeckId.rawValue)
+            switch savedDeckId?.lowercased() {
             case nil:
                 return defaultDeck
             case Deck.fibonacci.id:
