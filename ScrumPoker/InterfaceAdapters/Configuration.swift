@@ -10,7 +10,7 @@ import SideMenu
 import Firebase
 
 private enum UserDefaultsKey: String {
-    case selectedDeckName
+    case selectedDeckId = "selectedDeckName" // using legacy key
 }
 
 class Configuration {
@@ -58,10 +58,10 @@ class Configuration {
     
     var selectedDeck: Deck { // TODO avoid reading userDefaults everytime selectedDeck is called
         set {
-            userDefaults.set(newValue.id, forKey: UserDefaultsKey.selectedDeckName.rawValue)
+            userDefaults.set(newValue.id, forKey: UserDefaultsKey.selectedDeckId.rawValue)
         }
         get {
-            let savedDeckName = userDefaults.string(forKey: UserDefaultsKey.selectedDeckName.rawValue)
+            let savedDeckName = userDefaults.string(forKey: UserDefaultsKey.selectedDeckId.rawValue)
             switch savedDeckName?.lowercased() {
             case nil:
                 return defaultDeck
