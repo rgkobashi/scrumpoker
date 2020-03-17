@@ -1,11 +1,11 @@
 name: Firebase, nameSpecified: 
 body: 
                    …
-version: 6.18.0
+version: 6.20.0
 
 name: FirebaseAnalytics, nameSpecified: 
 body: Copyright 2020 Googl…
-version: 6.3.0
+version: 6.3.1
 
 name: FirebaseAnalyticsInterop, nameSpecified: 
 body: 
@@ -15,12 +15,12 @@ version: 1.5.0
 name: FirebaseCore, nameSpecified: 
 body: 
                    …
-version: 6.6.3
+version: 6.6.4
 
 name: FirebaseCoreDiagnostics, nameSpecified: 
 body: 
                    …
-version: 1.2.1
+version: 1.2.2
 
 name: FirebaseCoreDiagnosticsInterop, nameSpecified: 
 body: 
@@ -37,29 +37,24 @@ body:
                    …
 version: 1.1.0
 
-name: FirebaseInstanceID, nameSpecified: 
-body: 
-                   …
-version: 4.3.2
-
 name: GoogleAppMeasurement, nameSpecified: 
 body: Copyright 2020 Googl…
-version: 6.3.0
+version: 6.3.1
 
 name: GoogleDataTransport, nameSpecified: 
 body: 
                    …
-version: 4.0.1
+version: 5.0.0
 
 name: GoogleDataTransportCCTSupport, nameSpecified: 
 body: 
                    …
-version: 1.4.1
+version: 2.0.0
 
 name: GoogleUtilities, nameSpecified: 
 body: 
                    …
-version: 6.5.1
+version: 6.5.2
 
 name: LicensePlist, nameSpecified: 
 body: MIT License
