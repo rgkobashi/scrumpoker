@@ -33,7 +33,7 @@ class DeckViewController: UIViewController, StoryboardSceneBased {
         super.viewDidLoad()
         updateTitle()
         setupNavigationBar()
-        layoutCollectionView()
+        setupCollectionView()
         self.view.accessibilityIdentifier = "DeckViewController.view"
     }
     
@@ -51,9 +51,19 @@ class DeckViewController: UIViewController, StoryboardSceneBased {
         }()
     }
     
-    private func layoutCollectionView() {
+    private func setupCollectionView() {
         holderView.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        layoutCollectionView()
+    }
+    
+    private func layoutCollectionView() {
+        holderView.removeConstraints(holderView.constraints)
+        holderView.addConstraints(getConstraintsForCollectionView())
+        holderView.layoutIfNeeded()
+    }
+    
+    private func getConstraintsForCollectionView() -> [NSLayoutConstraint] {
         let horizontalC = NSLayoutConstraint(item: collectionView,
                                              attribute: .centerX,
                                              relatedBy: .equal,
@@ -82,7 +92,7 @@ class DeckViewController: UIViewController, StoryboardSceneBased {
                                          attribute: .height,
                                          multiplier: viewModel.deckHeightMultiplier,
                                          constant: 0)
-        holderView.addConstraints([horizontalC, verticalC, widthC, heightC])
+        return [horizontalC, verticalC, widthC, heightC]
     }
     
     @objc private func showMenu() {
