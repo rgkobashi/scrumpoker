@@ -292,6 +292,14 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		E23E7DF02423E425003CA231 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E2467E4D24100B840079BDAA /* DeckLayoutSpec.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		E242E05D22743EBC00C28204 = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +337,7 @@
 		E242E07D22743EBE00C28204 /* ScrumPokerTests */ = {
 			isa = PBXGroup;
 			children = (
+				E23E7DF02423E425003CA231 /* Entities */,
 				E2467E40240FF7920079BDAA /* UseCases */,
 				E2467E47241001C10079BDAA /* InterfaceAdapters */,
 				E2467E42240FF7A70079BDAA /* Support */,
@@ -357,7 +366,6 @@
 		E2467E40240FF7920079BDAA /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				E2467E4D24100B840079BDAA /* DeckLayoutSpec.swift */,
 				E2467E3E240FF7890079BDAA /* FeedbackSenderSpec.swift */,
 				E2467E43240FFD470079BDAA /* HapticFeedbackGeneratorSpec.swift */,
 				E2467E45240FFFDF0079BDAA /* AnalyticsManagerSpec.swift */,
@@ -396,6 +404,7 @@
 			children = (
 				E23288B7227460F900A94F15 /* Card.swift */,
 				E266CE9C2276CDF2003451F6 /* Deck.swift */,
+				E23288B922748FAA00A94F15 /* DeckLayout.swift */,
 				E28E88D4227767F100DFF021 /* Preference.swift */,
 				E2467E3D240FEA4B0079BDAA /* Analytics */,
 			);
@@ -406,7 +415,6 @@
 			isa = PBXGroup;
 			children = (
 				E26C738423A50F770034B6D6 /* CardDesign.swift */,
-				E23288B922748FAA00A94F15 /* DeckLayout.swift */,
 				E2A9DB1A23A2962D00E1AD4C /* FeedbackSender.swift */,
 				E2D2BA5823A4C5360039A960 /* HapticFeedbackGenerator.swift */,
 				E2D2BA5B23A4C9440039A960 /* AnalyticsManager.swift */,

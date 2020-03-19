@@ -13,7 +13,7 @@ import UIKit
 /// - (cardHeight * Y) + (verticalCardSpacing * (Y-1)) = 1
 ///
 /// Where `X` is the number of cards per row and `Y` number of cards per column.
-struct DeckLayout {
+struct DeckLayout: Equatable {
     /// Percentage of card containerView width to use for card width expressed from 0 to 1.
     let cardWidth: CGFloat
     /// Percentage of card containerView height to use for card height expressed from 0 to 1.
@@ -32,10 +32,17 @@ struct DeckLayout {
 
 extension DeckLayout {
     /// Layout for 3 cards per row and 5 per column without the need of scrolling.
-    static let `default` = DeckLayout(cardWidth: 0.275,
+    static let threeByFive = DeckLayout(cardWidth: 0.275,
                                       cardHeight: 0.166,
                                       horizontalCardSpacing: 0.08,
                                       verticalCardSpacing: 0.0425,
                                       horizontalDeckPadding: 0.15,
                                       verticalDeckPadding: 0.1)
+    
+    static let threeByThree = DeckLayout(cardWidth: 0.3,
+                                         cardHeight: 0.3,
+                                         horizontalCardSpacing: 0.049,
+                                         verticalCardSpacing: 0.05,
+                                         horizontalDeckPadding: 0.15,
+                                         verticalDeckPadding: 0.3)
 }

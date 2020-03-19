@@ -12,6 +12,7 @@ struct Deck: Equatable {
     let id: String
     let name: String
     let cards: [Card]
+    let layout: DeckLayout
 }
 
 extension Deck {
@@ -21,13 +22,19 @@ extension Deck {
             .removeDuplicates()
             .map(String.init)
             .map(Card.init) + extraCards
-        return Deck(id: "fibonacci", name: "deck.fibonacci".localized(), cards: cards)
+        return Deck(id: "fibonacci", name: "deck.fibonacci".localized(), cards: cards, layout: .threeByFive)
     }
     
     static var standard: Deck {
         let cards = ["0", "½", "1", "2", "3", "5", "8", "13", "20", "40", "90", "100"]
             .map(Card.init) + extraCards
-        return Deck(id: "standard", name: "deck.standard".localized(), cards: cards)
+        return Deck(id: "standard", name: "deck.standard".localized(), cards: cards, layout: .threeByFive)
+    }
+    
+    static var tShirt: Deck {
+        let cards = ["XS", "S", "M", "L", "XL", "2XL"]
+            .map(Card.init) + extraCards
+        return Deck(id: "tshirt", name: "deck.tshirt".localized(), cards: cards, layout: .threeByThree)
     }
     
     // MARK: Private

@@ -33,7 +33,7 @@ class MainCoordinator {
         self.window = window
         self.configuration = configuration
         deckVC = DeckViewController.instantiate()
-        deckVM = DeckViewModel(deck: configuration.selectedDeck, layout: .default)
+        deckVM = DeckViewModel(deck: configuration.selectedDeck)
         deckVM.delegate = self
         deckVC.viewModel = deckVM
     }

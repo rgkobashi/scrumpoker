@@ -12,6 +12,7 @@
 
 "deck.fibonacci" = "Fibonacci";
 "deck.standard" = "Estándar";
+"deck.tshirt" = "Camisetas";
 
 "preference.shakeToReveal" = "Agitar para revelar";
 "preference.vibrateOnReveal" = "Vibrar al revelar";
