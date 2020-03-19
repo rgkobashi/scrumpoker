@@ -13,7 +13,7 @@ import UIKit
 /// - (cardHeight * Y) + (verticalCardSpacing * (Y-1)) = 1
 ///
 /// Where `X` is the number of cards per row and `Y` number of cards per column.
-struct DeckLayout {
+struct DeckLayout: Equatable {
     /// Percentage of card containerView width to use for card width expressed from 0 to 1.
     let cardWidth: CGFloat
     /// Percentage of card containerView height to use for card height expressed from 0 to 1.
