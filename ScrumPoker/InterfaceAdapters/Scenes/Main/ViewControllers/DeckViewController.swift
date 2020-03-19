@@ -34,6 +34,7 @@ class DeckViewController: UIViewController, StoryboardSceneBased {
         updateTitle()
         setupNavigationBar()
         setupCollectionView()
+        collectionView.reloadData()
         self.view.accessibilityIdentifier = "DeckViewController.view"
     }
     
