@@ -34,7 +34,7 @@ extension Deck {
     static var tShirt: Deck {
         let cards = ["XS", "S", "M", "L", "XL", "2XL"]
             .map(Card.init) + extraCards
-        return Deck(id: "tshirt", name: "deck.tshirt".localized(), cards: cards, layout: .default)
+        return Deck(id: "tshirt", name: "deck.tshirt".localized(), cards: cards, layout: .threeByThree)
     }
     
     // MARK: Private
