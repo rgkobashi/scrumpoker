@@ -19,14 +19,12 @@ protocol DeckViewModelDelegate: class {
 
 class DeckViewModel {
     private var deck: Deck
-    private let layout: DeckLayout
     
     weak var delegate: DeckViewModelDelegate?
     weak var viewDelegate: DeckViewModelViewDelegate?
     
-    init(deck: Deck, layout: DeckLayout) {
+    init(deck: Deck) {
         self.deck = deck
-        self.layout = layout
     }
     
     func updateDeck(_ deck: Deck) {
@@ -51,25 +49,25 @@ class DeckViewModel {
     // MARK: Layout
     
     var deckWidthMultiplier: CGFloat {
-        return 1 - layout.horizontalDeckPadding
+        return 1 - deck.layout.horizontalDeckPadding
     }
     
     var deckHeightMultiplier: CGFloat {
-        return 1 - layout.verticalDeckPadding
+        return 1 - deck.layout.verticalDeckPadding
     }
     
     func cardSize(for parentView: UIView) -> CGSize {
-        let w = parentView.frame.width * layout.cardWidth
-        let h = parentView.frame.height * layout.cardHeight
+        let w = parentView.frame.width * deck.layout.cardWidth
+        let h = parentView.frame.height * deck.layout.cardHeight
         return CGSize(width: w, height: h)
     }
     
     func horizontalCardSpacing(for parentView: UIView) -> CGFloat {
-        return parentView.frame.width * layout.horizontalCardSpacing
+        return parentView.frame.width * deck.layout.horizontalCardSpacing
     }
     
     func verticalCardSpacing(for parentView: UIView) -> CGFloat {
-        return parentView.frame.height * layout.verticalCardSpacing
+        return parentView.frame.height * deck.layout.verticalCardSpacing
     }
     
     // MARK: Navigation
