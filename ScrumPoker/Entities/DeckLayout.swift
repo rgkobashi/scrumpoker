@@ -38,4 +38,11 @@ extension DeckLayout {
                                       verticalCardSpacing: 0.0425,
                                       horizontalDeckPadding: 0.15,
                                       verticalDeckPadding: 0.1)
+    
+    static let threeByThree = DeckLayout(cardWidth: 0.3,
+                                         cardHeight: 0.3,
+                                         horizontalCardSpacing: 0.049,
+                                         verticalCardSpacing: 0.05,
+                                         horizontalDeckPadding: 0.15,
+                                         verticalDeckPadding: 0.3)
 }
