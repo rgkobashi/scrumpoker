@@ -22,13 +22,13 @@ extension Deck {
             .removeDuplicates()
             .map(String.init)
             .map(Card.init) + extraCards
-        return Deck(id: "fibonacci", name: "deck.fibonacci".localized(), cards: cards, layout: .default)
+        return Deck(id: "fibonacci", name: "deck.fibonacci".localized(), cards: cards, layout: .threeByFive)
     }
     
     static var standard: Deck {
         let cards = ["0", "½", "1", "2", "3", "5", "8", "13", "20", "40", "90", "100"]
             .map(Card.init) + extraCards
-        return Deck(id: "standard", name: "deck.standard".localized(), cards: cards, layout: .default)
+        return Deck(id: "standard", name: "deck.standard".localized(), cards: cards, layout: .threeByFive)
     }
     
     static var tShirt: Deck {
