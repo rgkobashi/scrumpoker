@@ -69,6 +69,8 @@ class Configuration {
                 return .fibonacci
             case Deck.standard.id:
                 return .standard
+            case Deck.tShirt.id:
+                return .tShirt
             default:
                 fatalError("Saved deck does not exists")
             }
