@@ -136,6 +136,7 @@ extension DeckViewController: UICollectionViewDelegate {
 extension DeckViewController: DeckViewModelViewDelegate {
     func didUpdateDeck() {
         updateTitle()
+        layoutCollectionView()
         collectionView.reloadData()
     }
 }
