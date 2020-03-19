@@ -28,7 +28,8 @@ class MenuViewModel {
                                       selectionType: .single,
                                       rows: [
                                         DeckRowViewModel(deck: .fibonacci, configuration: configuration),
-                                        DeckRowViewModel(deck: .standard, configuration: configuration)
+                                        DeckRowViewModel(deck: .standard, configuration: configuration),
+                                        DeckRowViewModel(deck: .tShirt, configuration: configuration)
                 ]),
                 TableSectionViewModel(title: "common.preferences".localized(),
                                       selectionType: .multiple,
